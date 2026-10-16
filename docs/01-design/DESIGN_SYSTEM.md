@@ -21,6 +21,9 @@ Tokens are proposals, **not extracted** from generated concept images. Do not tr
 ## Typography
 Candidate heading: Space Grotesk. Body: Inter. Use responsive type scale and accessible line heights; avoid tiny sci-fi labels.
 
+### M1 implementation note — provisional
+Owner authorized provisional tokens for M1 only. `src/app/globals.css` maps the candidate space/surface/text/violet/amber colors into Tailwind theme tokens. Arial/Helvetica/system sans-serif is used locally until font sourcing and final typography are approved; no external font request or font asset was added. Flat editorial placeholders replace missing imagery. The primary action currently uses a solid light violet surface for readable contrast; gradient treatment remains a final-design review item. No final styling approval or visual parity is implied.
+
 ## Component rules
 - One strong primary CTA per major panel.
 - Primary button: violet-to-pink gradient with clear focus ring.

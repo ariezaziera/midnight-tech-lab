@@ -28,3 +28,26 @@
 - Final services/packages and contact links.
 - Approved reference images and per-screen measurements.
 - Whether to ship 3D intro at MVP or later.
+
+## M0 audit conflicts awaiting owner resolution — 2026-10-16
+
+These are audit findings, **not new approved decisions**. See `docs/04-delivery/M0_AUDIT_REPORT.md` for evidence and recommendations.
+
+- **AUD-05:** PRD permits disabled/demo form UI; CONTACT-001 permits form UI only with secure delivery. Proposed MVP resolution: verified direct link only; visibly incomplete shell until supplied.
+- **AUD-06:** PRD/SCOPE defer final assets and full modules, while M5/M6 precede the plan's release hardening/deployment. Confirm functional MVP release boundary and intro deferral; baseline quality must be checked before any release.
+- **AUD-07:** Navigation Console is interactive later in scene graph but mapped to module selection in interaction spec. Confirm active MVP hotspots, Creator ID panel/route behavior and Services detail destination; Development Lab flow is future scope.
+- **AUD-08:** App flow and camera specification use different preset/state identifiers. Reconcile stable presets, module selection and transition waypoints before implementation; coordinates remain blockout measurements.
+- **AUD-09:** Existing reference paths are valid, but Development/Design/Media screen assignments need crop review. Do not treat the current map as final visual approval.
+- Additional open choices: Services Terminal separate island versus attachment; provisional mobile 2D baseline; candidate-token use for M1; representative performance devices and release budgets.
+
+M0 audit delivered. The owner gate was subsequently resolved by the conditional approval below; other audit decisions remain open.
+
+## Owner gate — M1 conditional approval (2026-10-16)
+
+- Owner reviewed M0 and authorized M1 only: Next.js App Router, TypeScript strict and Tailwind CSS; content-first responsive HTML shells and reusable UI/navigation.
+- Provisional tokens are permitted but remain non-final. Explicitly labeled local content/asset placeholders are approved.
+- Contact is direct-link-only. Until a verified destination is supplied, render an incomplete informational shell without a working contact action. No form or simulated success state.
+- No Three.js, React Three Fiber or Drei installation during M1. No Central Hub, cameras, hotspots or intro animation.
+- Do not publish or invent portfolio content. Unresolved final visuals, hotspot behavior and release decisions stay open.
+- M1 must include lint, typecheck, tests, production build, direct/invalid-route and mobile checks, screenshots where possible, committed lockfile and implementation report.
+- Stop for M1 review. M2 requires explicit owner approval.

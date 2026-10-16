@@ -25,3 +25,6 @@ Route navigation is URL-based. Camera and overlay state are local to the world s
 
 ## Error strategy
 Show readable 2D experience when scene fails; never block the whole site on 3D asset load.
+
+## M1 implementation boundary
+All page shells are Server Components. Only the global navigation is a small Client Component for URL-derived `aria-current`; its links are prerendered and remain usable without JavaScript. Mobile links wrap visibly without a toggle. `/projects/placeholder` is a local, explicitly labeled layout fixture; other project slugs return 404. All pages carry noindex/nofollow metadata as a preview precaution, not an access control. The app must not be published. No 3D, content store, backend or scene state has been implemented.
