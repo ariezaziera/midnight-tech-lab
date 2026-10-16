@@ -42,3 +42,7 @@ Canvas (desktop only; demand rendering)
 ```
 
 Platform radius 4m; upper slab centered at Y=0, depth 0.32m, walkable top Y=0.16m. Desk size 3.4×0.16×1.45m. Props use local coordinates above the upper surface. No stairs, cozy area, satellites, mascot, hotspots or camera controls were implemented. Names identify geometry only, with no click behavior. Geometry is original procedural blockout, not supplied production assets. Configuration values are prototype measurements awaiting owner review.
+
+## M3 additions
+
+The M2 geometry is preserved. Workstation, Creator ID and Project Display groups carry explicit typed `hotspotId` metadata. A root selection handler resolves that metadata from the nearest hit without using mesh names; the platform, console and globe remain inert. A selected target receives a non-raycast amber bounds outline. CameraRig controls the four approved poses without free orbit or additional geometry. Loading/failed renderers retain HTML target explanations and links outside the canvas.

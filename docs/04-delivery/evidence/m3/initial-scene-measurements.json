@@ -1,0 +1,131 @@
+{
+  "browser": "156.0.8078.4",
+  "viewport": "1440x900",
+  "host": "Windows, local production server; no network throttling",
+  "metrics": {
+    "calls": 49,
+    "triangles": 866,
+    "geometries": 49,
+    "textures": 1,
+    "frames": 1,
+    "renderer": "WebKit WebGL",
+    "readyMs": 867
+  },
+  "idleFrames": "2",
+  "resources": [
+    {
+      "name": "/_next/static/chunks/3bdvdb3y077fv.css",
+      "durationMs": 32,
+      "transferBytes": 4230,
+      "encodedBodyBytes": 3930
+    },
+    {
+      "name": "/_next/static/chunks/1x6obpmlu1_c2.js",
+      "durationMs": 34,
+      "transferBytes": 2275,
+      "encodedBodyBytes": 1975
+    },
+    {
+      "name": "/_next/static/chunks/2r4s4h5xul1n-.js",
+      "durationMs": 34,
+      "transferBytes": 7924,
+      "encodedBodyBytes": 7624
+    },
+    {
+      "name": "/_next/static/chunks/2khxl0v1q4i6n.js",
+      "durationMs": 61,
+      "transferBytes": 72269,
+      "encodedBodyBytes": 71969
+    },
+    {
+      "name": "/_next/static/chunks/turbopack-3-ry682tkyiqk.js",
+      "durationMs": 35,
+      "transferBytes": 4240,
+      "encodedBodyBytes": 3940
+    },
+    {
+      "name": "/_next/static/chunks/2e268anpfvdoc.js",
+      "durationMs": 53,
+      "transferBytes": 46667,
+      "encodedBodyBytes": 46367
+    },
+    {
+      "name": "/_next/static/chunks/0xi76j1ftn42h.js",
+      "durationMs": 48,
+      "transferBytes": 6946,
+      "encodedBodyBytes": 6646
+    },
+    {
+      "name": "/_next/static/chunks/1v1nws4bi6j6d.js",
+      "durationMs": 50,
+      "transferBytes": 4239,
+      "encodedBodyBytes": 3939
+    },
+    {
+      "name": "/_next/static/chunks/1vksrzw79vjif.js",
+      "durationMs": 109,
+      "transferBytes": 245689,
+      "encodedBodyBytes": 245389
+    },
+    {
+      "name": "/",
+      "durationMs": 20,
+      "transferBytes": 463,
+      "encodedBodyBytes": 163
+    },
+    {
+      "name": "/projects",
+      "durationMs": 20,
+      "transferBytes": 483,
+      "encodedBodyBytes": 183
+    },
+    {
+      "name": "/services",
+      "durationMs": 20,
+      "transferBytes": 482,
+      "encodedBodyBytes": 182
+    },
+    {
+      "name": "/about",
+      "durationMs": 20,
+      "transferBytes": 480,
+      "encodedBodyBytes": 180
+    },
+    {
+      "name": "/contact",
+      "durationMs": 10,
+      "transferBytes": 481,
+      "encodedBodyBytes": 181
+    },
+    {
+      "name": "/",
+      "durationMs": 31,
+      "transferBytes": 2362,
+      "encodedBodyBytes": 2062
+    },
+    {
+      "name": "/projects",
+      "durationMs": 29,
+      "transferBytes": 2094,
+      "encodedBodyBytes": 1794
+    },
+    {
+      "name": "/services",
+      "durationMs": 27,
+      "transferBytes": 2071,
+      "encodedBodyBytes": 1771
+    },
+    {
+      "name": "/about",
+      "durationMs": 18,
+      "transferBytes": 2166,
+      "encodedBodyBytes": 1866
+    },
+    {
+      "name": "/contact",
+      "durationMs": 12,
+      "transferBytes": 2077,
+      "encodedBodyBytes": 1777
+    }
+  ]
+}

@@ -2,7 +2,7 @@ import { expect, test, type Page } from "@playwright/test";
 import { readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
-const evidence = "docs/04-delivery/evidence/m2";
+const evidence = "docs/04-delivery/evidence/m3";
 test.use({ viewport: { width: 1440, height: 900 } });
 
 // Locate the built lazy chunk by an authored scene-node identifier, not a hash.
@@ -23,7 +23,7 @@ async function navStillWorks(page: Page) {
   await expect(page.getByRole("heading", { level: 1 })).toHaveText("Work, with context.");
 }
 
-test("desktop renders an idle fixed overview and records initial measurements", async ({ page, browser }, testInfo) => {
+test("desktop overview remains idle until selection and records initial measurements", async ({ page, browser }, testInfo) => {
   await page.setViewportSize({ width: 1440, height: 900 });
   const errors: string[] = [];
   page.on("pageerror", error => errors.push(error.message));
@@ -40,7 +40,6 @@ test("desktop renders an idle fixed overview and records initial measurements", 
   const frames = await canvas.getAttribute("data-render-count");
   await page.waitForTimeout(500);
   expect(await canvas.getAttribute("data-render-count")).toBe(frames);
-  await canvas.click();
   await page.mouse.wheel(0, 100);
   expect(await canvas.getAttribute("data-render-count")).toBe(frames);
   await page.evaluate(() => window.scrollTo(0, 0));
@@ -52,7 +51,7 @@ test("desktop renders an idle fixed overview and records initial measurements", 
   const measurement = JSON.stringify({ browser: browser.version(), viewport: "1440x900", host: "Windows, local production server; no network throttling", metrics, idleFrames: frames, resources }, null, 2);
   writeFileSync(`${evidence}/initial-scene-measurements.json`, measurement);
   await testInfo.attach("initial-scene-measurements", { body: measurement, contentType: "application/json" });
-  console.log("M2_SCENE_MEASUREMENTS", JSON.stringify({ metrics, idleFrames: frames, javascriptTransferBytes: resources.filter(r => r.name.endsWith(".js")).reduce((sum, r) => sum + r.transferBytes, 0) }));
+  console.log("M3_SCENE_MEASUREMENTS", JSON.stringify({ metrics, idleFrames: frames, javascriptTransferBytes: resources.filter(r => r.name.endsWith(".js")).reduce((sum, r) => sum + r.transferBytes, 0) }));
   expect(errors).toEqual([]);
   await navStillWorks(page);
 });
@@ -118,7 +117,7 @@ test("slow scene download times out while HTML remains usable", async ({ page })
   const pending = new Promise<void>(resolve => { release = resolve; });
   await page.route(sceneChunkPattern(), async route => { await pending; await route.continue().catch(() => {}); });
   await page.goto("/");
-  await expect(page.getByRole("status")).toContainText("Loading the Central Hub blockout");
+  await expect(page.getByTestId("scene-viewport").getByRole("status")).toContainText("Loading the Central Hub blockout");
   await page.screenshot({ path: `${evidence}/desktop-loading.png` });
   await expect(page.getByTestId("scene-fallback")).toContainText("took too long", { timeout: 20000 });
   release();

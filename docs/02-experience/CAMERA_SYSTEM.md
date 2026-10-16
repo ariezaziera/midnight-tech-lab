@@ -1,34 +1,36 @@
-# Camera System — Prototype Specification
+# Camera System — M3
 
-## Presets
-- `overview`: readable three-quarter view of full Central Hub.
-- `workstation`: monitors and project hotspot framed clearly.
-- `navigation`: console framed, no objects occluding labels.
-- `cozy`: personal corner (later).
-- `top`: optional layout map (later).
-- `transition`: intermediate waypoint only, not a landing destination.
+M2's fixed overview is the accepted base. M3 camera/interaction implementation is subject to owner review; no final cinematic framing is implied.
 
-## Behavior
-- Camera travels along bounded, collision-aware curves between tested presets.
-- Save last stable preset before opening full HTML content; return action restores it where session state exists, otherwise overview.
-- Limit orbit/pan/zoom to prevent clipping and disorientation.
-- Disable controls during scripted travel; re-enable at stable destination.
-- Reduced-motion: snap or near-instant move; no mandatory intro.
+## Stable presets
 
-## Coordinates
-**Not finalized.** Define scene coordinate convention (+Y up, meters as nominal Blender units), then determine actual camera `position`, `target`, `fov`, and near/far clipping in the blockout. Store them in typed config rather than scattering magic numbers.
+Canonical typed configuration: src/lib/scene/interaction-config.ts. Nominal meters; +Y up. Each preset uses FOV 38°, near 0.1m and far 60m.
 
-## Tests
-No geometry clipping, target stays visible, all actions have exit path, motion can be skipped, overlay focus is stable.
+- overview: position [8, 7, 10], target [0, 0.25, 0] — unchanged M2 composition.
+- creator: position [-5, 3.5, 4.5], target [-2.6, 1.36, -0.8] — neutral Creator ID frame.
+- projects: position [-5, 3.5, 7], target [-2.4, 1.81, 1.7] — project placeholder display.
+- workstation: position [1, 4.5, 6.5], target [0.25, 1.95, -0.65] — desk and monitors, aimed at monitor geometry rather than the gap.
 
-## M2 measured overview — pending owner review
+Canvas height remains 440 CSS px, DPR 1–1.5, with responsive width. Preset coordinates and focus-volume projection are tested at 1024×900 and 1440×900. Mobile below 768px remains HTML only.
 
-M2 implements only a fixed perspective view in `src/lib/scene/hub-config.ts`:
+## Bounds and transitions
 
-- Position: `[8, 7, 10]` nominal meters.
-- Target: `[0, 0.25, 0]`.
-- Vertical FOV: `38°`.
-- Near / far: `0.1m / 60m`.
-- +Y up; platform centered at origin. Canvas height 440 CSS px; width follows its responsive container.
+- Position bounds: X [-6, 9], Y [3.2, 8.5], Z [4, 11]; FOV guard [35°, 45°].
+- Normal travel: two exterior legs through elevated waypoint [0, 8, 9], total configured duration 1000ms, smoothstep easing per leg. The target interpolates smoothly over the full journey.
+- No free movement, orbit controls, zoom or pan. Bounds clamp every generated pose; paths stay above/outside the blockout.
+- A new request replaces the existing plan from the actual current pose. Repeated requests cannot queue unbounded travel. Back/Reset/Escape can interrupt movement.
+- Reduced motion snaps on the next demanded frame. Changing the preference during travel also snaps to the requested destination.
+- Initial scene creation/recovery restores a stable preset directly, without an arrival cinematic.
+- Demand rendering invalidates while a plan is active and stops at rest. Large frame deltas are capped at 100ms to avoid an uncontrolled jump after a pause; real elapsed travel may exceed 1000ms on a slow/hidden tab.
 
-Desktop 1440×900 evidence frames the full platform/rock underside and all required zones without visible camera clipping. The camera has no controls, travel, preset switching, reset or saved state. Reduced motion uses the same static view. The specification above describes future M3 behavior, not completed M2 behavior. Owner composition/camera review remains open.
+## Recovery and restoration
+
+Back to overview requests overview and returns focus to the last selected HTML control. Reset also clears the saved preset to overview. Escape performs Back while focus is inside the studio region; it does not hijack keys elsewhere on the page.
+
+Only a validated stable preset ID is saved under midnight-tech-lab:stable-preset:v1 in sessionStorage, with memory fallback if storage is denied. No positions, intermediate waypoints, route state or unfinished travel are persisted. Invalid values use overview. Route-view reactivation discards pending requests and restores the stable ID. Explicit Return to studio links focus the studio heading; normal browser Back restores the prior stable view.
+
+## Validation boundaries
+
+Tests project configured target volumes into the viewport, inspect center-ray visibility, measure conservative camera clearance from mesh bounding boxes, sample moving poses, and cover preset pairs/interrupted paths. These are basic clipping/visibility checks for this fixed procedural scene, not a general collision engine. Other objects may intentionally leave the frame in a focused view. Future production geometry requires new path/visibility validation.
+
+Navigation/cozy/top/module presets, island travel and intro remain deferred. M3 implements only overview, creator, projects and workstation. Owner approval is required before M4.

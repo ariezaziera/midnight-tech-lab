@@ -5,10 +5,12 @@ import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { PerspectiveCamera } from "@react-three/drei/core/PerspectiveCamera";
 import { CentralHub } from "../hub/central-hub";
 import { hubConfig, type SceneMetrics } from "@/lib/scene/hub-config";
+import { CameraRig, type CameraRigProps } from "../camera/camera-rig";
+import { cameraPresets, type HotspotId } from "@/lib/scene/interaction-config";
 
-export type HubCanvasProps = { onReady: (metrics: SceneMetrics) => void; onFailure: () => void };
+export type HubCanvasProps = CameraRigProps & { onReady: (metrics: SceneMetrics) => void; onFailure: () => void; onSelect: (id: HotspotId) => void };
 
-function RendererLifecycle({ onReady, onFailure }: HubCanvasProps) {
+function RendererLifecycle({ onReady, onFailure }: Pick<HubCanvasProps, "onReady" | "onFailure">) {
   const { gl } = useThree();
   const frames = useRef(0);
   const reported = useRef(false);
@@ -41,23 +43,23 @@ function RendererLifecycle({ onReady, onFailure }: HubCanvasProps) {
 }
 
 export default function HubCanvas(props: HubCanvasProps) {
-  const { camera } = hubConfig;
+  const camera = cameraPresets.overview;
   return <Canvas
     frameloop="demand"
-    events={() => ({ enabled: false, priority: 1 })}
     resize={{ scroll: false }}
     dpr={hubConfig.dpr}
     gl={{ antialias: true, alpha: false, powerPreference: "low-power" }}
     fallback={<p className="p-6 text-muted">WebGL is unavailable. Use the HTML portfolio navigation.</p>}
     role="img"
-    aria-label="Static Central Hub blockout: floating rock platform, workstation, creator display, project display, console and globe placeholders."
+    aria-label="Central Hub blockout. Select the Creator ID, Project Display or Workstation, or use the equivalent HTML controls below."
   >
     <color attach="background" args={[hubConfig.background]} />
-    <PerspectiveCamera makeDefault position={camera.position} fov={camera.fov} near={camera.near} far={camera.far} onUpdate={value => value.lookAt(...camera.target)} />
+    <PerspectiveCamera makeDefault position={camera.position} fov={camera.fov} near={camera.near} far={camera.far} />
     <ambientLight intensity={1.4} />
     <directionalLight position={[4, 8, 5]} intensity={3} color="#d8d9ff" />
     <directionalLight position={[-4, 3, -4]} intensity={2} color="#a78bfa" />
-    <CentralHub />
+    <CentralHub selected={props.request.preset === "overview" ? null : props.request.preset} onSelect={props.onSelect} />
+    <CameraRig request={props.request} reducedMotion={props.reducedMotion} onSettled={props.onSettled} />
     <RendererLifecycle {...props} />
   </Canvas>;
 }

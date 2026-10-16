@@ -1,5 +1,13 @@
 # Changelog
 
+## M3 — Camera and interactions — 2026-10-17
+- Recorded M3-only authorization on the accepted M2 base; resolved the three-target route mapping without inventing a featured case study.
+- Added typed overview/creator/projects/workstation presets, bounded exterior transitions, rapid-request replacement and reduced-motion snapping; demand rendering stops at rest.
+- Added metadata-based pointer selection, semantic HTML focus controls, visible selection, normal About/Projects actions, Back/Reset/scoped Escape and stable session restoration across routes.
+- Preserved mobile/no-JavaScript HTML and WebGL recovery, including retry of a selected preset. Console/globe remain inactive; no new assets or dependencies.
+- Clean npm ci, lint, strict typecheck and production build passed. Final browser suite: 40 passed (17 M1, 8 M2, 15 M3); captured selected views and sampled camera diagnostics at 1024/1440px.
+- M3 report delivered for owner review. M4 and production publication remain unauthorized.
+
 ## M2 — Central Hub blockout — 2026-10-17
 - Recorded owner authorization for M2 only; accepted M1 remains the HTML foundation.
 - Added pinned Three.js 0.186.1, R3F 9.8.2, Drei 10.7.9 and matching Three types; verified compatibility with installed React 19.3.1.

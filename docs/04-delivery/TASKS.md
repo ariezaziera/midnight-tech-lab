@@ -13,7 +13,7 @@
 
 ### M0 findings — prioritized follow-up
 
-Audit delivered; M1 accepted and M2-only authorization received. **Do not begin M3 without explicit owner approval.** Findings are detailed in `M0_AUDIT_REPORT.md`; only decisions explicitly recorded in DECISIONS.md are approved.
+Audit delivered; M2 accepted and M3-only authorization received. **Do not begin M4 without explicit owner approval.** Findings are detailed in `M0_AUDIT_REPORT.md`; only decisions explicitly recorded in DECISIONS.md are approved.
 
 - [x] Read all 34 baseline docs and inspect all ten concept boards.
 - [x] Validate all ten referenced image paths, PNG decoding and SHA-256 prefixes: 10/10 pass each check. No broken listed image paths.
@@ -23,8 +23,8 @@ Audit delivered; M1 accepted and M2-only authorization received. **Do not begin 
 - [ ] **AUD-04 / P0 / before M5 / owner + implementer:** acquire approved production assets; extend manifest with licensing, provenance, runtime paths and asset budgets, including fallback/OG/favicon and editorial media.
 - [x] **AUD-05 / P1 / owner:** direct-link-only contact approved; incomplete informational shell until verified link exists, no form/success state.
 - [ ] **AUD-06 / P1 / release planning / owner:** confirm functional MVP boundary, defer intro/expansion, and require baseline hardening before any release.
-- [ ] **AUD-07 / P1 / before M3 / owner + implementer:** agree hotspot/action/route matrix; resolve console timing, Creator ID behavior, service-detail journey and future Lab flow.
-- [ ] **AUD-08 / P1 / before M2–M3 / implementer then owner review:** reconcile preset/state identifiers, restoration and interrupted transitions; measure camera paths in blockout and obtain camera approval.
+- [x] **AUD-07 / M3 matrix / owner + implementer:** approved creator → About, projects → Projects library, workstation → focus/overview; console/globe inactive. Service detail and Lab journeys remain deferred.
+- [x] **AUD-08 / M3 implementation / implementer:** centralize overview/creator/projects/workstation presets, bounds, interrupted transitions and stable restoration; capture geometry/camera evidence. Owner M3 framing review remains pending.
 - [ ] **AUD-09 / P1 / reference selection / owner:** review Development/Design crops from `earlier-central-hub.png` and Media from `earlier-module-layouts.png`; correct mappings after selection.
 - [x] **AUD-10 / P1 / M1 setup / implementer:** pin compatible dependencies and Node/npm, add lockfile and independent validation scripts. ESLint support limitation tracked below; see M1 report.
 - [ ] **AUD-11 / P1 / before M2 and release / owner + implementer:** specify target devices, measurable budgets, quality selection/override and failure recovery; validate accessibility throughout implementation.
@@ -44,6 +44,7 @@ Audit delivered; M1 accepted and M2-only authorization received. **Do not begin 
 - [x] Complete validation evidence and submit [M1 implementation report](M1_IMPLEMENTATION_REPORT.md): lint/typecheck/build pass; 17 browser tests pass; 12 screenshots captured.
 - [x] Owner accepted M1 as the base and explicitly authorized M2 only (2026-10-16).
 - [ ] Track lint-tooling maintenance: ESLint 9 support ended; current Next lint plugins do not support ESLint 10. Five high audit findings share the unpatched braces lint dependency chain. Production audit is clean.
+- [ ] Track upstream R3F/Three.js development deprecation: pinned R3F instantiates `THREE.Clock`; revisit a compatible dependency update when appropriate. No application Clock usage or dependency change was introduced in M3.
 
 ## M2 — Central Hub blockout
 - [x] Inspect required documents, accepted M1 source and Central Hub concept boards.
@@ -52,11 +53,21 @@ Audit delivered; M1 accepted and M2-only authorization received. **Do not begin 
 - [x] Add client-only lazy import, mobile/no-JS HTML view, loading watchdog, error/context-loss fallback and retry.
 - [x] Complete clean install, lint/typecheck/tests/build validation: all pass; 25 browser tests (17 M1 + 8 M2). Capture desktop/mobile/failure evidence under `evidence/m2/`.
 - [x] Submit [M2 implementation report](M2_IMPLEMENTATION_REPORT.md) and initial scene measurements for owner composition/camera review.
-- [ ] Owner accept M2; explicit approval required before M3.
+- [x] Owner accepted M2 as the base and explicitly authorized M3 only (2026-10-17).
 - [ ] Replace all procedural blockout assets only in a separately approved art milestone. Production GLBs, textures, real portrait and project art remain missing.
 
-## M3–M6
-- [ ] Implement camera/hotspots.
+## M3 — Camera and interactions
+- [x] Add four typed camera presets, exterior waypoint, tested bounds and reduced-motion snapping without new dependencies.
+- [x] Add three typed targets and metadata-based pointer selection; keep console/globe inactive.
+- [x] Add semantic HTML focus/route controls, selection outline/text/live status, Back, Reset and scoped Escape.
+- [x] Save only stable preset IDs, restore across routes/browser Back, reject invalid stored values and preserve failure recovery.
+- [x] Preserve M1/M2 regression coverage and add 15 M3 checks: final 40 tests pass; lint/typecheck/build and clean npm ci pass.
+- [x] Capture overview, selected targets, mobile, failure and camera measurement evidence under `evidence/m3/`.
+- [x] Submit [M3 implementation report](M3_IMPLEMENTATION_REPORT.md).
+- [ ] Owner review M3 camera/framing/interactions; explicit approval required before M4.
+- [ ] Physical mobile, Safari/Firefox, screen-reader and final visual/production-asset reviews remain outstanding.
+
+## M4–M6
 - [ ] Build editorial portfolio.
 - [ ] Integrate approved cinematic assets.
 - [ ] QA and deploy.

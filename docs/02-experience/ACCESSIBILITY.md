@@ -8,3 +8,11 @@
 - Honor `prefers-reduced-motion`; provide skip intro and pause nonessential animation.
 - Maintain readable contrast despite glass effects and glow; don't use color alone for states.
 - Test keyboard-only, touch, zoom, screen-reader basic flows.
+
+## M3 implemented behavior
+
+Three desktop focus buttons use semantic buttons, native Enter/Space, `aria-pressed` and textual selection indicators. Normal About/Projects links remain available without WebGL/JavaScript and on touch mobile. The scene selection panel is non-modal, with a heading and polite announcement only when the selection changes; no focus trap or forced travel is introduced.
+
+Pointer selection focuses the matching HTML control without scrolling. Keyboard selection retains its initiator. Back/Escape/Reset restore the last selected control; explicit Return to studio links focus the studio heading. Escape is scoped to focus inside the studio region. Reduced motion snaps directly, including preference changes during travel. Live scene transitions never block direct page navigation.
+
+Chromium keyboard/touch-emulation tests are implementation evidence, not a screen-reader or WCAG conformance claim. Assistive-technology and physical-device review remain outstanding.

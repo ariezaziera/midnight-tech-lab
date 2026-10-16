@@ -16,6 +16,14 @@
 - Equivalent HTML controls available for hotspot actions.
 - WebGL failure produces usable 2D navigation.
 
+### M3 owner-approved interpretation
+
+- Four tested presets: overview, creator, projects and workstation; all travel is bounded and cancellable, with reduced-motion snapping.
+- Creator ID focus provides a normal `/about` link. Project Display focus provides `/projects`; a featured case-study action is not approved or implemented.
+- Three explicit typed targets only; console/globe and future modules stay inert.
+- Back to overview, Reset, scoped Escape and route restoration work through HTML controls. Direct content access never waits for travel.
+- Mobile remains the existing content-first 2D experience. Production asset/visual approval and M4 content work are separate gates.
+
 ## Projects
 - Filters function with actual project tags; case-study links resolve.
 - Media includes alt text; missing content is visibly draft/placeholder, not invented.

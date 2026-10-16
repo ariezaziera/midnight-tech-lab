@@ -26,6 +26,10 @@ main:focus { outline: none; }
 .action-secondary:hover { background: #24213b; }
 .skip-link { position: absolute; z-index: 10; left: 1rem; top: -10rem; background: #fbbf24; color: #080b1c; padding: 1rem; }
 .skip-link:focus { top: 1rem; }
+.studio-control { display: inline-flex; align-items: center; min-height: 44px; padding: .6rem .8rem; border: 1px solid #56506f; color: #f8fafc; text-align: left; }
+.studio-control:hover { background: #24213b; }
+.studio-control[aria-pressed="true"] { border-color: #fbbf24; background: #30283c; }
+.studio-control:disabled { color: #c9c9dc; opacity: .65; cursor: default; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }

@@ -3,6 +3,9 @@
 import { Component, useCallback, useEffect, useRef, useState, useSyncExternalStore, type ComponentType, type ReactNode } from "react";
 import type { HubCanvasProps } from "@/components/three/world/hub-canvas";
 import type { SceneMetrics } from "@/lib/scene/hub-config";
+import { StudioControls } from "./studio-controls";
+import { isHotspotId, type CameraRequest, type HotspotId } from "@/lib/scene/interaction-config";
+import { readStablePreset, saveStablePreset, serverPreset, subscribeStablePreset } from "@/lib/scene/studio-session";
 
 const desktopQuery = "(min-width: 768px)";
 function subscribe(listener: () => void) {
@@ -12,6 +15,14 @@ function subscribe(listener: () => void) {
 }
 const getDesktop = () => window.matchMedia(desktopQuery).matches;
 const getServerDesktop = () => false;
+const motionQuery = "(prefers-reduced-motion: reduce)";
+function subscribeMotion(listener: () => void) {
+  const media = window.matchMedia(motionQuery);
+  media.addEventListener("change", listener);
+  return () => media.removeEventListener("change", listener);
+}
+const getReducedMotion = () => window.matchMedia(motionQuery).matches;
+const getServerMotion = () => true;
 
 class SceneBoundary extends Component<{ children: ReactNode; fallback: ReactNode }, { failed: boolean }> {
   state = { failed: false };
@@ -29,7 +40,7 @@ function Failure({ message, retry }: { message: string; retry: () => void }) {
 
 type LoadState = { phase: "loading" } | { phase: "loaded"; Canvas: ComponentType<HubCanvasProps> } | { phase: "unsupported" | "error" | "timeout" | "lost" };
 
-function DesktopPreview({ retry }: { retry: () => void }) {
+function DesktopPreview({ retry, ...interaction }: { retry: () => void } & Omit<HubCanvasProps, "onReady" | "onFailure">) {
   const [load, setLoad] = useState<LoadState>({ phase: "loading" });
   const [metrics, setMetrics] = useState<(SceneMetrics & { readyMs: number }) | null>(null);
   const started = useRef<number | null>(null);
@@ -75,7 +86,7 @@ function DesktopPreview({ retry }: { retry: () => void }) {
   const error = <Failure message="The 3D renderer could not initialize. You can retry or continue with the HTML portfolio." retry={retry} />;
   return <SceneBoundary fallback={error}>
     <div className="relative h-[440px] w-full" data-testid="scene-viewport" data-scene-ready={metrics ? "true" : "false"} data-scene-metrics={metrics ? JSON.stringify(metrics) : undefined}>
-      {load.phase === "loaded" && <load.Canvas onReady={ready} onFailure={lost} />}
+      {load.phase === "loaded" && <load.Canvas {...interaction} onReady={ready} onFailure={lost} />}
       {!metrics && <div className="absolute inset-0 flex flex-col items-center justify-center bg-space p-6 text-center" role="status"><p className="text-lg">Loading the Central Hub blockout…</p><p className="mt-3 text-sm text-muted">The HTML portfolio is ready to use.</p></div>}
     </div>
   </SceneBoundary>;
@@ -83,11 +94,55 @@ function DesktopPreview({ retry }: { retry: () => void }) {
 
 export function StudioPreview() {
   const desktop = useSyncExternalStore(subscribe, getDesktop, getServerDesktop);
+  const reducedMotion = useSyncExternalStore(subscribeMotion, getReducedMotion, getServerMotion);
+  const restored = useSyncExternalStore(subscribeStablePreset, readStablePreset, serverPreset);
+  const [requested, setRequested] = useState<CameraRequest | null>(null);
   const [attempt, setAttempt] = useState(0);
+  const controls = useRef<Partial<Record<HotspotId, HTMLButtonElement | null>>>({});
+  const region = useRef<HTMLElement>(null);
+  const heading = useRef<HTMLHeadingElement>(null);
+  const lastSelected = useRef<HotspotId | null>(null);
+  const request = requested ?? { preset: restored, sequence: 0 };
+  const preset = request.preset;
   const retry = useCallback(() => setAttempt(value => value + 1), []);
-  return <section className="min-w-0 overflow-hidden border border-white/15 bg-surface" aria-labelledby="studio-preview-heading">
-    <div className="border-b border-white/15 px-6 py-4"><h2 id="studio-preview-heading" className="text-lg">Central Hub / Spatial prototype</h2><p className="mt-1 text-xs text-muted">M2 blockout · Fixed overview · All objects are placeholders</p></div>
-    {desktop ? <DesktopPreview key={attempt} retry={retry} /> : <div data-testid="scene-2d"><StaticDescription message="This lightweight HTML view keeps the layout readable on smaller screens and when JavaScript is disabled. The 3D overview is available on wider screens." /></div>}
-    <div className="border-t border-white/15 px-6 py-4"><p className="mb-2 text-sm text-muted">Placeholder zones · No scene interactions</p><ul className="flex flex-wrap gap-x-5 gap-y-2 text-xs"><li className="text-violet">Creator ID / Left rear</li><li className="text-violet">Project display / Left front</li><li className="text-muted">Workstation / Center</li><li className="text-cyan-200">Console &amp; globe / Right</li></ul></div>
+  const select = useCallback((id: HotspotId) => {
+    lastSelected.current = id;
+    setRequested(current => ({ preset: id, sequence: (current?.sequence ?? 0) + 1 }));
+    controls.current[id]?.focus({ preventScroll: true });
+  }, []);
+  const back = useCallback(() => {
+    const previous = isHotspotId(preset) ? preset : lastSelected.current;
+    setRequested(current => ({ preset: "overview", sequence: (current?.sequence ?? 0) + 1 }));
+    if (previous) controls.current[previous]?.focus({ preventScroll: true });
+    else heading.current?.focus({ preventScroll: true });
+  }, [preset]);
+  const reset = useCallback(() => { saveStablePreset("overview"); back(); }, [back]);
+
+  useEffect(() => {
+    // Next's retained route views may preserve state while pausing effects.
+    // On reactivation, discard any unfinished request in favor of the stable session preset.
+    let active = true;
+    queueMicrotask(() => {
+      if (!active) return;
+      const stable = readStablePreset();
+      setRequested(current => current && current.preset !== stable ? { preset: stable, sequence: current.sequence + 1 } : current);
+    });
+    if (window.location.hash === "#studio-preview-heading") heading.current?.focus({ preventScroll: true });
+    return () => { active = false; };
+  }, []);
+  useEffect(() => {
+    const escape = (event: KeyboardEvent) => {
+      if (event.key !== "Escape" || preset === "overview" || !region.current?.contains(document.activeElement)) return;
+      event.preventDefault();
+      back();
+    };
+    window.addEventListener("keydown", escape);
+    return () => window.removeEventListener("keydown", escape);
+  }, [back, preset]);
+
+  return <section ref={region} className="min-w-0 overflow-hidden border border-white/15 bg-surface" aria-labelledby="studio-preview-heading" data-studio-preset={preset}>
+    <div className="border-b border-white/15 px-6 py-4"><h2 ref={heading} tabIndex={-1} id="studio-preview-heading" className="text-lg">Central Hub / Spatial prototype</h2><p className="mt-1 text-xs text-muted">M3 camera &amp; interactions · All objects are placeholders</p></div>
+    {desktop ? <DesktopPreview key={attempt} retry={retry} request={request} reducedMotion={reducedMotion} onSelect={select} onSettled={saveStablePreset} /> : <div data-testid="scene-2d"><StaticDescription message="This lightweight HTML view keeps the layout readable on smaller screens and when JavaScript is disabled. The 3D overview is available on wider screens." /></div>}
+    <StudioControls preset={preset} desktop={desktop} select={select} back={back} reset={reset} buttons={controls} />
   </section>;
 }

@@ -38,3 +38,13 @@ The loader owns only attempt/loading/ready/failure state, not navigation or inte
 Scene data lives in `src/lib/scene/hub-config.ts`. Procedural components under `components/three/hub/` build the platform, workstation and display zones. `PerspectiveCamera` is imported directly from Drei's camera module; no Drei controls, physics, asset loaders, textures, particles or postprocessing are used. Installed transitive packages are not evidence that their features are implemented.
 
 Rendering uses `frameloop="demand"`, DPR 1–1.5, no shadow maps, disabled raycast events and scroll-independent size measurement. Resize can redraw; normal operation has no continuous animation. `RendererLifecycle` observes frames and renderer counters for prototype diagnostics and context-loss handling; it does not animate objects or the camera.
+
+## M3 camera and interaction layer (supersedes static M2 behavior)
+
+`interaction-config.ts` centralizes four camera presets/bounds, three typed hotspot records, focus volumes and transition math. `studio-session.ts` persists only validated stable IDs with a memory fallback. StudioPreview derives a selection from the latest request; `studio-controls.tsx` provides normal HTML controls and route links outside the renderer/failure boundary.
+
+`three/camera/camera-rig.tsx` applies one cancellable two-leg camera plan through the exterior waypoint, invalidating demand frames until stable. Motion preferences can snap the plan. A completed plan saves the stable ID; route reactivation discards unfinished requests, and recovery snaps to a fresh renderer. Camera selection does not replace or duplicate URL navigation.
+
+Raycast events are enabled only for metadata-based scene selection; the root hit handler blocks deeper intersections and ignores inert metadata. No OrbitControls, camera-controls feature, GSAP, physics or additional animation package is used. A non-raycast amber outline marks selection. Native HTML buttons/links handle keyboard and touch alternatives. The non-modal selection section remains available during rendering failures.
+
+Canvas data attributes record prototype camera pose, stable projection/clearance diagnostics and render counts for reproducible browser verification. They expose no alternate navigation API or test-only feature switch. Geometry diagnostic sampling is limited to demanded frames; idle rendering still stops.

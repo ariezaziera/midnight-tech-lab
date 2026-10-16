@@ -21,6 +21,8 @@
 - Preset controller, bounded controls, project and Creator ID hotspots, accessible HTML equivalents, overlay state.
 - Gate: keyboard/pointer/touch journeys and back/reset pass.
 
+M3 owner authorization narrows this slice to overview/creator/projects/workstation presets and three targets only. Creator ID offers `/about`; Project Display offers `/projects`; Workstation focuses desk/monitors. The selection panel is non-modal. No featured case study, module travel or intro is included. Implementation and 40 passing checks are documented in `M3_IMPLEMENTATION_REPORT.md`; owner review remains pending. M4 is not authorized.
+
 ## M4 — Editorial portfolio
 - Projects library and case studies, About, Services, Contact, typed content and verified links.
 - Gate: recruiter/client journeys work without 3D.

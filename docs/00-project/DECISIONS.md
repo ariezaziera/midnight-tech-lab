@@ -62,3 +62,13 @@ M0 audit delivered. The owner gate was subsequently resolved by the conditional 
 - Mobile may use a practical simplified scene or retain HTML; M2 implementation uses a descriptive 2D view below 768 CSS px as a reversible prototype choice, not a final mobile design decision.
 - Require WebGL unsupported/initialization/context-loss handling, recoverable loading failure, reduced-motion behavior, tests and review screenshots.
 - No publication. Submit M2 report and evidence, then stop for owner review before M3.
+
+## Owner gate — M3 execution authorization (2026-10-17)
+
+- Owner accepted M2 and authorized M3 only: controlled camera movement and three targets, Creator ID, Project Display and Workstation.
+- Approved stable presets: `overview`, `creator`, `projects`, `workstation`, centrally typed with position/target/FOV/clipping/bounds. Respect reduced motion, support Back to overview, Reset and Escape, handle rapid selections, and restore stable state across HTML routes.
+- Creator ID focuses its neutral display with a normal `/about` action. Project Display focuses its placeholder with a `/projects` action; no featured case study is implied. Workstation focuses desk/monitors and returns to overview.
+- Typed IDs/metadata govern selection; pointer, keyboard and touch-friendly HTML equivalents are required, with visible focus/selection. Content access must not require camera travel or WebGL.
+- Navigation Console, Holographic Globe, Cozy Corner and satellite islands remain non-interactive. No free-flight/orbit exploration, intro, production art, fictional content, backend or new modules.
+- Keep the existing mobile content-first HTML presentation. Preserve demand rendering at rest and track existing dependency audit issues.
+- Deliver tests, camera/interaction evidence and M3 report. Stop for owner review; M4 requires explicit authorization. No publication is authorized.

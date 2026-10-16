@@ -19,3 +19,11 @@ One recorded run: 901ms from scene-loader mount through first completed draw; 49
 ResourceTiming recorded 387,471 transferred bytes across all JavaScript resources in the observation (framework/shell plus lazy scene, including reported transfer overhead). The large lazy chunk transferred 244,783 bytes (244,483 encoded-body bytes); this is not a production network budget. Local timing, startup invalidations and browser caching affect these numbers. No model/texture/font/network service assets are requested. Mobile's scene-chunk interception test recorded zero scene requests at 390px.
 
 Tests impose draw-call/triangle regression guards (<120 calls, <12,000 triangles), not owner-approved performance budgets. Production device targets, quality thresholds, actual mobile GPU tests and final performance budgets remain unresolved. No 60/30 FPS or broad GPU-compatibility claim is made.
+
+## M3 movement and rest observations — 2026-10-17
+
+Same local Windows/Chromium environment; new initial overview sample: 867ms loader-to-draw, 49 calls/866 triangles, 390,249 transferred JavaScript bytes across shell/framework/scene. No dependency or asset changes. Raw values are in `evidence/m3/initial-scene-measurements.json` under delivery docs.
+
+Demand rendering invalidates only while a camera plan is active. At 1024×900, three recorded transitions used 45 render frames, then remained at frame 47 during idle observation. At 1440×900 they used 44 frames, then held at 46. Browser-sampled transition durations were 1092/1006/1712ms and 1142/1014/1143ms respectively (creator/projects/workstation). The configured duration is 1000ms; local test load and the 100ms delta cap affect wall time. Reduced motion snaps with at most four extra draws per tested selection.
+
+The camera evidence JSON files preserve moving poses, projection and conservative geometry-clearance diagnostics. No continuous idle loop, production FPS guarantee, physical-device compatibility or general collision-engine claim is implied. Existing dependency audit issues and real target-device budgets remain tracked.
