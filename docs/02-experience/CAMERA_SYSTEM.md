@@ -20,3 +20,15 @@
 
 ## Tests
 No geometry clipping, target stays visible, all actions have exit path, motion can be skipped, overlay focus is stable.
+
+## M2 measured overview — pending owner review
+
+M2 implements only a fixed perspective view in `src/lib/scene/hub-config.ts`:
+
+- Position: `[8, 7, 10]` nominal meters.
+- Target: `[0, 0.25, 0]`.
+- Vertical FOV: `38°`.
+- Near / far: `0.1m / 60m`.
+- +Y up; platform centered at origin. Canvas height 440 CSS px; width follows its responsive container.
+
+Desktop 1440×900 evidence frames the full platform/rock underside and all required zones without visible camera clipping. The camera has no controls, travel, preset switching, reset or saved state. Reduced motion uses the same static view. The specification above describes future M3 behavior, not completed M2 behavior. Owner composition/camera review remains open.

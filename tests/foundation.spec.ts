@@ -81,7 +81,8 @@ test("capture desktop and mobile route evidence", async ({ page }) => {
     await page.setViewportSize({ width, height });
     for (const [path] of routes) {
       await page.goto(path);
-      await page.screenshot({ path: `docs/04-delivery/evidence/m1/${label}-${path === "/" ? "home" : path.slice(1).replaceAll("/", "-")}.png`, fullPage: true });
+      if (path === "/" && width >= 768) await expect(page.getByTestId("scene-viewport")).toHaveAttribute("data-scene-ready", "true", { timeout: 15000 });
+      await page.screenshot({ path: `docs/04-delivery/evidence/m2/${label}-${path === "/" ? "home" : path.slice(1).replaceAll("/", "-")}.png`, fullPage: path !== "/" || width < 768 });
     }
   }
 });

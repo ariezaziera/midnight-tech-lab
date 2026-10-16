@@ -28,3 +28,13 @@ Show readable 2D experience when scene fails; never block the whole site on 3D a
 
 ## M1 implementation boundary
 All page shells are Server Components. Only the global navigation is a small Client Component for URL-derived `aria-current`; its links are prerendered and remain usable without JavaScript. Mobile links wrap visibly without a toggle. `/projects/placeholder` is a local, explicitly labeled layout fixture; other project slugs return 404. All pages carry noindex/nofollow metadata as a preview precaution, not an access control. The app must not be published. No 3D, content store, backend or scene state has been implemented.
+
+## M2 implementation boundary (supersedes M1's no-3D status)
+
+Home remains a Server Component and embeds `StudioPreview`, a small client boundary with a server-rendered descriptive HTML view. At 768 CSS px and wider, it probes WebGL 2 and calls `import()` from an effect to load `three/world/hub-canvas.tsx`. The import never runs during SSR. Smaller screens do not load the scene module. Editorial routes remain Server Components. The 768px choice is provisional and does not approve the final mobile presentation.
+
+The loader owns only attempt/loading/ready/failure state, not navigation or interaction state. It handles unsupported WebGL, rejected chunk requests, a 15-second first-draw watchdog, renderer exceptions and real `webglcontextlost` events. Failure keeps the HTML description/navigation and exposes a retry that remounts a fresh attempt. A React boundary is one layer, not the whole failure strategy. A desktop Canvas also has a last-resort native fallback; the first-draw watchdog covers a renderer that never becomes ready.
+
+Scene data lives in `src/lib/scene/hub-config.ts`. Procedural components under `components/three/hub/` build the platform, workstation and display zones. `PerspectiveCamera` is imported directly from Drei's camera module; no Drei controls, physics, asset loaders, textures, particles or postprocessing are used. Installed transitive packages are not evidence that their features are implemented.
+
+Rendering uses `frameloop="demand"`, DPR 1–1.5, no shadow maps, disabled raycast events and scroll-independent size measurement. Resize can redraw; normal operation has no continuous animation. `RendererLifecycle` observes frames and renderer counters for prototype diagnostics and context-loss handling; it does not animate objects or the camera.

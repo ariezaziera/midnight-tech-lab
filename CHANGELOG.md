@@ -1,5 +1,14 @@
 # Changelog
 
+## M2 — Central Hub blockout — 2026-10-17
+- Recorded owner authorization for M2 only; accepted M1 remains the HTML foundation.
+- Added pinned Three.js 0.186.1, R3F 9.8.2, Drei 10.7.9 and matching Three types; verified compatibility with installed React 19.3.1.
+- Added reusable procedural platform/rock underside, desk/chair/monitors, display/Creator ID, console/globe and basic lighting with typed configuration and one fixed overview camera.
+- Added browser-only lazy loading, descriptive mobile/no-JS view, WebGL capability probe, loading watchdog, renderer failure/context-loss handling and retry.
+- Preserved M1 checks and added eight M2 browser checks; final full suite passed 25 tests. Captured rendered, mobile, loading and failure evidence plus initial rendering/resource measurements.
+- No camera travel, hotspots, intro, satellite islands, final art or publication. M2 composition/camera review is pending; M3 requires explicit owner approval.
+- Restored the local development preview and verified HTTP 200/ready scene. Retained the framework-generated AGENTS documentation guide block after verifying its origin.
+
 ## [0.2.0] — M1 foundation — 2026-10-16
 - Recorded conditional M1 approval and direct-link-only contact policy; unresolved product decisions remain open.
 - Added Next.js App Router, strict TypeScript and Tailwind with six HTML route shells, reusable navigation/UI, labeled placeholders and 404 recovery.

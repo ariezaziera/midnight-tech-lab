@@ -23,3 +23,7 @@ No production assets are bundled. Every row is planned, not complete.
 - Keep GLB files optimized and use compressed textures where supported.
 - Avoid generating a fake likeness or substituting mockup portrait as actual owner image.
 - Blockout may use simple geometry labeled as placeholder.
+
+## M2 status clarification
+
+CH-001–CH-008 now have original procedural placeholder geometry in `src/components/three/hub/`; ENV-001 uses only a background color. This does **not** complete any production GLB/texture/image row above. CH-009/CH-010 detailed props/mascot remain unimplemented. The actual portrait, project imagery, approved screen crops and licensed production assets are still missing. All scene objects are labeled collectively as placeholders with an HTML zone legend; no board artwork or depicted identity was reused.

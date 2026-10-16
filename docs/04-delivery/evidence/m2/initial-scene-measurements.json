@@ -1,0 +1,131 @@
+{
+  "browser": "156.0.8078.4",
+  "viewport": "1440x900",
+  "host": "Windows, local production server; no network throttling",
+  "metrics": {
+    "calls": 49,
+    "triangles": 866,
+    "geometries": 49,
+    "textures": 1,
+    "frames": 1,
+    "renderer": "WebKit WebGL",
+    "readyMs": 901
+  },
+  "idleFrames": "2",
+  "resources": [
+    {
+      "name": "/_next/static/chunks/1p1lk54hi-xp4.css",
+      "durationMs": 18,
+      "transferBytes": 3905,
+      "encodedBodyBytes": 3605
+    },
+    {
+      "name": "/_next/static/chunks/1x6obpmlu1_c2.js",
+      "durationMs": 18,
+      "transferBytes": 2275,
+      "encodedBodyBytes": 1975
+    },
+    {
+      "name": "/_next/static/chunks/2r4s4h5xul1n-.js",
+      "durationMs": 67,
+      "transferBytes": 7924,
+      "encodedBodyBytes": 7624
+    },
+    {
+      "name": "/_next/static/chunks/2khxl0v1q4i6n.js",
+      "durationMs": 83,
+      "transferBytes": 72269,
+      "encodedBodyBytes": 71969
+    },
+    {
+      "name": "/_next/static/chunks/2e268anpfvdoc.js",
+      "durationMs": 79,
+      "transferBytes": 46667,
+      "encodedBodyBytes": 46367
+    },
+    {
+      "name": "/_next/static/chunks/turbopack-3-ry682tkyiqk.js",
+      "durationMs": 72,
+      "transferBytes": 4240,
+      "encodedBodyBytes": 3940
+    },
+    {
+      "name": "/_next/static/chunks/2c0dwyiklakik.js",
+      "durationMs": 77,
+      "transferBytes": 6870,
+      "encodedBodyBytes": 6570
+    },
+    {
+      "name": "/_next/static/chunks/3v2t8tkbzw2na.js",
+      "durationMs": 142,
+      "transferBytes": 2443,
+      "encodedBodyBytes": 2143
+    },
+    {
+      "name": "/_next/static/chunks/3f2fjbm-0vncx.js",
+      "durationMs": 101,
+      "transferBytes": 244783,
+      "encodedBodyBytes": 244483
+    },
+    {
+      "name": "/",
+      "durationMs": 26,
+      "transferBytes": 463,
+      "encodedBodyBytes": 163
+    },
+    {
+      "name": "/projects",
+      "durationMs": 27,
+      "transferBytes": 483,
+      "encodedBodyBytes": 183
+    },
+    {
+      "name": "/services",
+      "durationMs": 27,
+      "transferBytes": 483,
+      "encodedBodyBytes": 183
+    },
+    {
+      "name": "/about",
+      "durationMs": 27,
+      "transferBytes": 480,
+      "encodedBodyBytes": 180
+    },
+    {
+      "name": "/contact",
+      "durationMs": 21,
+      "transferBytes": 482,
+      "encodedBodyBytes": 182
+    },
+    {
+      "name": "/",
+      "durationMs": 19,
+      "transferBytes": 2363,
+      "encodedBodyBytes": 2063
+    },
+    {
+      "name": "/projects",
+      "durationMs": 17,
+      "transferBytes": 2093,
+      "encodedBodyBytes": 1793
+    },
+    {
+      "name": "/services",
+      "durationMs": 15,
+      "transferBytes": 2071,
+      "encodedBodyBytes": 1771
+    },
+    {
+      "name": "/about",
+      "durationMs": 46,
+      "transferBytes": 2167,
+      "encodedBodyBytes": 1867
+    },
+    {
+      "name": "/contact",
+      "durationMs": 10,
+      "transferBytes": 2079,
+      "encodedBodyBytes": 1779
+    }
+  ]
+}

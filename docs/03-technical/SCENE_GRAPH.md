@@ -21,3 +21,24 @@ Nominal meters, +Y up. Suggested GLB node prefixes `CH_`, `DL_`, `DS_`, `ML_`, `
 
 ## Prototype scale (unvalidated)
 Central platform approx. 8m across, top level approx. 2.5m above rock underside reference. Treat these as blockout estimates, not production engineering dimensions.
+
+## Implemented M2 hierarchy — procedural placeholders
+
+```text
+Canvas (desktop only; demand rendering)
+├── Dark color background
+├── Fixed PerspectiveCamera
+├── Ambient + two directional lights
+├── CentralHub
+│   ├── CH_001_Platform (12-sided top, violet rim, inverted low-poly cone, seven rock facets)
+│   ├── CH_002_Workstation (desk, supports, two monitors, keyboard and mouse blocks)
+│   │   ├── CH_003_Chair (seat, back, stem and base)
+│   │   └── CH_008_Lamp (basic stem/shade and restrained amber point light)
+│   ├── CH_005_CreatorID (neutral framed display, no face)
+│   ├── CH_004_ProjectDisplay (separate pedestal/monitor, no project art)
+│   ├── CH_006_NavigationConsole (simple cyan console)
+│   └── CH_007_Globe (wireframe icosahedron on base)
+└── RendererLifecycle (readiness counters/context-loss listener; no animation)
+```
+
+Platform radius 4m; upper slab centered at Y=0, depth 0.32m, walkable top Y=0.16m. Desk size 3.4×0.16×1.45m. Props use local coordinates above the upper surface. No stairs, cozy area, satellites, mascot, hotspots or camera controls were implemented. Names identify geometry only, with no click behavior. Geometry is original procedural blockout, not supplied production assets. Configuration values are prototype measurements awaiting owner review.

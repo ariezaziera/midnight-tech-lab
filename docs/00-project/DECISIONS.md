@@ -51,3 +51,14 @@ M0 audit delivered. The owner gate was subsequently resolved by the conditional 
 - Do not publish or invent portfolio content. Unresolved final visuals, hotspot behavior and release decisions stay open.
 - M1 must include lint, typecheck, tests, production build, direct/invalid-route and mobile checks, screenshots where possible, committed lockfile and implementation report.
 - Stop for M1 review. M2 requires explicit owner approval.
+
+## Owner gate — M2 execution authorization (2026-10-16)
+
+- Owner accepted M1 as the base and authorized M2 only: a procedural Central Hub floating-platform/workstation blockout with distinguishable display, Creator ID, console and globe zones.
+- Pinned compatible Three.js, React Three Fiber and Drei dependencies are authorized; retain a small browser-only scene boundary and the existing HTML portfolio.
+- Approximate 8m scale is a prototype estimate. Use one stable overview camera; record position, target, FOV and clipping. Composition and camera remain subject to review.
+- No portrait/production artwork, satellite islands, mascot, detailed props, expensive environment effects or production models.
+- No hotspots, menu selection, orbit exploration, camera transitions/travel, back/reset state machine or intro. M3 remains unauthorized.
+- Mobile may use a practical simplified scene or retain HTML; M2 implementation uses a descriptive 2D view below 768 CSS px as a reversible prototype choice, not a final mobile design decision.
+- Require WebGL unsupported/initialization/context-loss handling, recoverable loading failure, reduced-motion behavior, tests and review screenshots.
+- No publication. Submit M2 report and evidence, then stop for owner review before M3.

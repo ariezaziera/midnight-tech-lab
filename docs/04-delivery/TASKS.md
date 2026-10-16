@@ -13,7 +13,7 @@
 
 ### M0 findings — prioritized follow-up
 
-Audit delivered; M1-only conditional approval received. **Do not begin M2 without explicit owner approval.** Findings are detailed in `M0_AUDIT_REPORT.md`; only decisions explicitly recorded in DECISIONS.md are approved.
+Audit delivered; M1 accepted and M2-only authorization received. **Do not begin M3 without explicit owner approval.** Findings are detailed in `M0_AUDIT_REPORT.md`; only decisions explicitly recorded in DECISIONS.md are approved.
 
 - [x] Read all 34 baseline docs and inspect all ten concept boards.
 - [x] Validate all ten referenced image paths, PNG decoding and SHA-256 prefixes: 10/10 pass each check. No broken listed image paths.
@@ -42,11 +42,20 @@ Audit delivered; M1-only conditional approval received. **Do not begin M2 withou
 - [x] Add HTML navigation, six responsive route shells and explicit local placeholders.
 - [x] Establish lint/typecheck/build and browser tests.
 - [x] Complete validation evidence and submit [M1 implementation report](M1_IMPLEMENTATION_REPORT.md): lint/typecheck/build pass; 17 browser tests pass; 12 screenshots captured.
-- [ ] Owner review M1; explicit approval required before M2.
+- [x] Owner accepted M1 as the base and explicitly authorized M2 only (2026-10-16).
 - [ ] Track lint-tooling maintenance: ESLint 9 support ended; current Next lint plugins do not support ESLint 10. Five high audit findings share the unpatched braces lint dependency chain. Production audit is clean.
 
-## M2–M6
-- [ ] Implement scene blockout.
+## M2 — Central Hub blockout
+- [x] Inspect required documents, accepted M1 source and Central Hub concept boards.
+- [x] Implement procedural platform, rock underside, workstation/chair/monitors, neutral Creator ID, project display, console, globe and basic lights.
+- [x] Add typed dimensions/materials and fixed overview camera; no travel or hotspots.
+- [x] Add client-only lazy import, mobile/no-JS HTML view, loading watchdog, error/context-loss fallback and retry.
+- [x] Complete clean install, lint/typecheck/tests/build validation: all pass; 25 browser tests (17 M1 + 8 M2). Capture desktop/mobile/failure evidence under `evidence/m2/`.
+- [x] Submit [M2 implementation report](M2_IMPLEMENTATION_REPORT.md) and initial scene measurements for owner composition/camera review.
+- [ ] Owner accept M2; explicit approval required before M3.
+- [ ] Replace all procedural blockout assets only in a separately approved art milestone. Production GLBs, textures, real portrait and project art remain missing.
+
+## M3–M6
 - [ ] Implement camera/hotspots.
 - [ ] Build editorial portfolio.
 - [ ] Integrate approved cinematic assets.
