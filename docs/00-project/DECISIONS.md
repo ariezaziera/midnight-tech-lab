@@ -123,3 +123,7 @@ M0 audit delivered. The owner gate was subsequently resolved by the conditional 
 - Local scene navigation, validated stable restoration in a separate record, cancellable loading, native Enter/Back/Reset/scoped Escape, keyboard focus and ordinary Projects link. Preserve existing hub preset key, cameras/targets, geometry/lights, shell/440px panel, DPR, HTML/mobile/no-JS, reduced motion, recovery and editorial safeguards.
 - Capture fresh baseline before application edits, at least five matched startup runs, entry/re-entry medians/ranges, twenty resource cycles, all 55 retained tests plus focused checks and full required validation/evidence/report.
 - All other M6 decisions/batches remain pending. Console/globe stay inert; no Design/Media/Services/Personal module, production content, deployment or publication. Commit/push M6-A1 then stop for owner review; no M6-A2/B1 automatically.
+
+## Owner gate — M6-B3 execution authorization
+
+- Owner separately and explicitly authorized Savvyra HTML library integration using the complete Savvyra Content Packet v1.0. Exact text is approved for this repository and HTML presentation only; this does not authorize deployment, screenshots/media, external Savvyra links, 3D changes or another milestone. Preserve existing publication validation/noindex and the separate template. Stop after validation, scoped commit/push and remote-SHA verification. See `docs/04-delivery/SAVVYRA_CONTENT_PACKET_V1.md` for the approved text, without historical gate metadata.

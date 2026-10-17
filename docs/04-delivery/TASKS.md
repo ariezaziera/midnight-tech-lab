@@ -151,3 +151,11 @@ Audit delivered; M0–M5-C accepted. **M6-A1 delivered for review only; no later
 - [x] Prepare [one-project intake plan](M6B1_CONTENT_INTAKE_PLAN.md), permission checklist, proposed HTML-only B1 boundary and separately gated A2 dependencies. No code, records, assets, tests, dependencies or runtime changes.
 - [ ] Owner supplies/approves one authentic Development packet, category and media or explicit text-first choice; separately authorizes narrowed B1 implementation. M6-A1 remains delivered for review, not implicitly accepted.
 - [ ] M6-A2, wider B1 identity/services/art work, other batches and deployment remain unauthorized. Validate and commit/push this planning documentation only.
+
+## M6-B3 — Savvyra HTML library integration
+
+- [x] Separate explicit implementation authorization and full owner-approved v1.0 text received. Clean `main` and local/remote baseline `81b89da3384eb0783d7117e3514c2f70828376ff` verified before edits.
+- [x] Add one published text-only Savvyra record and Development category; retain the separate template, existing schema/validation and noindex. Preserve AI-assisted workflow wording and owner responsibility; no media, external links or 3D changes.
+- [x] Extend focused editorial coverage and retain empty/draft exclusion guarantees with isolated fixtures.
+- [x] ci/lint/typecheck/build passed; 69 tests passed in 4.4m; production audit found zero vulnerabilities. Exact packet text, protected files and documentation paths reviewed. See [M6-B3 report](M6B3_IMPLEMENTATION_REPORT.md).
+- [ ] Owner review after scoped commit/push and remote-SHA verification; no M6-A2, M6-B4 or deployment.

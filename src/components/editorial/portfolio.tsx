@@ -28,7 +28,7 @@ export function CaseStudyPage({ project, data }: { project: Project; data: Edito
     ["Process & decisions", study.process?.join("\n\n")], ["Solution & deliverables", study.solution],
   ];
   const related = data.projects.filter(p => project.relatedSlugs.includes(p.slug) && isPublished(p));
-  return <><div className="mb-9"><ActionLink href="/projects" secondary>Back to projects</ActionLink></div><PageIntro eyebrow={preview ? "Local layout preview / Not a real project" : "Case study"} title={project.title}><p>{project.summary}</p></PageIntro>
+  return <><div className="mb-9"><ActionLink href="/projects" secondary>Back to projects</ActionLink></div><PageIntro eyebrow={preview ? "Local layout preview / Not a real project" : "Case study"} title={project.title}><p>{project.summary}</p>{project.projectType && <p className="mt-3">{project.projectType}</p>}</PageIntro>
     {preview && <Placeholder title="Template preview only"><p>This is a local placeholder, not a completed project. Empty sections identify missing input; no narrative or outcome has been invented.</p></Placeholder>}
     <div className="mt-10 grid gap-8 md:grid-cols-2">{sections.filter(([, text]) => text || preview).map(([title, text]) => <section className="editorial-section" key={title}><h2 className="mb-4 text-2xl">{title}</h2><p className="whitespace-pre-line text-muted">{text || "Incomplete — owner-approved content has not been supplied."}</p></section>)}</div>
     {!!study.outcomes?.filter(o => approved(o.approval)).length && <section className="editorial-section"><h2 className="mb-4 text-2xl">Verified outcomes</h2>{study.outcomes.filter(o => approved(o.approval)).map(o => <p key={o.text} className="text-muted">{o.text}</p>)}</section>}

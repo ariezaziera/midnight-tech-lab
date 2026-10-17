@@ -1,3 +1,9 @@
+# M6-B3 Savvyra HTML library integration
+
+- Add one owner-approved text-only Savvyra case study and Development category using the existing schema/publication guards; preserve the separate template, noindex and all studio behavior. No media, external Savvyra links, dependencies, 3D changes or deployment.
+- Preserve exact v1.0 wording including AI-assisted workflow/owner responsibility and qualitative reflection; archive the approved packet. Display existing optional project type and remove obsolete zero-approved-content library copy.
+- All 65 retained checks plus four new editorial checks pass: 69 in 4.4m. ci/lint/typecheck/build pass; production audit reports zero vulnerabilities. Historical captures preserved; commit/push M6-B3 only and stop for owner review.
+
 # M6-B1 content intake planning — 2026-10-17
 
 - Audit actual local content/publication guards, HTML routes and technical bay integration; document one authentic Development project packet and rights/approval checklist.
