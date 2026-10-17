@@ -88,3 +88,12 @@ M0 audit delivered. The owner gate was subsequently resolved by the conditional 
 - Refine rock strata/taper, workstation construction, Creator ID/project exhibition frames and minor inert console/globe geometry. Lightweight integrated selection marks may replace the debug bounds outline if tests and cost permit.
 - Simple shared materials, limited emissive geometry and static batching are permitted. No new lighting system, bloom, volumetrics, particles, expensive shaders/shadows, textures, dependencies, islands or modules.
 - Fresh before/after measurements and all four camera views are required. Do not silently accept material rendering/responsiveness regressions. Commit/report and stop for M5-A owner review. M5-B/M5-C/M6 and publication remain unauthorized.
+
+## Owner gate — M5-B authorization (2026-10-17)
+
+- Owner accepted M5-A and authorized only lighting, selective materials and lightweight cosmic atmosphere. Keep the procedural geometry, four camera presets, target metadata/route actions, selection corners and M4 content safeguards.
+- Use conservative fixed lighting, warm amber workstation focus, cool purple/blue separation and muted pink atmosphere. Static CSS gradients/stars behind a transparent canvas are permitted; no continuous animation, heavy shaders/post-processing, shadows, nebula downloads, new models/dependencies or hardware requirement.
+- Preserve demand rendering, mobile 2D, no-JS HTML, WebGL loading/failure/retry, reduced motion and keyboard/pointer/Back/Reset/Escape/restoration.
+- Capture fresh M5-A baseline and repeated comparable M5-B measurements/screenshots. Document trade-offs and simplify any material cost regression.
+- Standing owner instruction: after completed implementation and validation, commit and push directly. This authorizes repository delivery, not deployment or proceeding past milestone approval gates.
+- Stop after M5-B report/evidence for owner review. M5-C/M6 and public deployment remain unauthorized.

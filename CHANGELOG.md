@@ -1,3 +1,11 @@
+# M5-B lighting, materials & atmosphere — 2026-10-17
+- Recorded M5-A acceptance and M5-B-only authorization; retained geometry, cameras, content and interaction behavior.
+- Added typed four-light setup/material responses, warm lamp/key and cool fill/rim, with static CSS cosmic gradients, twelve small stars and a transparent desktop canvas.
+- No shadows, post-processing, animated particles, new assets/dependencies or quality UI. Live diagnostics confirm four lights/one point, alpha on, shadows off.
+- Matched runs retain 30 draws/1680 triangles/30 geometries/one texture and idle frame 2; JS +235 bytes and first-sample CSS +347 bytes. Real-device/CSS compositing cost remains unmeasured.
+- npm ci, lint, typecheck, build, production audit and all 51 tests passed (2.2m). Saved 37 PNGs, five JSON files and comparison/report.
+- Commit and push per standing owner instruction; no deployment or M5-C/M6 work.
+
 # M5-A procedural refinement — 2026-10-17
 - Recorded M4 acceptance and M5-A-only code-first authorization; no Blender or downloaded assets required.
 - Refined deterministic layered rock, workstation/chair/lamp and neutral framed displays; replaced selection volumes with small integrated corners.

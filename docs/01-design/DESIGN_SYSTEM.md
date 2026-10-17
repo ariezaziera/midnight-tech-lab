@@ -35,3 +35,7 @@ Owner authorized provisional tokens for M1 only. `src/app/globals.css` maps the 
 
 ## Acceptance
 Do not finalize tokens until desktop and mobile screenshots are reviewed side-by-side with approved cropped visual references.
+
+## M5-B palette and lighting review
+
+Within the scene only, materials are tuned for warm wood/amber practical light against cool purple/blue separation, muted metal and restrained frame/globe emission. Desktop background uses original static CSS color gradients and sparse tiny stars. Global editorial layout, typography, focus/control colors and provisional status remain unchanged. These choices require owner visual review; they are not extracted measurements or final pixel fidelity to the concept boards.

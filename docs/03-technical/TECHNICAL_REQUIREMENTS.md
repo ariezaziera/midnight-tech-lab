@@ -22,3 +22,7 @@
 ## M5-A workflow supersession
 
 For the authorized procedural refinement, use Three/R3F code geometry and lightweight shared materials. Blender/external modeling software and paid assets are explicitly outside this workflow. Preserve existing framework boundaries and camera controller. Later external assets/effects require separate owner authorization.
+
+## M5-B conservative rendering defaults
+
+Maintain demand rendering, DPR 1–1.5, antialiasing, low-power preference and four fixed lights (one point light). The context now supports alpha to compose over static CSS atmosphere. Shadows and post-processing remain disabled/absent. No graphics-settings UI, adaptive quality controller or new package is introduced; broader quality policy belongs to separately authorized M5-C.

@@ -3,10 +3,13 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import { join, resolve } from "node:path";
 import { pathToFileURL } from "node:url";
 
-// Same protocol for both accepted M4 baseline and M5-A refinement.
+// Same protocol for each accepted milestone baseline and its authorized refinement.
 const phase = process.argv[2];
 if (!["before", "after"].includes(phase)) throw new Error("Use before or after");
-const output = join("docs/04-delivery/evidence/m5a", phase);
+const milestone = process.argv[3] ?? "m5a";
+if (!["m5a", "m5b"].includes(milestone)) throw new Error("Use m5a or m5b");
+const evidenceRoot = join("docs/04-delivery/evidence", milestone);
+const output = join(evidenceRoot, phase);
 mkdirSync(output, { recursive: true });
 const browser = await chromium.launch();
 const observations = [];
@@ -38,13 +41,13 @@ try {
     observations.push({ metrics, idle: { start, end, unchanged: start === end }, javascriptTransferBytes: resources.filter(r => r.path.endsWith(".js")).reduce((sum, r) => sum + r.transferBytes, 0), resources, camera, errors });
     await context.close();
   }
-  writeFileSync(join(output, "measurements.json"), JSON.stringify({ phase, browser: browser.version(), viewport: "1440x900", environment: "Windows; local production build; Chromium headless; fresh browser context per run; no network throttling; two idle samples 750ms apart; same capture script and renderer settings", observations }, null, 2));
+  writeFileSync(join(output, "measurements.json"), JSON.stringify({ phase, browser: browser.version(), viewport: "1440x900", environment: "Windows; local production build; Chromium headless; fresh browser context per run; no network throttling; two idle samples 750ms apart; same capture protocol, viewport and DPR; scene/rendering changes documented per phase", observations }, null, 2));
   console.log(JSON.stringify({ phase, observations: observations.map(({ metrics, idle, javascriptTransferBytes, errors }) => ({ metrics, idle, javascriptTransferBytes, errors })) }, null, 2));
   if (phase === "after") {
     const review = await browser.newPage({ viewport: { width: 1800, height: 1000 } });
-    await review.goto(pathToFileURL(resolve("docs/04-delivery/evidence/m5a/comparison.html")).href);
+    await review.goto(pathToFileURL(resolve(evidenceRoot, "comparison.html")).href);
     const loaded = await review.locator("img").evaluateAll(images => images.every(img => img.complete && img.naturalWidth > 0));
     if (!loaded) throw new Error("Missing comparison image");
-    await review.screenshot({ path: "docs/04-delivery/evidence/m5a/comparison.png", fullPage: true });
+    await review.screenshot({ path: join(evidenceRoot, "comparison.png"), fullPage: true });
   }
 } finally { await browser.close(); }

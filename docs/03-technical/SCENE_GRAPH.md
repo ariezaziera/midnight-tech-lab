@@ -60,3 +60,7 @@ The camera rig and typed hotspot configuration remain unchanged. Procedural comp
 `HubResources` shares small geometry templates and a material palette per mounted hub. `StaticParts` transforms and merges static primitives by surface **within** each logical group. This reduces draw calls without merging targets together. Merged mesh hits still resolve ancestor `hotspotId`, never mesh names. Static geometry and shared materials are disposed on unmount/recovery.
 
 The full amber wireframe volume is replaced by small amber frame-corner marks anchored to each selected display (both workstation monitors). These batches skip diagnostic rays and pointer raycasting, and do not obstruct target geometry. HTML selection/focus controls are unchanged. No continuous animation or new camera feature is introduced.
+
+## M5-B lighting/material layer
+
+M5-A procedural geometry, dimensions, frame-corner selection and hotspot ancestry remain unchanged. World ambient is replaced by a hemisphere fill; the two directional lights and one local desk point light are retuned through `look-config.ts`. No extra light or star geometry is added. CSS atmosphere sits behind a transparent desktop canvas, outside the Three.js scene graph. Selection marks remain non-raycast decoration; console/globe remain inert.

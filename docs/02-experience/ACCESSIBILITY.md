@@ -24,3 +24,7 @@ Editorial pages remain Server Components. Project category links use a named nav
 ## M5-A selections
 
 Small amber corner marks on the physical display frames replace the large wireframe selection volume. They do not pulse or animate and are excluded from scene hit tests. The existing pressed buttons, written Selected state, focus behavior, live status and always-available route links remain the primary accessible feedback. No new keyboard behavior or mandatory camera movement is introduced.
+
+## M5-B atmosphere accessibility
+
+Stars/gradients are CSS decoration restricted to the desktop scene viewport; they have no text, focus target, hit target or animation. They cannot replace portfolio content or selected-state explanations. HTML buttons/status/focus keep their opaque existing treatment. Reduced motion requires no special atmosphere animation switch because the background is static in all modes. Existing mobile/no-JS HTML and WebGL failure explanations/retry remain.

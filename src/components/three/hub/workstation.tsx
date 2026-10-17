@@ -1,3 +1,4 @@
+import { lightingConfig } from "@/lib/scene/look-config";
 import { hubConfig } from "@/lib/scene/hub-config";
 import { StaticParts, box, monitor, selectionCorners, type Part } from "./primitives";
 
@@ -30,6 +31,6 @@ export function Workstation({ selected }: { selected: boolean }) {
   return <group name="CH_002_Workstation" position={hubConfig.workstation.position}>
     <StaticParts parts={furniture} />
     {selected && <StaticParts parts={selection} decorative />}
-    <pointLight position={[1.4, 2.15, -.3]} color="#fbbf70" intensity={7} distance={4} decay={2} />
+    <pointLight {...lightingConfig.lamp} />
   </group>;
 }

@@ -85,9 +85,9 @@ function DesktopPreview({ retry, ...interaction }: { retry: () => void } & Omit<
 
   const error = <Failure message="The 3D renderer could not initialize. You can retry or continue with the HTML portfolio." retry={retry} />;
   return <SceneBoundary fallback={error}>
-    <div className="relative h-[440px] w-full" data-testid="scene-viewport" data-scene-ready={metrics ? "true" : "false"} data-scene-metrics={metrics ? JSON.stringify(metrics) : undefined}>
+    <div className="cosmic-stage relative h-[440px] w-full" data-testid="scene-viewport" data-scene-ready={metrics ? "true" : "false"} data-scene-metrics={metrics ? JSON.stringify(metrics) : undefined}>
       {load.phase === "loaded" && <load.Canvas {...interaction} onReady={ready} onFailure={lost} />}
-      {!metrics && <div className="absolute inset-0 flex flex-col items-center justify-center bg-space p-6 text-center" role="status"><p className="text-lg">Loading the Central Hub blockout…</p><p className="mt-3 text-sm text-muted">The HTML portfolio is ready to use.</p></div>}
+      {!metrics && <div className="absolute inset-0 z-10 flex flex-col items-center justify-center bg-space p-6 text-center" role="status"><p className="text-lg">Loading the Central Hub blockout…</p><p className="mt-3 text-sm text-muted">The HTML portfolio is ready to use.</p></div>}
     </div>
   </SceneBoundary>;
 }

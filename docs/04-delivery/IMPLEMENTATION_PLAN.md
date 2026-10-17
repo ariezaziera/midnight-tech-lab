@@ -45,3 +45,7 @@ Typed local editorial content and publication safeguards only. Preserve M1–M3,
 ## M5-A — Procedural refinement (authorized slice of M5)
 
 Owner accepted M4 and authorized geometry, materials and composition only, prioritizing an older laptop. Capture fresh M4 baseline and refined views/measurements under the same production-browser conditions. Preserve all M1–M4 functionality, interaction metadata, camera architecture, mobile/failure paths and publication safeguards. No Blender, GLB download, expensive effects, new modules or deployment. Stop after M5-A report/commit; M5-B lighting/atmosphere/effects, M5-C and M6 remain unauthorized.
+
+## M5-B — Lighting/materials/atmosphere (authorized)
+
+M5-A accepted as base. Refine the existing light/material response and a static lightweight cosmic background while retaining geometry, cameras, content and all fallbacks. Capture a fresh baseline before application changes. Do not introduce post-processing, animated particles, shadows, models or graphics settings. Commit and push the completed validated slice per standing owner instruction; stop for review before M5-C/M6. No deployment.

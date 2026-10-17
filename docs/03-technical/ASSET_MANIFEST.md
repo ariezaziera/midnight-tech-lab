@@ -33,3 +33,7 @@ CH-001–CH-008 now have original procedural placeholder geometry in `src/compon
 The owner explicitly approved original procedural refinement rather than a Blender/GLB workflow. CH-001–CH-008 now have refined authored code geometry; this is a reviewable procedural art study, not final photorealistic or high-fidelity approval. Source is `src/components/three/hub/` and typed configuration in `src/lib/scene/hub-config.ts`. Geometry is authored locally; no third-party artwork/model, image texture or asset download is used. Existing concept boards guide broad composition only.
 
 Actual portrait/project media, final references, licensed image content and any future external production assets remain missing/unapproved. The original GLB target-format rows above are historical planning, not a requirement to obtain GLBs for M5-A. Detailed props, mascot, new modules and environment effects remain deferred.
+
+## M5-B atmosphere provenance
+
+The background is original CSS gradient/color composition with twelve static one-pixel star marks. There is no nebula photograph, image texture, downloaded artwork, external model or generated portrait/project art. Geometry is the accepted M5-A source; only materials and lighting change. Final visual references and authentic content/media approval remain outstanding.

@@ -2,6 +2,8 @@
 
 import { useEffect, useRef } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
+import { Light, PointLight } from "three";
+import { lightingConfig } from "@/lib/scene/look-config";
 import { PerspectiveCamera } from "@react-three/drei/core/PerspectiveCamera";
 import { CentralHub } from "../hub/central-hub";
 import { hubConfig, type SceneMetrics } from "@/lib/scene/hub-config";
@@ -36,7 +38,9 @@ function RendererLifecycle({ onReady, onFailure }: Pick<HubCanvasProps, "onReady
     scheduled.current = requestAnimationFrame(() => {
       const context = renderer.getContext();
       if (context.isContextLost() || renderer.info.render.calls === 0) { onFailure(); return; }
-      onReady({ calls: renderer.info.render.calls, triangles: renderer.info.render.triangles, geometries: renderer.info.memory.geometries, textures: renderer.info.memory.textures, frames: frames.current, renderer: String(context.getParameter(context.RENDERER)) });
+      const lights: Light[] = [];
+      state.scene.traverse(object => { if (object instanceof Light) lights.push(object); });
+      onReady({ lightCount: lights.length, pointLightCount: lights.filter(light => light instanceof PointLight).length, shadows: renderer.shadowMap.enabled, alpha: context.getContextAttributes()?.alpha ?? false, calls: renderer.info.render.calls, triangles: renderer.info.render.triangles, geometries: renderer.info.memory.geometries, textures: renderer.info.memory.textures, frames: frames.current, renderer: String(context.getParameter(context.RENDERER)) });
     });
   });
   return null;
@@ -45,19 +49,21 @@ function RendererLifecycle({ onReady, onFailure }: Pick<HubCanvasProps, "onReady
 export default function HubCanvas(props: HubCanvasProps) {
   const camera = cameraPresets.overview;
   return <Canvas
+    className="cosmic-canvas"
     frameloop="demand"
     resize={{ scroll: false }}
     dpr={hubConfig.dpr}
-    gl={{ antialias: true, alpha: false, powerPreference: "low-power" }}
+    gl={{ antialias: true, alpha: true, powerPreference: "low-power" }}
+    onCreated={({ gl }) => gl.setClearColor(0x000000, 0)}
     fallback={<p className="p-6 text-muted">WebGL is unavailable. Use the HTML portfolio navigation.</p>}
     role="img"
     aria-label="Central Hub blockout. Select the Creator ID, Project Display or Workstation, or use the equivalent HTML controls below."
   >
-    <color attach="background" args={[hubConfig.background]} />
+
     <PerspectiveCamera makeDefault position={camera.position} fov={camera.fov} near={camera.near} far={camera.far} />
-    <ambientLight intensity={1.4} />
-    <directionalLight position={[4, 8, 5]} intensity={3} color="#d8d9ff" />
-    <directionalLight position={[-4, 3, -4]} intensity={2} color="#a78bfa" />
+    <hemisphereLight args={[lightingConfig.fill.sky, lightingConfig.fill.ground, lightingConfig.fill.intensity]} />
+    <directionalLight {...lightingConfig.key} />
+    <directionalLight {...lightingConfig.rim} />
     <CentralHub selected={props.request.preset === "overview" ? null : props.request.preset} onSelect={props.onSelect} />
     <CameraRig request={props.request} reducedMotion={props.reducedMotion} onSettled={props.onSettled} />
     <RendererLifecycle {...props} />

@@ -40,3 +40,35 @@ main:focus { outline: none; }
 .tag { border: 1px solid #56506f; padding: .2rem .65rem; color: #c9c9dc; font-size: .875rem; }
 .editorial-card p, .editorial-section p { overflow-wrap: anywhere; }
 [aria-label="Project filters"] [aria-current="page"] { border-color: #c4b5fd; background: #24213b; }
+
+/* M5-B: static desktop-canvas backdrop. No textures, filters or animation. */
+.cosmic-stage {
+  isolation: isolate;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 19% 28%, #5b2d8b52 0%, transparent 58%),
+    radial-gradient(ellipse at 82% 62%, #1b416c59 0%, transparent 62%),
+    radial-gradient(ellipse at 70% 16%, #70315b24 0%, transparent 44%),
+    linear-gradient(145deg, #080915 0%, #11122a 56%, #090d1c 100%);
+}
+.cosmic-stage::before {
+  content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background:
+    radial-gradient(1px 1px at 8% 21%, #c4c4de99 80%, transparent),
+    radial-gradient(1px 1px at 21% 11%, #bfc9e480 80%, transparent),
+    radial-gradient(1px 1px at 36% 29%, #d4c5ed80 80%, transparent),
+    radial-gradient(1px 1px at 52% 9%, #bfc9e480 80%, transparent),
+    radial-gradient(1px 1px at 73% 23%, #d8bbcf66 80%, transparent),
+    radial-gradient(1px 1px at 92% 13%, #c4c4de99 80%, transparent),
+    radial-gradient(1px 1px at 13% 69%, #c4c4de66 80%, transparent),
+    radial-gradient(1px 1px at 31% 84%, #bfc9e466 80%, transparent),
+    radial-gradient(1px 1px at 79% 81%, #d4c5ed66 80%, transparent),
+    radial-gradient(1px 1px at 95% 58%, #bfc9e480 80%, transparent),
+    radial-gradient(1px 1px at 6% 46%, #d4c5ed66 80%, transparent),
+    radial-gradient(1px 1px at 62% 91%, #c4c4de66 80%, transparent);
+}
+.cosmic-stage::after {
+  content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+  background: radial-gradient(ellipse at 50% 44%, transparent 42%, #05071370 100%);
+}
+.cosmic-canvas { z-index: 1; }

@@ -1,0 +1,135 @@
+{
+  "browser": "156.0.8078.4",
+  "viewport": "1440x900",
+  "host": "Windows, local production server; no network throttling",
+  "metrics": {
+    "lightCount": 4,
+    "pointLightCount": 1,
+    "shadows": false,
+    "alpha": true,
+    "calls": 30,
+    "triangles": 1680,
+    "geometries": 30,
+    "textures": 1,
+    "frames": 1,
+    "renderer": "WebKit WebGL",
+    "readyMs": 977
+  },
+  "idleFrames": "2",
+  "resources": [
+    {
+      "name": "/_next/static/chunks/1-zz3nntdn6yy.css",
+      "durationMs": 29,
+      "transferBytes": 5120,
+      "encodedBodyBytes": 4820
+    },
+    {
+      "name": "/_next/static/chunks/1ckvzn7sfprko.js",
+      "durationMs": 27,
+      "transferBytes": 2335,
+      "encodedBodyBytes": 2035
+    },
+    {
+      "name": "/_next/static/chunks/2r4s4h5xul1n-.js",
+      "durationMs": 28,
+      "transferBytes": 7924,
+      "encodedBodyBytes": 7624
+    },
+    {
+      "name": "/_next/static/chunks/2gvu8dyrhibpa.js",
+      "durationMs": 68,
+      "transferBytes": 72199,
+      "encodedBodyBytes": 71899
+    },
+    {
+      "name": "/_next/static/chunks/2e268anpfvdoc.js",
+      "durationMs": 36,
+      "transferBytes": 46667,
+      "encodedBodyBytes": 46367
+    },
+    {
+      "name": "/_next/static/chunks/turbopack-3-ry682tkyiqk.js",
+      "durationMs": 29,
+      "transferBytes": 4240,
+      "encodedBodyBytes": 3940
+    },
+    {
+      "name": "/_next/static/chunks/0xi76j1ftn42h.js",
+      "durationMs": 34,
+      "transferBytes": 6946,
+      "encodedBodyBytes": 6646
+    },
+    {
+      "name": "/_next/static/chunks/0bictyfakurb2.js",
+      "durationMs": 34,
+      "transferBytes": 4250,
+      "encodedBodyBytes": 3950
+    },
+    {
+      "name": "/_next/static/chunks/3osaa3odh1h8q.js",
+      "durationMs": 168,
+      "transferBytes": 248505,
+      "encodedBodyBytes": 248205
+    },
+    {
+      "name": "/",
+      "durationMs": 37,
+      "transferBytes": 464,
+      "encodedBodyBytes": 164
+    },
+    {
+      "name": "/projects",
+      "durationMs": 34,
+      "transferBytes": 480,
+      "encodedBodyBytes": 180
+    },
+    {
+      "name": "/services",
+      "durationMs": 34,
+      "transferBytes": 482,
+      "encodedBodyBytes": 182
+    },
+    {
+      "name": "/about",
+      "durationMs": 34,
+      "transferBytes": 479,
+      "encodedBodyBytes": 179
+    },
+    {
+      "name": "/contact",
+      "durationMs": 42,
+      "transferBytes": 482,
+      "encodedBodyBytes": 182
+    },
+    {
+      "name": "/projects",
+      "durationMs": 42,
+      "transferBytes": 997,
+      "encodedBodyBytes": 697
+    },
+    {
+      "name": "/",
+      "durationMs": 38,
+      "transferBytes": 2477,
+      "encodedBodyBytes": 2177
+    },
+    {
+      "name": "/services",
+      "durationMs": 37,
+      "transferBytes": 2252,
+      "encodedBodyBytes": 1952
+    },
+    {
+      "name": "/about",
+      "durationMs": 7,
+      "transferBytes": 2558,
+      "encodedBodyBytes": 2258
+    },
+    {
+      "name": "/contact",
+      "durationMs": 16,
+      "transferBytes": 2141,
+      "encodedBodyBytes": 1841
+    }
+  ]
+}

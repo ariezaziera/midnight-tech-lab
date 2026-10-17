@@ -13,7 +13,7 @@
 
 ### M0 findings — prioritized follow-up
 
-Audit delivered; M4 accepted and M5-A procedural refinement authorized. **Do not begin M5-B/M5-C/M6 without explicit owner approval.** Findings are detailed in `M0_AUDIT_REPORT.md`; only decisions explicitly recorded in DECISIONS.md are approved.
+Audit delivered; M5-A accepted and M5-B authorized. **Do not begin M5-C/M6 without explicit owner approval.** Findings are detailed in `M0_AUDIT_REPORT.md`; only decisions explicitly recorded in DECISIONS.md are approved.
 
 - [x] Read all 34 baseline docs and inspect all ten concept boards.
 - [x] Validate all ten referenced image paths, PNG decoding and SHA-256 prefixes: 10/10 pass each check. No broken listed image paths.
@@ -95,5 +95,15 @@ Audit delivered; M4 accepted and M5-A procedural refinement authorized. **Do not
 - [x] Focused checks: seven passed; no camera adjustment required.
 - [x] All required commands passed; final full suite 49 passed in 2.0m. Fresh three-run after comparison: draws/geometries 49→30, triangles 866→1680, textures unchanged, no idle loop; trade-off documented.
 - [x] Submit [M5-A implementation report](M5A_IMPLEMENTATION_REPORT.md), 36 screenshots, five JSON measurements and side-by-side comparison; commit for owner review.
-- [ ] Owner approve procedural visual direction before any M5-B lighting/atmosphere/effects work.
+- [x] Owner accepted M5-A and explicitly authorized M5-B only (2026-10-17); final visual approval remains open.
 - [ ] Physical older-laptop/GPU validation, final visual approval and authentic identity/project assets remain open.
+
+
+## M5-B — Lighting, materials & atmosphere
+- [x] Audit current source, M5-A evidence, references and required documentation.
+- [x] Capture fresh accepted-M5-A baseline before source edits: four views and three measurement samples.
+- [x] Tune four fixed lights/shared materials and static CSS cosmic background; geometry/cameras/content unchanged.
+- [x] Preserve all 49 existing tests and add two live atmosphere/light-budget checks.
+- [x] All required checks passed; 51 tests in 2.2m, clean production audit. Submit [M5-B report](M5B_IMPLEMENTATION_REPORT.md), 37 PNGs, five JSON files and comparison.
+- [x] Commit and push completed M5-B under standing owner instruction; request owner review before M5-C/M6.
+- [ ] Physical older-laptop/GPU review, final visuals and M5-C authorization remain outstanding.

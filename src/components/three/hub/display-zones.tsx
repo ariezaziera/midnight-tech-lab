@@ -1,3 +1,4 @@
+import { materialResponse } from "@/lib/scene/look-config";
 import { hubConfig } from "@/lib/scene/hub-config";
 import { StaticParts, box, monitor, selectionCorners, type Part } from "./primitives";
 import type { HotspotId } from "@/lib/scene/interaction-config";
@@ -38,7 +39,7 @@ export function DisplayZones({ selected }: { selected: HotspotId | null }) {
     <group name="CH_006_NavigationConsole" position={hubConfig.zones.console} rotation={[0, -.3, 0]}><StaticParts parts={consoleParts} /></group>
     <group name="CH_007_Globe" position={hubConfig.zones.globe}>
       <StaticParts parts={globeBase} />
-      <mesh position={[0, 1.1, 0]}><icosahedronGeometry args={[.6, 1]} /><meshStandardMaterial color={hubConfig.colors.cyan} wireframe /></mesh>
+      <mesh position={[0, 1.1, 0]}><icosahedronGeometry args={[.6, 1]} /><meshStandardMaterial color={hubConfig.colors.cyan} emissive={hubConfig.colors.cyan} {...materialResponse.cyan} wireframe /></mesh>
     </group>
   </>;
 }

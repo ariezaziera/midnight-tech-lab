@@ -16,7 +16,7 @@ export const hubConfig: HubConfig = {
   ] },
   workstation: { position: [0, .16, -.65], deskSize: [3.4, .16, 1.45] },
   zones: { creator: [-2.6, .16, -.8], project: [-2.4, .16, 1.7], console: [2.55, .16, .4], globe: [2.4, .16, -1.65] },
-  colors: { rock: "#242331", platform: "#292838", edge: "#6b4a9c", desk: "#714938", metal: "#1c2130", trim: "#676477", screen: "#0b1220", violet: "#9c83c3", cyan: "#438d9f", amber: "#eab773", neutral: "#9295a1", upholstery: "#393447" },
+  colors: { rock: "#242331", platform: "#303047", edge: "#8063ac", desk: "#75503a", metal: "#30384a", trim: "#666779", screen: "#0b1220", violet: "#8470ad", cyan: "#4499ad", amber: "#eab773", neutral: "#9295a1", upholstery: "#302d42" },
   background: "#0b1024", dpr: [1, 1.5],
 };
-export type SceneMetrics = { calls: number; triangles: number; geometries: number; textures: number; frames: number; renderer: string };
+export type SceneMetrics = { calls: number; triangles: number; geometries: number; textures: number; frames: number; renderer: string; lightCount: number; pointLightCount: number; shadows: boolean; alpha: boolean };

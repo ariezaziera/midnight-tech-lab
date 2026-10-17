@@ -1,5 +1,6 @@
 import { createContext, useContext, useEffect, useMemo, type ReactNode } from "react";
 import { BoxGeometry, CylinderGeometry, ConeGeometry, ExtrudeGeometry, Shape, MeshStandardMaterial, Matrix4, Quaternion, Euler, Vector3, type BufferGeometry } from "three";
+import { materialResponse } from "@/lib/scene/look-config";
 import { mergeGeometries } from "three/addons/utils/BufferGeometryUtils.js";
 import { hubConfig, type Surface, type Vec3 } from "@/lib/scene/hub-config";
 
@@ -22,8 +23,8 @@ export function HubResources({ children }: { children: ReactNode }) {
       const converted = geometry.toNonIndexed(); geometry.dispose(); return [key, converted];
     })) as Resources["shapes"];
     const materials = Object.fromEntries(Object.entries(hubConfig.colors).map(([surface, color]) => {
-      const accent = ["edge", "violet", "cyan", "amber"].includes(surface);
-      return [surface, new MeshStandardMaterial({ color, roughness: surface === "desk" ? .65 : .85, metalness: surface === "metal" || surface === "trim" ? .35 : .05, emissive: accent ? color : "#000000", emissiveIntensity: accent ? .18 : 0 })];
+      const response = materialResponse[surface as Surface];
+      return [surface, new MeshStandardMaterial({ color, ...response, emissive: response.emissiveIntensity > 0 ? color : "#000000" })];
     })) as Resources["materials"];
     return { shapes, materials };
   }, []);

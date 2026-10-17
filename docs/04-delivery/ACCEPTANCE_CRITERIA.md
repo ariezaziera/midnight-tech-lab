@@ -50,3 +50,11 @@
 - Small integrated selected-frame accents replace debug volume lines without affecting hit tests.
 - Compare new same-condition before/after readiness, draws, triangles, geometries, textures, JS transfer and idle behavior; optimize or revert responsible changes if costs materially regress.
 - Added 35-draw/geometry and 3,000-triangle test caps are implementation regression guards, not owner-approved production hardware budgets or FPS claims.
+
+## M5-B lighting/atmosphere checks
+
+- Fixed four-light budget with one local point light, no shadow maps or extra render loop.
+- Background is static and decorative; it cannot intercept scene input or cover essential HTML controls.
+- Geometry counts, camera coordinates/hotspots and all M1–M5-A checks remain protected.
+- Fresh repeated before/after measurements include readiness, geometry/draw/texture counts, transfer, idle frames and page errors. CSS compositing cost is not represented by WebGL counters and needs real-device review.
+- Keep mobile HTML, reduced motion, all failure/retry states, noindex and direct-link-only Contact. No M5-C UI or unapproved content.

@@ -62,3 +62,11 @@ Projects filters use server-rendered query links (`?category=...`) and work with
 ## M5-A procedural resource boundary
 
 The existing lazy Canvas/client boundary, lifecycle, demand loop, camera rig and HTML portfolio are retained. Hub-local resource ownership and material batching live in `components/three/hub/primitives.tsx`; deterministic low-poly strata live in `platform.tsx`. Each furniture/display group merges geometry by surface locally, preserving separate hotspot metadata. Shared templates/materials and merged geometry have explicit unmount cleanup. No global mutable scene resource cache, new dependency or continuous frame callback is added.
+
+## M5-B fixed lighting and static atmosphere
+
+Geometry and camera layers are unchanged. The world uses one hemisphere fill, two directional lights and the existing workstation point light, with typed values in `src/lib/scene/look-config.ts`. No shadow map is enabled. Shared MeshStandardMaterial responses are configured there without changing M5-A's per-target static batching/resource ownership.
+
+The desktop viewport has a static CSS midnight/purple/blue/muted-pink gradient, twelve small radial-gradient star marks and a subtle edge vignette. WebGL clears transparently above that background. Pseudo-elements are decorative and pointer-inert; the Canvas has its own stacking level and loading status remains above it. No texture, star mesh, particle loop, post-processing or camera motion is used for atmosphere. Smaller screens/failures retain their existing HTML view.
+
+RendererLifecycle keeps its original readiness/context-loss behavior and adds one-time diagnostics for actual light/point counts, shadow-map state and context alpha. Existing demand rendering and camera transitions are unchanged. CSS painting/compositing is outside Three.js draw counters; real-device review remains necessary.

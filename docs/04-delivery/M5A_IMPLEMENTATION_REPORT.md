@@ -1,6 +1,6 @@
 # M5-A — Procedural Cinematic Asset & Composition Refinement
 
-Date: 2026-10-17 (Asia/Kuala_Lumpur). Base: accepted M4 commit `cc4363d`. **Procedural geometry/material refinement delivered for owner review. M5-B/M5-C/M6 remain unstarted.**
+Date: 2026-10-17 (Asia/Kuala_Lumpur). Base: accepted M4 commit `cc4363d`. **Historical M5-A report. Owner accepted M5-A and authorized M5-B on 2026-10-17. Final cinematic approval and real-device validation remain open.**
 
 ## Summary and scope
 
