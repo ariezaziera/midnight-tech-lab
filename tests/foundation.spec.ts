@@ -14,7 +14,7 @@ for (const [path, heading] of routes) {
     expect(response?.status()).toBe(200);
     await expect(page.getByRole("heading", { level: 1 })).toContainText(heading);
     await expect(page.getByRole("navigation", { name: "Main navigation" }).getByRole("link")).toHaveCount(5);
-    await page.getByRole("navigation").getByRole("link", { name: "About", exact: true }).click();
+    await page.getByRole("navigation", { name: "Main navigation" }).getByRole("link", { name: "About", exact: true }).click();
     await expect(page).toHaveURL(/\/about$/);
     await context.close();
   });
@@ -33,10 +33,10 @@ test("project journey, current route, no invented contact actions", async ({ pag
   await page.goto("/");
   await page.getByRole("link", { name: "Explore projects" }).click();
   await page.getByRole("link", { name: "View placeholder case study" }).click();
-  await expect(page.getByRole("navigation").getByRole("link", { name: "Projects" })).toHaveAttribute("aria-current", "page");
+  await expect(page.getByRole("navigation", { name: "Main navigation" }).getByRole("link", { name: "Projects" })).toHaveAttribute("aria-current", "page");
   await page.getByRole("link", { name: "Back to projects" }).click();
   await expect(page).toHaveURL("/projects");
-  await page.getByRole("navigation").getByRole("link", { name: "Contact" }).click();
+  await page.getByRole("navigation", { name: "Main navigation" }).getByRole("link", { name: "Contact" }).click();
   await expect(page.locator("form, input, textarea, a[href^='mailto:'], a[href^='tel:'], canvas")).toHaveCount(0);
   await expect(page.locator("main button, main a")).toHaveCount(0);
 });
@@ -59,7 +59,7 @@ for (const width of [320, 390, 768, 1024, 1440]) {
     for (const [path] of routes) {
       await page.goto(path);
       expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
-      const nav = page.getByRole("navigation");
+      const nav = page.getByRole("navigation", { name: "Main navigation" });
       for (const link of await nav.getByRole("link").all()) {
         await expect(link).toBeVisible();
         expect((await link.boundingBox())?.height).toBeGreaterThanOrEqual(44);
@@ -82,7 +82,7 @@ test("capture desktop and mobile route evidence", async ({ page }) => {
     for (const [path] of routes) {
       await page.goto(path);
       if (path === "/" && width >= 768) await expect(page.getByTestId("scene-viewport")).toHaveAttribute("data-scene-ready", "true", { timeout: 15000 });
-      await page.screenshot({ path: `docs/04-delivery/evidence/m3/${label}-${path === "/" ? "home" : path.slice(1).replaceAll("/", "-")}.png`, fullPage: path !== "/" || width < 768 });
+      await page.screenshot({ path: `docs/04-delivery/evidence/m4/${label}-${path === "/" ? "home" : path.slice(1).replaceAll("/", "-")}.png`, fullPage: path !== "/" || width < 768 });
     }
   }
 });

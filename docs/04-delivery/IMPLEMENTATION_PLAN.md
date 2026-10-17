@@ -21,7 +21,7 @@
 - Preset controller, bounded controls, project and Creator ID hotspots, accessible HTML equivalents, overlay state.
 - Gate: keyboard/pointer/touch journeys and back/reset pass.
 
-M3 owner authorization narrows this slice to overview/creator/projects/workstation presets and three targets only. Creator ID offers `/about`; Project Display offers `/projects`; Workstation focuses desk/monitors. The selection panel is non-modal. No featured case study, module travel or intro is included. Implementation and 40 passing checks are documented in `M3_IMPLEMENTATION_REPORT.md`; owner review remains pending. M4 is not authorized.
+M3 owner authorization narrows this slice to overview/creator/projects/workstation presets and three targets only. Creator ID offers `/about`; Project Display offers `/projects`; Workstation focuses desk/monitors. The selection panel is non-modal. No featured case study, module travel or intro is included. Implementation and 40 passing checks are documented in `M3_IMPLEMENTATION_REPORT.md`; owner accepted the functional prototype and authorized M4 on 2026-10-17. Final framing, selection visuals and cinematic styling remain separate gates.
 
 ## M4 — Editorial portfolio
 - Projects library and case studies, About, Services, Contact, typed content and verified links.
@@ -37,3 +37,7 @@ M3 owner authorization narrows this slice to overview/creator/projects/workstati
 
 ## Codex reporting format per milestone
 Summary; changed files; assumptions; missing assets; tests run and exact results; screenshots; visual differences; outstanding tasks; request for owner approval.
+
+
+### M4 authorized scope clarification
+Typed local editorial content and publication safeguards only. Preserve M1–M3, no new 3D behavior or backend. Zero approved projects means an honest portfolio empty state with the existing separate local template preview. Validate recruiter/client route journeys without JavaScript/WebGL and all previous regressions. Commit and submit report/evidence for owner review; do not begin M5/M6 or deploy.

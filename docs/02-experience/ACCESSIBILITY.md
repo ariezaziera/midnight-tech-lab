@@ -16,3 +16,7 @@ Three desktop focus buttons use semantic buttons, native Enter/Space, `aria-pres
 Pointer selection focuses the matching HTML control without scrolling. Keyboard selection retains its initiator. Back/Escape/Reset restore the last selected control; explicit Return to studio links focus the studio heading. Escape is scoped to focus inside the studio region. Reduced motion snaps directly, including preference changes during travel. Live scene transitions never block direct page navigation.
 
 Chromium keyboard/touch-emulation tests are implementation evidence, not a screen-reader or WCAG conformance claim. Assistive-technology and physical-device review remain outstanding.
+
+## M4 editorial accessibility
+
+Editorial pages remain Server Components. Project category links use a named navigation landmark and aria-current, preserving native keyboard/history behavior without client scripting. Cards have descriptive text links; missing content is identified in text, not color alone. No hover-only content, custom keyboard widget or new animation is introduced. Existing focus, reduced-motion and wrapping navigation styles remain. Browser tests are observations, not WCAG conformance or assistive-technology certification.

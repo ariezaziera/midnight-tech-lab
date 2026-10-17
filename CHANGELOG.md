@@ -1,3 +1,9 @@
+# M4 editorial update — 2026-10-17
+- Recorded M3 functional acceptance and M4-only owner authorization.
+- Added typed local editorial content, publication validation, reusable library/case-study presentation, URL filters and structured About/Services/Contact.
+- Retained honest empty states, reserved local template, noindex/nofollow and direct-link-only incomplete Contact. No unapproved content, camera changes, dependencies or deployment.
+- npm ci, lint, strict typecheck, production build and production audit passed; final Playwright suite: 47 passed in 1.9m. Captured 27 PNGs and three regression measurement files; M4 report submitted for review. Stop before M5/M6.
+
 # Changelog
 
 ## M3 — Camera and interactions — 2026-10-17

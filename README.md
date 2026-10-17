@@ -2,12 +2,12 @@
 
 A greenfield portfolio and solo freelance storefront with a cinematic 3D cosmic world plus accessible editorial content.
 
-**Status:** M3 camera/interactions implemented; owner review pending. The accepted M1 HTML foundation and M2 blockout remain usable. Final content/design remain unapproved. No actual Blender models or real portrait are included. Do not publish or begin M4 without owner approval.
+**Status:** M3 functional prototype accepted; M4 editorial implementation complete and awaiting owner review. The accepted M1 HTML foundation and M2 blockout remain usable. Final content/design remain unapproved. No actual Blender models or real portrait are included. Do not publish or begin M5/M6 without owner approval.
 
 ## Local development
 Use Node 22 (tested with 22.14.0) and npm (tested with 11.16.0). Run `npm ci`, then `npm run dev` and open `http://127.0.0.1:3000`. The server binds to loopback only.
 
-Validation: `npm run lint`, `npm run typecheck`, `npm run build`, then `npm test`. Browser tests start the production server themselves; port 3000 must be free. Install the matching browser with `npx playwright install chromium` if it is not already available. Current tests capture evidence under `docs/04-delivery/evidence/m3/`; historical M1/M2 evidence is retained. Run installation before starting servers or tests to avoid Windows native-file locks.
+Validation: `npm run lint`, `npm run typecheck`, `npm run build`, then `npm test`. Browser tests start the production server themselves; port 3000 must be free. Install the matching browser with `npx playwright install chromium` if it is not already available. Current tests capture evidence under `docs/04-delivery/evidence/m4/`; historical M1/M2 evidence is retained. Run installation before starting servers or tests to avoid Windows native-file locks.
 
 The sole project fixture is `/projects/placeholder`. It represents no actual project. Contact has no working destination or form. Styles and system fonts are provisional. See `docs/04-delivery/M1_IMPLEMENTATION_REPORT.md` for validation and limitations.
 
@@ -29,3 +29,6 @@ Start with `AGENTS.md`, then `docs/00-project/PRD.md`, `docs/00-project/DECISION
 
 ## Pack v2 — Visual fidelity handoff
 The v2 package bundles ten earlier concept boards under `docs/05-references/`. See `docs/01-design/WIREFRAME_MAP.md` for verified paths, `VISUAL_FIDELITY_CHECKLIST.md` for review gates, and `CODEX_VISUAL_HANDOFF_PROMPT.md` for Codex handoff. Concept art is illustrative and is not a substitute for user-approved final assets or per-screen designs.
+
+
+M4 editorial data lives in `src/content/editorial.ts`, with schema in `src/content/model.ts` and validation/publication selectors in `src/lib/content.ts`. No authentic project has publication approval. `/projects` therefore shows an honest empty state and a separate local template; only approved published project tags become filters. `?category=...` filters server-rendered results without JavaScript. Draft details return 404. All routes retain noindex/nofollow; this is a prototype safeguard, not access control or permission to deploy. Test-only contract fixtures never enter application routes. M3 camera/framing styling remains subject to later visual review.

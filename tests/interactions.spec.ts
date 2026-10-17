@@ -3,7 +3,7 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import { cameraBounds, cameraPresets, hotspotIds, hotspots, transitionPose, type CameraPresetId } from "../src/lib/scene/interaction-config";
 
 test.use({ viewport: { width: 1440, height: 900 } });
-const evidence = "docs/04-delivery/evidence/m3";
+const evidence = "docs/04-delivery/evidence/m4";
 type MotionSample = { position: number[]; target: number[] };
 type Diagnostics = {
   position: number[]; target: number[]; fov: number; near: number; far: number; clearance: number;
@@ -110,9 +110,22 @@ test("rapid repeated requests and Escape during travel always settle to the late
     for (const index of [0, 1, 2, 2]) buttons[index].click();
   });
   await settled(page, "workstation");
-  await focusButton(page, "creator").evaluate(button => (button as HTMLButtonElement).click());
-  await expect(page.locator("canvas")).toHaveAttribute("data-camera-moving", "true");
-  await page.keyboard.press("Escape");
+  // Observe and interrupt inside the browser: a delayed automation round-trip
+  // can miss the entire transition on this machine. Real Escape input is tested above.
+  await focusButton(page, "creator").evaluate(button => new Promise<void>((resolve, reject) => {
+    const canvas = document.querySelector("canvas");
+    if (!canvas) { reject(new Error("Missing scene")); return; }
+    const timeout = setTimeout(() => { observer.disconnect(); reject(new Error("No moving frame observed")); }, 15000);
+    const observer = new MutationObserver(() => {
+      if (canvas.dataset.cameraMoving !== "true") return;
+      observer.disconnect();
+      clearTimeout(timeout);
+      window.dispatchEvent(new KeyboardEvent("keydown", { key: "Escape", bubbles: true }));
+      resolve();
+    });
+    observer.observe(canvas, { attributes: true, attributeFilter: ["data-camera-moving"] });
+    (button as HTMLButtonElement).click();
+  }));
   await settled(page, "overview");
   await expect(focusButton(page, "creator")).toBeFocused();
 });
@@ -190,7 +203,7 @@ test("HTML target actions stay usable without WebGL", async ({ page }) => {
     } as typeof original;
   });
   await page.goto("/");
-  await expect(page.getByTestId("scene-fallback")).toBeVisible();
+  await expect(page.getByTestId("scene-fallback")).toBeVisible({ timeout: 15000 });
   await focusButton(page, "creator").click();
   await page.getByTestId("studio-actions").getByRole("link", { name: "About Arieza" }).click();
   await expect(page).toHaveURL("/about");

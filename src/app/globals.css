@@ -33,3 +33,10 @@ main:focus { outline: none; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
 }
+
+/* M4 editorial hierarchy; existing provisional palette and typography retained. */
+.editorial-section { margin-top: 2.5rem; padding-top: 1.75rem; border-top: 1px solid #ffffff26; }
+.editorial-card { padding: clamp(1.5rem, 3vw, 2.5rem); border: 1px solid #56506f; background: #10132b; line-height: 1.7; min-width: 0; }
+.tag { border: 1px solid #56506f; padding: .2rem .65rem; color: #c9c9dc; font-size: .875rem; }
+.editorial-card p, .editorial-section p { overflow-wrap: anywhere; }
+[aria-label="Project filters"] [aria-current="page"] { border-color: #c4b5fd; background: #24213b; }

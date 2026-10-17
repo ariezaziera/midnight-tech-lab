@@ -1,13 +1,16 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { ActionLink, PageIntro, Placeholder } from "@/components/ui/shell";
-
+import { content } from "@/content/editorial";
+import { projectForRoute, routableProjects, isPublished } from "@/lib/content";
+import { CaseStudyPage } from "@/components/editorial/portfolio";
 export const dynamicParams = false;
-export function generateStaticParams() { return [{ slug: "placeholder" }]; }
-export const metadata: Metadata = { title: "Placeholder case study" };
-
+export function generateStaticParams() { return routableProjects(content).map(p => ({ slug: p.slug })); }
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const project = projectForRoute(content, (await params).slug);
+  return { title: project ? `${isPublished(project) ? "" : "Local placeholder — "}${project.title}` : "Project unavailable", robots: { index: false, follow: false } };
+}
 export default async function ProjectDetail({ params }: { params: Promise<{ slug: string }> }) {
-  const { slug } = await params;
-  if (slug !== "placeholder") notFound();
-  return <><div className="mb-9"><ActionLink href="/projects" secondary>Back to projects</ActionLink></div><PageIntro eyebrow="Local layout preview / Not a real project" title="Placeholder case study"><p>Structure only. No project claims, results or client work are represented.</p></PageIntro><Placeholder title="Project media pending"><p>Approved screenshots and descriptive alternative text will be added with the actual project.</p></Placeholder><div className="mt-10 grid gap-8 sm:grid-cols-2">{["Overview", "Contribution", "Process", "Outcomes"].map(title => <section key={title} className="border-t border-white/15 pt-6"><h2 className="mb-3 text-2xl">{title}</h2><p className="text-muted">Placeholder — verified {title.toLowerCase()} content has not been supplied.</p></section>)}</div></>;
+  const project = projectForRoute(content, (await params).slug);
+  if (!project) notFound();
+  return <CaseStudyPage project={project} data={content} />;
 }

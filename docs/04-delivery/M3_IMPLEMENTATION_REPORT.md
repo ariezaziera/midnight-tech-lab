@@ -1,6 +1,6 @@
 # M3 — Camera & Interactions
 
-Date: 2026-10-17 (Asia/Kuala_Lumpur). Base: accepted M2 commit `29bc79e`. **Implementation and validation complete; owner review pending. M4 has not started.**
+Date: 2026-10-17 (Asia/Kuala_Lumpur). Base: accepted M2 commit `29bc79e`. **Historical M3 implementation report. Owner accepted the functional prototype and authorized M4 on 2026-10-17; final framing, selection visuals and cinematic styling remain reserved for later review.**
 
 ## Delivered behavior
 

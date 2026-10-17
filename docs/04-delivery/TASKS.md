@@ -13,7 +13,7 @@
 
 ### M0 findings — prioritized follow-up
 
-Audit delivered; M2 accepted and M3-only authorization received. **Do not begin M4 without explicit owner approval.** Findings are detailed in `M0_AUDIT_REPORT.md`; only decisions explicitly recorded in DECISIONS.md are approved.
+Audit delivered; M3 accepted as a functional prototype and M4 authorized. **Do not begin M5 without explicit owner approval.** Findings are detailed in `M0_AUDIT_REPORT.md`; only decisions explicitly recorded in DECISIONS.md are approved.
 
 - [x] Read all 34 baseline docs and inspect all ten concept boards.
 - [x] Validate all ten referenced image paths, PNG decoding and SHA-256 prefixes: 10/10 pass each check. No broken listed image paths.
@@ -24,7 +24,7 @@ Audit delivered; M2 accepted and M3-only authorization received. **Do not begin 
 - [x] **AUD-05 / P1 / owner:** direct-link-only contact approved; incomplete informational shell until verified link exists, no form/success state.
 - [ ] **AUD-06 / P1 / release planning / owner:** confirm functional MVP boundary, defer intro/expansion, and require baseline hardening before any release.
 - [x] **AUD-07 / M3 matrix / owner + implementer:** approved creator → About, projects → Projects library, workstation → focus/overview; console/globe inactive. Service detail and Lab journeys remain deferred.
-- [x] **AUD-08 / M3 implementation / implementer:** centralize overview/creator/projects/workstation presets, bounds, interrupted transitions and stable restoration; capture geometry/camera evidence. Owner M3 framing review remains pending.
+- [x] **AUD-08 / M3 implementation / implementer:** centralize overview/creator/projects/workstation presets, bounds, interrupted transitions and stable restoration; capture geometry/camera evidence. M3 functional prototype accepted; final framing remains a later visual gate.
 - [ ] **AUD-09 / P1 / reference selection / owner:** review Development/Design crops from `earlier-central-hub.png` and Media from `earlier-module-layouts.png`; correct mappings after selection.
 - [x] **AUD-10 / P1 / M1 setup / implementer:** pin compatible dependencies and Node/npm, add lockfile and independent validation scripts. ESLint support limitation tracked below; see M1 report.
 - [ ] **AUD-11 / P1 / before M2 and release / owner + implementer:** specify target devices, measurable budgets, quality selection/override and failure recovery; validate accessibility throughout implementation.
@@ -64,10 +64,23 @@ Audit delivered; M2 accepted and M3-only authorization received. **Do not begin 
 - [x] Preserve M1/M2 regression coverage and add 15 M3 checks: final 40 tests pass; lint/typecheck/build and clean npm ci pass.
 - [x] Capture overview, selected targets, mobile, failure and camera measurement evidence under `evidence/m3/`.
 - [x] Submit [M3 implementation report](M3_IMPLEMENTATION_REPORT.md).
-- [ ] Owner review M3 camera/framing/interactions; explicit approval required before M4.
+- [x] Owner accepted M3 functional prototype and authorized M4 (2026-10-17). Final framing/selection/cinematic styling remain open.
 - [ ] Physical mobile, Safari/Firefox, screen-reader and final visual/production-asset reviews remain outstanding.
 
-## M4–M6
-- [ ] Build editorial portfolio.
+## M5–M6
+
 - [ ] Integrate approved cinematic assets.
 - [ ] QA and deploy.
+
+
+## M4 — Editorial portfolio
+- [x] Audit content approvals; retain zero published projects/services/contact methods and one labeled local template.
+- [x] Add typed local records, publication checks, category/reference validation and reusable project/case-study presentation.
+- [x] Structure About, Services and Contact with honest missing inputs and direct HTML journeys.
+- [x] Complete npm ci, lint, typecheck, production build and production audit (zero production findings); final full browser suite: 47 passed in 1.9m.
+- [x] Capture 27 screenshots and three regression measurement JSON files; submit [M4 implementation report](M4_IMPLEMENTATION_REPORT.md).
+- [ ] Owner approve authentic project titles, roles, narratives, tools, media/rights, results and links before publication.
+- [ ] Owner supply approved biography, skills, experience, working approach, portrait/CV, actual offerings and verified contact destination/availability.
+- [ ] Owner review M4 implementation; M5/M6 remain unauthorized.
+
+- [ ] Review the clean-install notice for the pinned `unrs-resolver@1.12.2` postinstall script before explicitly approving scripts; no blanket approval was applied in M4.

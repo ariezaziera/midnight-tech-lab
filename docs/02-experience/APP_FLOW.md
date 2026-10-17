@@ -26,3 +26,7 @@ Direct page links are available before travel finishes and in every fallback. Th
 - Missing approved media/content → visibly labeled placeholders, never invented biography/project claims.
 - Mobile below 768 CSS px or JavaScript disabled → descriptive HTML studio and direct routes; no required camera action.
 - Leaving during travel → preserve the prior settled ID, not the intermediate pose or pending destination. Return restores that stable view.
+
+## M4 editorial journeys
+
+Recruiter: Home → Projects → local template preview → About → Contact. This verifies navigation only: there is no approved genuine case study yet. Client: Home → Services → Projects → Contact. Relevant work and offerings remain empty until approved. Both journeys use ordinary links without WebGL or JavaScript. Publication status gates actual case-study and related-work links; no camera change was required.

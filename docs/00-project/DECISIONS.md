@@ -72,3 +72,11 @@ M0 audit delivered. The owner gate was subsequently resolved by the conditional 
 - Navigation Console, Holographic Globe, Cozy Corner and satellite islands remain non-interactive. No free-flight/orbit exploration, intro, production art, fictional content, backend or new modules.
 - Keep the existing mobile content-first HTML presentation. Preserve demand rendering at rest and track existing dependency audit issues.
 - Deliver tests, camera/interaction evidence and M3 report. Stop for owner review; M4 requires explicit authorization. No publication is authorized.
+
+## Owner gate — M4 execution authorization (2026-10-17)
+
+- Owner accepted M3 as a functional prototype. Final camera framing, selection visuals and cinematic styling remain reserved for later visual review.
+- M4 only: typed local editorial content, Projects/filtering, reusable case studies, About, provisional Services and verified direct-link-only Contact. Preserve M1–M3 and existing routes/navigation.
+- Content defaults to draft or labeled placeholder unless owner verification and explicit public-presentation approval are recorded. Candidate names in CONTENT_GUIDELINES are not publication approval.
+- Retain `/projects/placeholder` as a clearly labeled local template demonstration. Draft and other placeholder slugs are excluded from portfolio listings and detail routes. Prototype-wide noindex/nofollow remains; it is not access control.
+- No CMS, database, authentication, contact backend, deployment, production art, new 3D modules or camera features. Stop after M4 and request owner review before M5.

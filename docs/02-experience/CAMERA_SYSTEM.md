@@ -1,6 +1,6 @@
 # Camera System — M3
 
-M2's fixed overview is the accepted base. M3 camera/interaction implementation is subject to owner review; no final cinematic framing is implied.
+M2's fixed overview is the accepted base. M3 camera/interaction functionality is accepted. Final framing, selection visuals and cinematic styling remain subject to later owner review.
 
 ## Stable presets
 
@@ -33,4 +33,4 @@ Only a validated stable preset ID is saved under midnight-tech-lab:stable-preset
 
 Tests project configured target volumes into the viewport, inspect center-ray visibility, measure conservative camera clearance from mesh bounding boxes, sample moving poses, and cover preset pairs/interrupted paths. These are basic clipping/visibility checks for this fixed procedural scene, not a general collision engine. Other objects may intentionally leave the frame in a focused view. Future production geometry requires new path/visibility validation.
 
-Navigation/cozy/top/module presets, island travel and intro remain deferred. M3 implements only overview, creator, projects and workstation. Owner approval is required before M4.
+Navigation/cozy/top/module presets, island travel and intro remain deferred. M3 implements only overview, creator, projects and workstation. M4 editorial work is authorized; no new camera features are approved in M4.

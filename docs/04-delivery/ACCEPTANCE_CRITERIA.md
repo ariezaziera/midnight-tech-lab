@@ -35,3 +35,10 @@
 ## Visual QA
 - Compare desktop 1440x900 and mobile 390x844 against approved per-screen reference images once provided.
 - Log deviations rather than silently declaring pixel-perfect equivalence.
+
+## M4 editorial checks
+
+- Only explicitly approved content can enter published listings and detail routes; the reserved local template is unmistakably labeled.
+- Filters reflect actual published tags, expose current state and work without JavaScript; empty results have a clear recovery action.
+- About/Services lead to Contact; core journeys do not depend on the scene.
+- Retain noindex/nofollow, 404 restrictions, direct-link-only Contact and the complete M3 regression suite.

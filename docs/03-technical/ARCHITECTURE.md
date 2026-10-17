@@ -48,3 +48,13 @@ Rendering uses `frameloop="demand"`, DPR 1–1.5, no shadow maps, disabled rayca
 Raycast events are enabled only for metadata-based scene selection; the root hit handler blocks deeper intersections and ignores inert metadata. No OrbitControls, camera-controls feature, GSAP, physics or additional animation package is used. A non-raycast amber outline marks selection. Native HTML buttons/links handle keyboard and touch alternatives. The non-modal selection section remains available during rendering failures.
 
 Canvas data attributes record prototype camera pose, stable projection/clearance diagnostics and render counts for reproducible browser verification. They expose no alternate navigation API or test-only feature switch. Geometry diagnostic sampling is limited to demanded frames; idle rendering still stops.
+
+## M4 editorial content contract
+
+Canonical types: `src/content/model.ts`; local records: `src/content/editorial.ts`; validation/selectors: `src/lib/content.ts`. Editorial data is separate from Server Component presentation under `src/components/editorial/`. No CMS/API/storage service is used.
+
+Every record has `published`, `draft` or `placeholder` status. Published records require an approval source plus owner verification and explicit public-presentation approval. Project identity, category/related references, minimum published overview/role, media alt/rights/provenance, verified outcomes and links are validated when content is imported. A failed content contract stops rendering/build instead of silently exposing incomplete data. Media paths and CV file existence must also be checked before adding actual assets; none are currently configured.
+
+Only published projects appear in the portfolio/filter categories/related work. The sole explicit exception is `/projects/placeholder`, shown separately as a local demonstration. Draft/other placeholder routes are excluded both by generated params and runtime selection. Candidate project names from documentation are not imported. Profile drafts show only missing-input messages, and unconfirmed services/contact methods are excluded. Prototype metadata remains noindex/nofollow for every status; no structured data is added.
+
+Projects filters use server-rendered query links (`?category=...`) and work without JavaScript. Unknown categories show an empty state with a clear-filter link; repeated category parameters use the unfiltered view. Consequently `/projects` renders at request time, while approved detail params remain statically generated. Existing small client navigation/studio boundaries are unchanged.
