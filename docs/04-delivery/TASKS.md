@@ -144,3 +144,10 @@ Audit delivered; M0–M5-C accepted. **M6-A1 delivered for review only; no later
 - [x] Fifteen extended idle windows and 20 resource cycles stable;63 PNGs/eight JSON files plus comparison and [implementation report](M6A1_IMPLEMENTATION_REPORT.md).
 - [ ] Owner review bay/framing/controls and actual Intel HD Graphics 620 behavior; local headless measurements are not physical-device validation.
 - [ ] M6-A2, B1, other batches, authentic-content integration and deployment remain NOT authorized. Existing dependency/browser/AT/content/asset risks stay open.
+
+## M6-B1 — Content intake planning only
+
+- [x] Owner authorized documentation/planning only; inspect current types, publication guards, routes, categories, renderer and Development integration points.
+- [x] Prepare [one-project intake plan](M6B1_CONTENT_INTAKE_PLAN.md), permission checklist, proposed HTML-only B1 boundary and separately gated A2 dependencies. No code, records, assets, tests, dependencies or runtime changes.
+- [ ] Owner supplies/approves one authentic Development packet, category and media or explicit text-first choice; separately authorizes narrowed B1 implementation. M6-A1 remains delivered for review, not implicitly accepted.
+- [ ] M6-A2, wider B1 identity/services/art work, other batches and deployment remain unauthorized. Validate and commit/push this planning documentation only.

@@ -1,3 +1,8 @@
+# M6-B1 content intake planning — 2026-10-17
+
+- Audit actual local content/publication guards, HTML routes and technical bay integration; document one authentic Development project packet and rights/approval checklist.
+- Propose a narrow HTML-only B1 implementation before separately authorized A2; no application, asset, dependency, test or runtime change. M6-A1 acceptance and later budgets/console decisions remain gated.
+
 # M6-A1 one-scene host and technical review bay — 2026-10-17
 - Recorded D1–D4/F-only D6 authorization. Added two-scene typed host, lazy procedural Development placeholder and validated stable-scene restoration while preserving the hub, shell, camera rig and editorial data.
 - Successful switches retain one Canvas/renderer; load/error/cancel/readiness, scoped Escape/Back/Reset, keyboard focus and all HTML/failure/mobile safeguards remain available.
