@@ -64,3 +64,7 @@ The full amber wireframe volume is replaced by small amber frame-corner marks an
 ## M5-B lighting/material layer
 
 M5-A procedural geometry, dimensions, frame-corner selection and hotspot ancestry remain unchanged. World ambient is replaced by a hemisphere fill; the two directional lights and one local desk point light are retuned through `look-config.ts`. No extra light or star geometry is added. CSS atmosphere sits behind a transparent desktop canvas, outside the Three.js scene graph. Selection marks remain non-raycast decoration; console/globe remain inert.
+
+## M6-A1 graph lifecycle
+
+The only Canvas contains common PerspectiveCamera, hemisphere/key/rim lights, SceneHost and RendererLifecycle. SceneHost owns exactly one ready graph: the accepted CentralHub plus its existing CameraRig, or DevelopmentTechnicalReviewBay plus its fixed camera placement and one local point light. Loading/failure temporarily has no graph and a readable HTML cover; no two graphs coexist. The bay reuses per-mount shared primitive/material templates and merged batches; unmount disposes them. The console/globe and three hub targets remain unchanged. No other room, exhibit camera or spatial travel system is present.

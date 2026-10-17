@@ -59,3 +59,7 @@ M5-B accepted. Capture fresh unchanged production baseline first; implement cons
 Owner accepted M0–M5-C and authorized planning only. Preserve the split-screen shell. The historical module/intro/deployment list above is not an approved batch or release permission. See [M6 planning report](M6_PLANNING_REPORT.md), [experience architecture](M6_EXPERIENCE_ARCHITECTURE.md), [batch plan](M6_BATCH_PLAN.md) and [owner decisions](M6_OWNER_DECISIONS.md).
 
 Recommended Option C and M6-A1 (single-scene lifecycle plus labeled Development review bay) remain proposed. Numerical F/Z/I/R profiles are targets needing approval. Each A/B/C sub-batch has its own scope, content dependencies, validation, evidence and stop gate; acceptance never authorizes the next. No M6 implementation or deployment has begun.
+
+## M6-A1 delivery gate
+
+Owner explicitly approved D1–D4/F-only D6 and M6-A1 under execution conditions. One-scene host plus Development technical review bay is delivered for owner review; see [implementation report](M6A1_IMPLEMENTATION_REPORT.md). Preserve the shell, hub, cameras, editorial safeguards and all prior guarantees. No other A/B/C batch, console/globe activation, authentic-content integration or deployment is authorized by this delivery. The earlier planning-only section is historical and superseded only for this specific slice.

@@ -1,0 +1,324 @@
+{
+  "phases": {
+    "before": {
+      "readinessMs": {
+        "median": 760,
+        "min": 664,
+        "max": 1327
+      },
+      "javascriptBytes": {
+        "median": 393559,
+        "min": 393559,
+        "max": 393559
+      },
+      "metrics": {
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false,
+        "alpha": true,
+        "calls": 30,
+        "triangles": 1680,
+        "geometries": 30,
+        "textures": 1,
+        "frames": 1,
+        "renderer": "WebKit WebGL",
+        "readyMs": 1327
+      },
+      "idleStable": true,
+      "errors": []
+    },
+    "after": {
+      "readinessMs": {
+        "median": 663,
+        "min": 632,
+        "max": 905
+      },
+      "javascriptBytes": {
+        "median": 399367,
+        "min": 399367,
+        "max": 399367
+      },
+      "metrics": {
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false,
+        "alpha": true,
+        "calls": 30,
+        "triangles": 1680,
+        "geometries": 30,
+        "textures": 1,
+        "frames": 3,
+        "renderer": "WebKit WebGL",
+        "readyMs": 823
+      },
+      "idleStable": true,
+      "errors": []
+    }
+  },
+  "modes": {
+    "Low": {
+      "firstMs": {
+        "median": 139,
+        "min": 134,
+        "max": 178
+      },
+      "warmMs": {
+        "median": 120,
+        "min": 112,
+        "max": 149
+      },
+      "additionalJsBytes": {
+        "median": 1280,
+        "min": 1280,
+        "max": 1280
+      },
+      "metrics": {
+        "calls": 9,
+        "triangles": 424,
+        "geometries": 9,
+        "textures": 1,
+        "materials": 9,
+        "programs": 1,
+        "dpr": 1,
+        "width": 694,
+        "height": 440,
+        "graphs": [
+          "development"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      },
+      "camera": {
+        "position": [
+          5.6,
+          4.6,
+          6.8
+        ],
+        "target": [
+          0,
+          1,
+          0
+        ],
+        "fov": 38,
+        "near": 0.1,
+        "far": 40,
+        "clearance": 6.427285572334453,
+        "bounds": {
+          "min": [
+            5,
+            4,
+            6
+          ],
+          "max": [
+            6,
+            5,
+            7
+          ]
+        },
+        "targetInView": [
+          2.3074364550473634e-16,
+          -6.776417670673255e-17,
+          0.983943290641143
+        ]
+      },
+      "sameCanvas": true
+    },
+    "Medium": {
+      "firstMs": {
+        "median": 177,
+        "min": 161,
+        "max": 210
+      },
+      "warmMs": {
+        "median": 133,
+        "min": 131,
+        "max": 268
+      },
+      "additionalJsBytes": {
+        "median": 1280,
+        "min": 1280,
+        "max": 1280
+      },
+      "metrics": {
+        "calls": 9,
+        "triangles": 424,
+        "geometries": 9,
+        "textures": 1,
+        "materials": 9,
+        "programs": 1,
+        "dpr": 1.5,
+        "width": 1041,
+        "height": 660,
+        "graphs": [
+          "development"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      },
+      "camera": {
+        "position": [
+          5.6,
+          4.6,
+          6.8
+        ],
+        "target": [
+          0,
+          1,
+          0
+        ],
+        "fov": 38,
+        "near": 0.1,
+        "far": 40,
+        "clearance": 6.427285572334453,
+        "bounds": {
+          "min": [
+            5,
+            4,
+            6
+          ],
+          "max": [
+            6,
+            5,
+            7
+          ]
+        },
+        "targetInView": [
+          2.3074364550473634e-16,
+          -6.776417670673255e-17,
+          0.983943290641143
+        ]
+      },
+      "sameCanvas": true
+    },
+    "High": {
+      "firstMs": {
+        "median": 215,
+        "min": 187,
+        "max": 260
+      },
+      "warmMs": {
+        "median": 175,
+        "min": 158,
+        "max": 270
+      },
+      "additionalJsBytes": {
+        "median": 1280,
+        "min": 1280,
+        "max": 1280
+      },
+      "metrics": {
+        "calls": 9,
+        "triangles": 424,
+        "geometries": 9,
+        "textures": 1,
+        "materials": 9,
+        "programs": 1,
+        "dpr": 2,
+        "width": 1389,
+        "height": 880,
+        "graphs": [
+          "development"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      },
+      "camera": {
+        "position": [
+          5.6,
+          4.6,
+          6.8
+        ],
+        "target": [
+          0,
+          1,
+          0
+        ],
+        "fov": 38,
+        "near": 0.1,
+        "far": 40,
+        "clearance": 6.427285572334453,
+        "bounds": {
+          "min": [
+            5,
+            4,
+            6
+          ],
+          "max": [
+            6,
+            5,
+            7
+          ]
+        },
+        "targetInView": [
+          2.3074364550473634e-16,
+          -6.776417670673255e-17,
+          0.983943290641143
+        ]
+      },
+      "sameCanvas": true
+    }
+  },
+  "hubStartupTargetMs": 1000,
+  "initialJsGrowthBytes": 5808,
+  "gates": {
+    "hubStartup": true,
+    "initialJs": true,
+    "lazyJs": true,
+    "firstEntry": true,
+    "warmEntry": true,
+    "bayResources": true,
+    "hubResources": true,
+    "cycles": true,
+    "idle": true,
+    "singleCanvas": true,
+    "singleGraph": true,
+    "errors": true,
+    "responsive": true
+  },
+  "idleSamples": 15,
+  "cycles": 20,
+  "responsive": [
+    {
+      "width": 320,
+      "overflow": false,
+      "canvas": 0
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "canvas": 0
+    },
+    {
+      "width": 768,
+      "overflow": false,
+      "canvas": 1
+    },
+    {
+      "width": 1024,
+      "overflow": false,
+      "canvas": 1
+    },
+    {
+      "width": 1440,
+      "overflow": false,
+      "canvas": 1
+    }
+  ],
+  "browsers": [
+    {
+      "name": "chromium",
+      "installed": true
+    },
+    {
+      "name": "firefox",
+      "installed": false
+    },
+    {
+      "name": "webkit",
+      "installed": false
+    }
+  ]
+}

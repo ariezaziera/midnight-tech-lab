@@ -1,6 +1,6 @@
 # M6 owner decisions and content intake
 
-**Status: planning only.** M0–M5-C are accepted by the owner. No proposed architecture, numerical budget, new interaction, content claim or M6 implementation batch below is approved yet. A reply accepting this planning package must explicitly identify any batch it authorizes; document acceptance alone does not start work.
+**Current gate:** owner approves D1, D2, D3, D4 and the F-profile portion of D6 for M6-A1 only, subject to the recorded execution authorization. All other decisions and batches remain pending. The recommendations below remain planning context except where explicitly approved.
 
 ## Already approved constraints — do not ask again
 
@@ -9,30 +9,30 @@
 - Accepted split-screen desktop shell. This request explicitly preserves it; no fullscreen redesign is proposed.
 - Accepted M3 hub overview/creator/projects/workstation behavior, M5-A procedural geometry, M5-B static atmosphere/materials and M5-C density policy; no forced camera/content prerequisite.
 - Current mobile HTML, reduced motion, failure recovery, direct-link-only incomplete Contact until verified, no fabricated identity/projects/services, no deployment.
-- Commit/push completed documentation under the standing instruction; do not implement M6-A.
+- Commit/push the authorized slice under the standing instruction, then stop. M6-A1 only is authorized; do not implement M6-A2/B1 or deploy.
 - Owner reports smooth operation on **Intel HD Graphics 620**, including High. This identifies a real target and qualitative acceptance; it is not an instrumented frame-time/FPS/GPU-memory result. It does not change Low default or approve higher density/effects automatically.
 
 ## Decisions requested now
 
 ### D1 — Primary spatial architecture
 
-**Recommendation:** Option C, one active on-demand scene inside the existing panel, Central Hub as entry/restoration point. Preserve editorial URLs and hub camera architecture; do not construct a resident multi-island world. Alternatives A/B and trade-offs are in [planning report](M6_PLANNING_REPORT.md). **Approval needed before:** A1. **Owner answer:** approve C / choose A / choose B / request revision. **Status:** pending.
+**Recommendation:** Option C, one active on-demand scene inside the existing panel, Central Hub as entry/restoration point. Preserve editorial URLs and hub camera architecture; do not construct a resident multi-island world. Alternatives A/B and trade-offs are in [planning report](M6_PLANNING_REPORT.md). **Approval needed before:** A1. **Owner answer:** approve C / choose A / choose B / request revision. **Status:** approved for M6-A1 only under the owner execution conditions.
 
 ### D2 — First implementation batch
 
-**Recommendation:** authorize **M6-A1 only**, as exactly scoped in [batch plan](M6_BATCH_PLAN.md): hub plus a clearly labeled local Development technical review bay, one-at-a-time graph lifecycle, HTML equivalents and tested recovery. No real project/tool claims, active console/globe, other scenes or content publication. **Approval needed before:** any application/test/asset/dependency edit. **Status:** pending. A1 acceptance cannot authorize A2/B1 automatically.
+**Recommendation:** authorize **M6-A1 only**, as exactly scoped in [batch plan](M6_BATCH_PLAN.md): hub plus a clearly labeled local Development technical review bay, one-at-a-time graph lifecycle, HTML equivalents and tested recovery. No real project/tool claims, active console/globe, other scenes or content publication. **Approval needed before:** any application/test/asset/dependency edit. **Status:** approved for M6-A1 only under the owner execution conditions. A1 acceptance cannot authorize A2/B1 automatically.
 
 ### D3 — Scene navigation, restoration and escape contract
 
-**Recommendation:** local scene state, no new route/query/deep-link or browser-history entry for scene choices. Existing editorial links retain normal href/history. Save only stable eligible scene ID in a separate validated versioned session record if needed; preserve existing hub preset key. Back to hub restores stable hub focus; Reset means hub overview and clears scene restoration; scoped Escape closes directory first, otherwise cancels loading/returns hub. Fixed-size HTML loading between disposed graphs; no crossfade or cross-world flight. **Trade-off:** rooms are not directly shareable by URL initially. **Approval needed before:** A1. **Status:** pending.
+**Recommendation:** local scene state, no new route/query/deep-link or browser-history entry for scene choices. Existing editorial links retain normal href/history. Save only stable eligible scene ID in a separate validated versioned session record if needed; preserve existing hub preset key. Back to hub restores stable hub focus; Reset means hub overview and clears scene restoration; scoped Escape closes directory first, otherwise cancels loading/returns hub. Fixed-size HTML loading between disposed graphs; no crossfade or cross-world flight. **Trade-off:** rooms are not directly shareable by URL initially. **Approval needed before:** A1. **Status:** approved for M6-A1 only under the owner execution conditions.
 
 ### D4 — Content eligibility and review-only exception
 
-**Recommendation:** activate a public-facing discipline only with an approved relevant project, readable contribution/process and approved visual or explicitly approved text-first exhibit. A1's empty technical bay is a visibly labeled local review exception, never represented as finished work or permission to deploy. Absent Design/Media content means deferring those rooms, not inventing it. **Approval needed before:** A1/A2 respectively. **Status:** pending.
+**Recommendation:** activate a public-facing discipline only with an approved relevant project, readable contribution/process and approved visual or explicitly approved text-first exhibit. A1's empty technical bay is a visibly labeled local review exception, never represented as finished work or permission to deploy. Absent Design/Media content means deferring those rooms, not inventing it. **Approval needed before:** A1/A2 respectively. **Status:** approved for M6-A1 only under the owner execution conditions.
 
 ### D6 — Numerical gate profiles
 
-**Recommendation:** approve the proposed F/Z/I/R profiles and common measurement protocol in the batch plan as initial targets, subject to evidence-based revision. F keeps hub unchanged, bounds the first bay at 35 draws/3,000 triangles and limits initial JS growth to 12 KiB. These are proposed caps, not hardware guarantees. High remains DPR cap 2, Low default 1. **Approval needed before:** A1 acceptance criteria are made executable. **Status:** pending. Owner may revise caps without approving effects or further scenes.
+**Recommendation:** approve the proposed F/Z/I/R profiles and common measurement protocol in the batch plan as initial targets, subject to evidence-based revision. F keeps hub unchanged, bounds the first bay at 35 draws/3,000 triangles and limits initial JS growth to 12 KiB. These are proposed caps, not hardware guarantees. High remains DPR cap 2, Low default 1. **Approval needed before:** A1 acceptance criteria are made executable. **Status:** F profile approved as initial M6-A1 targets only; Z/I/R remain pending proposals. Owner may revise caps without approving effects or further scenes.
 
 ## Decisions required before later affected work
 

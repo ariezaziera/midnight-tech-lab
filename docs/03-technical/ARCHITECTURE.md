@@ -80,3 +80,19 @@ RendererLifecycle samples renderer memory/draw/DPR/backbuffer and unique live me
 ## M6 planning pointer — not an architecture change
 
 M5-C is owner-accepted. M6 planning recommends a single active lazy scene inside the existing split-screen panel, scene-local controlled cameras and a minimal typed host, while preserving hub presets, server/editorial boundaries, DPR modes and HTML fallback. This remains a proposal: [experience architecture](../04-delivery/M6_EXPERIENCE_ARCHITECTURE.md) and [owner gate](../04-delivery/M6_OWNER_DECISIONS.md). Existing source/runtime and the accepted M5-C architecture are unchanged; no scene host or new module exists yet.
+
+## M6-A1 one-scene host — implemented for owner review
+
+The existing lazy `hub-canvas.tsx` remains the only Canvas/renderer entry point. Common camera object, three fill/key/rim lights, static atmosphere and quality selection persist across successful switches. `SceneHost` mounts either the existing CentralHub/CameraRig pair or the lazily imported Development bay. It renders no graph during loading/failure under a fixed-size HTML cover, never two hidden graphs. Console/globe and hub geometry/camera configuration are unchanged.
+
+State ownership:
+- StudioPreview owns typed scene request ID/sequence, current matching lifecycle event, cancellation notice, quality and the existing hub camera request. Stale events are checked against the current request. Scene changes add no routes/query/history entries.
+- DesktopPreview owns the original WebGL probe/world import/renderer readiness, global first-draw watchdog, context loss and whole-renderer retry boundary.
+- SceneHost owns one request-scoped asynchronous import, active flag, graph component and 15-second completed-draw watchdog. Request replacement, route deactivation and unmount invalidate old resolutions. A graph construction boundary reports failed state; retry may create a fresh renderer. Successful switches preserve Canvas identity.
+- RendererLifecycle inspects actual graph metadata, light/resource counters and completed nonzero draws with the requested camera settled before emitting scene readiness. Initial renderer readiness stays separate from per-entry timing. No callback requests an idle frame loop.
+
+Registry/camera values are in `src/lib/scene/scene-registry.ts`; the new stable-scene record lives in `scene-session.ts`. Only hub/development are valid, saved only after readiness; invalid values use hub and denied storage uses memory fallback. Existing `midnight-tech-lab:stable-preset:v1` behavior is intact. The new key is `midnight-tech-lab:stable-scene:v1`; no coordinates or pending loads are persisted. Route reactivation drops unfinished selection in favor of the validated stable scene. Reset selects hub overview and retains quality.
+
+Bay resources reuse the existing per-mount HubResources/StaticParts ownership and cleanup. Inactive graphs are unmounted, not hidden. Shared module code remains browser-cached after import; GPU resource disposal does not promise JavaScript unloading or complete heap/VRAM accounting. There are no new dependencies, production assets or other module imports. See the M6-A1 implementation report for measurements, evidence and limitations; no M6-A2/B1 approval is implied.
+
+Reset clarification: explicit Reset removes the prior scene-session record immediately and resets the in-memory default to hub, before requesting the hub draw. This prevents an immediate route departure from reviving the bay. Only completed scene readiness writes a new stable record; ordinary Back/loading cancellation still retains the previous completed state until the hub is ready.

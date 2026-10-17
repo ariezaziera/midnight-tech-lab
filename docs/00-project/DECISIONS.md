@@ -114,3 +114,12 @@ M0 audit delivered. The owner gate was subsequently resolved by the conditional 
 - Planning deliverables: M6_PLANNING_REPORT.md, M6_EXPERIENCE_ARCHITECTURE.md, M6_BATCH_PLAN.md and M6_OWNER_DECISIONS.md under docs/04-delivery/.
 - Option C (one active lazy scene), proposed navigation/restoration, numeric profiles and M6-A1 are recommendations awaiting approval, not accepted architecture or execution authorization. Other batches are independently gated.
 - Commit/push the documentation under standing instructions, then stop. Request explicit architecture and first-batch approval before M6-A1; no batch automatically authorizes another.
+
+## Owner gate — M6-A1 execution authorization (2026-10-17)
+
+- Owner approves D1, D2, D3, D4 and D6 for M6-A1 only, subject to the explicit execution conditions. D6 approval covers the F profile as initial measurable acceptance targets, not later Z/I/R growth allowances.
+- Implement one active scene graph and one Canvas/renderer, lazy Development technical review bay, explicit loading/ready/failed/cancelled behavior, safe disposal/re-entry and stale-load protection. Prefer preserving renderer identity across successful switches.
+- Bay label: Development Lab — Technical Review Placeholder. Original procedural bench/display only, one bounded overview; no real project/skill/tool/employer/outcome claims or imported media/models.
+- Local scene navigation, validated stable restoration in a separate record, cancellable loading, native Enter/Back/Reset/scoped Escape, keyboard focus and ordinary Projects link. Preserve existing hub preset key, cameras/targets, geometry/lights, shell/440px panel, DPR, HTML/mobile/no-JS, reduced motion, recovery and editorial safeguards.
+- Capture fresh baseline before application edits, at least five matched startup runs, entry/re-entry medians/ranges, twenty resource cycles, all 55 retained tests plus focused checks and full required validation/evidence/report.
+- All other M6 decisions/batches remain pending. Console/globe stay inert; no Design/Media/Services/Personal module, production content, deployment or publication. Commit/push M6-A1 then stop for owner review; no M6-A2/B1 automatically.

@@ -3,7 +3,7 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import { cameraBounds, cameraPresets, hotspotIds, hotspots, transitionPose, type CameraPresetId } from "../src/lib/scene/interaction-config";
 
 test.use({ viewport: { width: 1440, height: 900 } });
-const evidence = "docs/04-delivery/evidence/m5c/after";
+const evidence = "docs/04-delivery/evidence/m6a1/after";
 type MotionSample = { position: number[]; target: number[] };
 type Diagnostics = {
   position: number[]; target: number[]; fov: number; near: number; far: number; clearance: number;
@@ -142,9 +142,22 @@ test("reduced motion snaps and preference changes interrupt travel", async ({ pa
   }
   await captureStudio(page, "desktop-reduced-motion-selected");
   await page.emulateMedia({ reducedMotion: "no-preference" });
-  await focusButton(page, "creator").evaluate(button => (button as HTMLButtonElement).click());
-  await expect(page.locator("canvas")).toHaveAttribute("data-camera-moving", "true");
-  await page.emulateMedia({ reducedMotion: "reduce" });
+  // Signal from the first actual moving frame. A remote locator round trip can
+  // exceed the entire transition; the binding still changes real browser media.
+  await page.exposeFunction("reduceMotionDuringTravel", () => page.emulateMedia({ reducedMotion: "reduce" }));
+  const sawMoving = await focusButton(page, "creator").evaluate(button => new Promise<boolean>((resolve, reject) => {
+    const canvas = document.querySelector("canvas");
+    if (!canvas) { reject(new Error("Missing scene")); return; }
+    const timeout = setTimeout(() => { observer.disconnect(); reject(new Error("No moving frame observed")); }, 15000);
+    const observer = new MutationObserver(() => {
+      if (canvas.dataset.cameraMoving !== "true") return;
+      observer.disconnect(); clearTimeout(timeout);
+      void (window as unknown as { reduceMotionDuringTravel: () => Promise<void> }).reduceMotionDuringTravel().then(() => resolve(true), reject);
+    });
+    observer.observe(canvas, { attributes: true, attributeFilter: ["data-camera-moving"] });
+    (button as HTMLButtonElement).click();
+  }));
+  expect(sawMoving).toBe(true);
   await settled(page, "creator");
 });
 

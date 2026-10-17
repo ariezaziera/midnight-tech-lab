@@ -28,3 +28,7 @@ Small amber corner marks on the physical display frames replace the large wirefr
 ## M5-B atmosphere accessibility
 
 Stars/gradients are CSS decoration restricted to the desktop scene viewport; they have no text, focus target, hit target or animation. They cannot replace portfolio content or selected-state explanations. HTML buttons/status/focus keep their opaque existing treatment. Reduced motion requires no special atmosphere animation switch because the background is static in all modes. Existing mobile/no-JS HTML and WebGL failure explanations/retry remain.
+
+## M6-A1 accessibility
+
+The review bay is an explicitly labeled technical placeholder, with native Enter/Back/Reset controls and normal editorial links. New scenes do not make content depend on WebGL. On readiness the named studio heading receives focus without forced scroll; returning restores the entry control. Scoped Escape cancels pending loading or returns from the bay, while existing hub Escape remains unchanged. Loading/failed/cancelled/ready feedback is written in HTML, not only color. Mobile/no-JS omits scene entry controls and retains the direct project journey. No dialog, focus trap, autoplay or mandatory animation is added. Automated observations are not screen-reader/WCAG certification.

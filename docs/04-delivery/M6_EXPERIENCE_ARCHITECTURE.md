@@ -1,6 +1,6 @@
 # M6 experience architecture — proposal for owner approval
 
-Planning base: accepted M0–M5-C, repository commit `52e3845`. This document proposes behavior; it does not authorize implementation. The desktop split-screen shell, 440px studio viewport, existing editorial routes, mobile HTML experience and M3 hub camera values remain the starting constraints. See [owner decisions](M6_OWNER_DECISIONS.md), [batch plan](M6_BATCH_PLAN.md) and [audit](M6_PLANNING_REPORT.md).
+Planning base: accepted M0–M5-C, repository commit `52e3845`. The Existing inventories below describe that planning base; see [M6-A1 implementation report](M6A1_IMPLEMENTATION_REPORT.md) for the delivered review bay. Owner subsequently approved Option C and the M6-A1 subset under explicit execution conditions. Other areas/batches remain proposed; this document alone does not authorize them. The desktop split-screen shell, 440px studio viewport, existing editorial routes, mobile HTML experience and M3 hub camera values remain the starting constraints. See [owner decisions](M6_OWNER_DECISIONS.md), [batch plan](M6_BATCH_PLAN.md) and [audit](M6_PLANNING_REPORT.md).
 
 ## Experience principle
 

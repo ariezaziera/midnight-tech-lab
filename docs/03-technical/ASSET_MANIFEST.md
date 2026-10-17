@@ -37,3 +37,7 @@ Actual portrait/project media, final references, licensed image content and any 
 ## M5-B atmosphere provenance
 
 The background is original CSS gradient/color composition with twelve static one-pixel star marks. There is no nebula photograph, image texture, downloaded artwork, external model or generated portrait/project art. Geometry is the accepted M5-A source; only materials and lighting change. Final visual references and authentic content/media approval remain outstanding.
+
+## M6-A1 Development technical review bay
+
+One original procedural bench/display arrangement is now loaded on demand in the existing scene panel, with a small platform, warm desk, blank monitor/peripheral blocks and lamp. There are no language logos, code screenshots, employer/project claims or imported assets. Label: Development Lab — Technical Review Placeholder. Source: src/components/three/zones/development-scene.tsx. It does not complete an authentic portfolio-media/portrait/production GLB row or authorize another module.

@@ -30,3 +30,9 @@ Direct page links are available before travel finishes and in every fallback. Th
 ## M4 editorial journeys
 
 Recruiter: Home → Projects → local template preview → About → Contact. This verifies navigation only: there is no approved genuine case study yet. Client: Home → Services → Projects → Contact. Relevant work and offerings remain empty until approved. Both journeys use ordinary links without WebGL or JavaScript. Publication status gates actual case-study and related-work links; no camera change was required.
+
+## M6-A1 scene navigation
+
+Desktop Enter Development Review Bay is a native button, with a normal Browse Projects link in the HTML directory. Readiness focuses the studio heading; Back to Central Hub or scoped Escape returns to the prior stable hub view and restores focus to Enter. During loading, Escape cancels the request and leaves a written cancellation notice; late imports cannot mount or save a stale scene. Reset returns hub overview and preserves quality. Hub-only focus/Back controls are shown only in the hub; quality, Reset and direct HTML links remain available in the bay.
+
+Scene selection has no URL/history entry. A separate validated stable scene ID restores completed bay journeys on reload/route return; unfinished loads restore the previous stable scene. Mobile/no-JS keeps HTML and direct routes without importing the bay. Global WebGL failures preserve explanatory fallback/retry and editorial links. No console activation, new exhibit selection, free orbit or cross-world flight is introduced.

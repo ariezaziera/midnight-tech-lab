@@ -2,7 +2,7 @@ import { expect, test, type Page } from "@playwright/test";
 import { readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
-const evidence = "docs/04-delivery/evidence/m5c/after";
+const evidence = "docs/04-delivery/evidence/m6a1/after";
 test.use({ viewport: { width: 1440, height: 900 } });
 
 // Locate the built lazy chunk by an authored scene-node identifier, not a hash.

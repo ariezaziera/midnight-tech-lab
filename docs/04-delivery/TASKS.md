@@ -13,7 +13,7 @@
 
 ### M0 findings — prioritized follow-up
 
-Audit delivered; M0–M5-C accepted. **M6 planning only; no implementation or deployment authorized.** Findings are detailed in `M0_AUDIT_REPORT.md`; only decisions explicitly recorded in DECISIONS.md are approved.
+Audit delivered; M0–M5-C accepted. **M6-A1 delivered for review only; no later implementation or deployment authorized.** Findings are detailed in `M0_AUDIT_REPORT.md`; only decisions explicitly recorded in DECISIONS.md are approved.
 
 - [x] Read all 34 baseline docs and inspect all ten concept boards.
 - [x] Validate all ten referenced image paths, PNG decoding and SHA-256 prefixes: 10/10 pass each check. No broken listed image paths.
@@ -127,7 +127,20 @@ Audit delivered; M0–M5-C accepted. **M6 planning only; no implementation or de
 - [x] Prepare [planning report](M6_PLANNING_REPORT.md), [ten-area experience architecture](M6_EXPERIENCE_ARCHITECTURE.md), [independently gated batch plan](M6_BATCH_PLAN.md) and [owner decisions/content intake](M6_OWNER_DECISIONS.md).
 - [x] Recommend Option C with proposed F/Z/I/R performance profiles and a minimal M6-A1 review bay; recommendations are not accepted requirements.
 - [x] Documentation-only path/consistency/Git scope review; no npm/runtime validation or new application screenshots claimed.
-- [ ] Owner approve architecture/state contract, review-only placeholder exception, numeric targets and explicitly authorize M6-A1 (D1–D4/D6).
+- [x] Owner approved D1–D4 and D6 F targets for M6-A1 only, under explicit execution conditions. Other profiles/decisions remain pending.
 - [ ] Supply approved factual project/identity/services/contact/media packet; optional CV/socials/personal work must not be fabricated or block independent technical proof.
 - [ ] Authorize/measure Intel HD 620 and missing browser/assistive-device coverage in affected implementation batches.
-- [ ] M6-A1 implementation is NOT started. All later A/B/C batches and deployment remain unauthorized.
+- [x] M6-A1 implementation delivered for owner review; all later A/B/C batches and deployment remain unauthorized.
+
+## M6-A1 — One-scene host and Development technical review bay
+- [x] D1–D4 and F-only D6 approval recorded; no other M6 decision or batch authorized.
+- [x] Required clean install/audit/source review and fresh five-run accepted-code baseline before application edits.
+- [x] Add typed two-scene host, one Canvas/one ready graph, explicit lazy loading/failed/cancelled/ready behavior and request-scoped cleanup/watchdog.
+- [x] Add original blank procedural bench/display and one bounded overview; technical-placeholder label, no factual portfolio/skill content.
+- [x] Preserve hub source/cameras/geometry/lights, three targets, inert console/globe, shell/440px panel, DPR, mobile/no-JS, recovery and publication safeguards.
+- [x] Native Enter/Back/Reset/Escape and normal Projects link; focus, validated separate stable-scene session and pending-route restoration.
+- [x] Preserve all 55 tests and add 10. Final suite 65 passed in4.1m; ci/lint/typecheck/build and production audit pass (zero production vulnerabilities). A retained temporal assertion now signals real browser preference changes from an actual moving frame without removing its guarantee.
+- [x] F gates pass: readiness median 663 ms≤1000, initial JS+5808 bytes≤12 KiB, bay module1280 bytes≤20 KiB; bay 9 draws/424 triangles/9 geometries/9attached materials/1 texture; exact hub return counts.
+- [x] Fifteen extended idle windows and 20 resource cycles stable;63 PNGs/eight JSON files plus comparison and [implementation report](M6A1_IMPLEMENTATION_REPORT.md).
+- [ ] Owner review bay/framing/controls and actual Intel HD Graphics 620 behavior; local headless measurements are not physical-device validation.
+- [ ] M6-A2, B1, other batches, authentic-content integration and deployment remain NOT authorized. Existing dependency/browser/AT/content/asset risks stay open.

@@ -26,3 +26,7 @@ For the authorized procedural refinement, use Three/R3F code geometry and lightw
 ## M5-B conservative rendering defaults
 
 Maintain demand rendering, DPR 1–1.5, antialiasing, low-power preference and four fixed lights (one point light). The context now supports alpha to compose over static CSS atmosphere. Shadows and post-processing remain disabled/absent. No graphics-settings UI, adaptive quality controller or new package is introduced; broader quality policy belongs to separately authorized M5-C.
+
+## M6-A1 current runtime clarification
+
+The accepted M5-C policy supersedes the older M5-B DPR/no-quality-UI description above: Low/Medium/High caps 1/1.5/2, conservative Low default. M6-A1 retains those settings and one demand-rendered Canvas, adds only one lazy procedural Development technical bay and validated scene restoration, and leaves the hub rig/editorial architecture intact. No Blender, model/image download, animation/physics package, backend or dependency update is required. Detailed behavior/measurements: docs/04-delivery/M6A1_IMPLEMENTATION_REPORT.md. Later batches and deployment remain gated.

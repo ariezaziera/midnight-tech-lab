@@ -1,6 +1,6 @@
 # M6 delivery batches — proposed, not execution authorization
 
-Base: accepted M5-C `52e3845`. Only this planning package is authorized. Every batch below ends in a report/commit and owner review; completion never authorizes the next. [Architecture](M6_EXPERIENCE_ARCHITECTURE.md), [decisions](M6_OWNER_DECISIONS.md) and [planning report](M6_PLANNING_REPORT.md) govern this proposal. Proposed file paths below are not present implementation.
+Base: accepted M5-C `52e3845`. Owner subsequently authorized M6-A1 only under its explicit execution conditions; all other batches remain proposed. Every batch below ends in a report/commit and owner review; completion never authorizes the next. [Architecture](M6_EXPERIENCE_ARCHITECTURE.md), [decisions](M6_OWNER_DECISIONS.md) and [planning report](M6_PLANNING_REPORT.md) govern this proposal. Proposed file paths below are not present implementation.
 
 ## Common scope and validation contract
 
@@ -10,7 +10,7 @@ For each future implementation batch: read current AGENTS/installed framework gu
 
 Retain the 55 existing checks and their guarantees. A1 should not require changed behavioral assertions. Later explicit console activation or genuine content approval necessarily changes old assertions such as "console inert", "zero published projects" and "six draft sections". Change those only in the batch specifically approving the new behavior, preserve equivalent negative tests with isolated fixtures, and add positive real-content/console tests. Do not remove failure, keyboard or publication safeguards to get a pass. Keep exact hub geometry assertions scoped to the unchanged hub; new rooms receive their own budgets, rather than weakening hub limits globally.
 
-## Proposed performance gate profiles — require owner approval
+## Performance profiles — F approved for A1; Z/I/R remain proposed
 
 All counts are **absolute resident totals per active scene**, including selected-state geometry, not additive allowances for every module. A hidden scene is unmounted, not merely invisible. These are cautious planning caps selected above current measured complexity; they are not measured future results or established GPU limits.
 

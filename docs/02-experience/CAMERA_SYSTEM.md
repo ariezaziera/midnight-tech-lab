@@ -38,3 +38,7 @@ Navigation/cozy/top/module presets, island travel and intro remain deferred. M3 
 ## M5-A geometry compatibility
 
 All four preset positions, targets, FOV/clipping, transition waypoint/duration and bounds remain unchanged. Refined geometry stays within the original platform/target-space constraints and is rechecked for focus projection, target hits and clearance. Selection-corner batches are excluded from diagnostic rays. The camera architecture is not rewritten. Final framing remains an owner visual-review gate.
+
+## M6-A1 review camera
+
+Hub presets/controller/waypoint/bounds are unchanged. Development uses a separate fixed overview only: position [5.6,4.6,6.8], target [0,1,0], FOV 38°, near/far0.1/40. Position bounds [5,4,6]–[6,5,7] describe its fixed configuration envelope, not an exploration feature. It is placed directly before the demanded draw; no entry flight, camera animation, orbit or exhibit preset. Scene switching/reduced motion do not require travel. Actual framing/clearance evidence is recorded separately in the M6-A1 report.

@@ -3,17 +3,19 @@ import type { RefObject } from "react";
 import { qualityIds, qualityPolicy, type GraphicsQuality } from "@/lib/scene/quality-config";
 import { hotspots, hotspotIds, type CameraPresetId, type HotspotId } from "@/lib/scene/interaction-config";
 
-export function StudioControls({ preset, desktop, select, back, reset, buttons, quality, setQuality }: {
+export function StudioControls({ preset, desktop, select, back, reset, buttons, quality, setQuality, hubActive, backToHub }: {
+  backToHub: () => void;
+  hubActive: boolean;
   quality: GraphicsQuality; setQuality: (quality: GraphicsQuality) => void;
   preset: CameraPresetId; desktop: boolean; select: (id: HotspotId) => void; back: () => void; reset: () => void;
   buttons: RefObject<Partial<Record<HotspotId, HTMLButtonElement | null>>>;
 }) {
-  const selected = preset === "overview" ? null : hotspots[preset];
+  const selected = !hubActive || preset === "overview" ? null : hotspots[preset];
   return <div className="border-t border-white/15 p-6" data-testid="studio-actions">
     {desktop && <>
-      <div className="flex flex-wrap gap-2" role="group" aria-label="Studio focus controls">
+      {hubActive && <div className="flex flex-wrap gap-2" role="group" aria-label="Studio focus controls">
         {hotspotIds.map(id => <button key={id} ref={node => { buttons.current[id] = node; }} type="button" className="studio-control" aria-pressed={preset === id} onClick={() => select(id)}>{hotspots[id].title}{preset === id && <span className="ml-2 text-xs">· Selected</span>}</button>)}
-      </div>
+      </div>}
       <fieldset className="mt-4" aria-describedby="quality-description">
         <legend className="text-sm">Graphics quality</legend>
         <div className="mt-2 flex flex-wrap gap-2">
@@ -24,14 +26,14 @@ export function StudioControls({ preset, desktop, select, back, reset, buttons, 
         <p id="quality-description" className="mt-2 text-xs text-muted">Pixel detail only. Low uses less graphics work on high-density screens. Motion preference is separate.</p>
       </fieldset>
       <div className="mt-3 flex flex-wrap gap-2">
-        <button type="button" onClick={back} disabled={preset === "overview"} className="studio-control">Back to overview</button>
+        {hubActive ? <button type="button" onClick={back} disabled={preset === "overview"} className="studio-control">Back to overview</button> : <button type="button" onClick={backToHub} className="studio-control">Back to Central Hub</button>}
         <button type="button" onClick={reset} className="studio-control">Reset view</button>
       </div>
     </>}
     <section className={desktop ? "mt-5" : ""} aria-labelledby="studio-selection-title">
-      <h3 id="studio-selection-title" className="text-lg">{selected?.title ?? "Studio overview"}</h3>
-      <p className="mt-2 text-sm leading-relaxed text-muted">{selected?.description ?? (desktop ? "Select an object or use the focus controls. Escape returns to the overview. All objects remain blockout placeholders." : "Explore the portfolio through these HTML links. The workstation overview is described above.")}</p>
-      <p className="sr-only" role="status">{selected ? `${selected.title} selected.` : "Studio overview selected."}</p>
+      <h3 id="studio-selection-title" className="text-lg">{selected?.title ?? (hubActive ? "Studio overview" : "Technical review controls")}</h3>
+      <p className="mt-2 text-sm leading-relaxed text-muted">{!hubActive ? "Inspect the static review bench. Escape or Back to Central Hub returns to the studio; Reset view returns to the hub overview." : selected?.description ?? (desktop ? "Select an object or use the focus controls. Escape returns to the overview. All objects remain blockout placeholders." : "Explore the portfolio through these HTML links. The workstation overview is described above.")}</p>
+      <p className="sr-only" role="status">{selected ? `${selected.title} selected.` : hubActive ? "Studio overview selected." : "Development technical review selected."}</p>
       <div className="mt-4 flex flex-wrap gap-3">
         <Link href="/about" className={preset === "creator" ? "action" : "action action-secondary"}>About Arieza <span aria-hidden="true">↗</span></Link>
         <Link href="/projects" className={preset === "projects" ? "action" : "action action-secondary"}>Browse projects <span aria-hidden="true">↗</span></Link>

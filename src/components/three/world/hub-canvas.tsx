@@ -2,21 +2,23 @@
 
 import { useEffect, useRef } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import { Light, Mesh, PointLight } from "three";
+import { Light, Mesh, PointLight, type Object3D } from "three";
 import { qualityPolicy, type GraphicsQuality } from "@/lib/scene/quality-config";
 import { lightingConfig } from "@/lib/scene/look-config";
 import { PerspectiveCamera } from "@react-three/drei/core/PerspectiveCamera";
-import { CentralHub } from "../hub/central-hub";
+import { SceneHost } from "./scene-host";
+import { sceneRegistry, type SceneEvent, type ScenePhase, type SceneRequest } from "@/lib/scene/scene-registry";
 import { type SceneMetrics } from "@/lib/scene/hub-config";
-import { CameraRig, type CameraRigProps } from "../camera/camera-rig";
+import { type CameraRigProps } from "../camera/camera-rig";
 import { cameraPresets, type HotspotId } from "@/lib/scene/interaction-config";
 
-export type HubCanvasProps = CameraRigProps & { quality: GraphicsQuality; onReady: (metrics: SceneMetrics) => void; onFailure: () => void; onSelect: (id: HotspotId) => void };
+export type HubCanvasProps = CameraRigProps & { sceneRequest: SceneRequest; scenePhase: ScenePhase; onSceneState: (event: SceneEvent) => void; quality: GraphicsQuality; onReady: (metrics: SceneMetrics) => void; onFailure: () => void; onSelect: (id: HotspotId) => void };
 
-function RendererLifecycle({ onReady, onFailure }: Pick<HubCanvasProps, "onReady" | "onFailure">) {
+function RendererLifecycle({ onReady, onFailure, sceneRequest, request, onSceneState }: Pick<HubCanvasProps, "onReady" | "onFailure" | "sceneRequest" | "request" | "onSceneState">) {
   const { gl } = useThree();
   const frames = useRef(0);
   const reported = useRef(false);
+  const stable = useRef<string | null>(null);
   const scheduled = useRef<number | null>(null);
 
   useEffect(() => {
@@ -26,6 +28,7 @@ function RendererLifecycle({ onReady, onFailure }: Pick<HubCanvasProps, "onReady
     return () => {
       canvas.removeEventListener("webglcontextlost", lost);
       if (scheduled.current !== null) cancelAnimationFrame(scheduled.current);
+      scheduled.current = null;
     };
   }, [gl, onFailure]);
 
@@ -38,14 +41,26 @@ function RendererLifecycle({ onReady, onFailure }: Pick<HubCanvasProps, "onReady
     scheduled.current = requestAnimationFrame(() => {
       scheduled.current = null;
       const context = renderer.getContext();
-      if (context.isContextLost() || renderer.info.render.calls === 0) { onFailure(); return; }
-      const materials = new Set();
-      state.scene.traverse(object => { if (object instanceof Mesh) (Array.isArray(object.material) ? object.material : [object.material]).forEach(material => materials.add(material)); });
-      renderer.domElement.dataset.renderMetrics = JSON.stringify({ calls: renderer.info.render.calls, triangles: renderer.info.render.triangles, geometries: renderer.info.memory.geometries, textures: renderer.info.memory.textures, materials: materials.size, programs: renderer.info.programs?.length ?? 0, dpr: renderer.getPixelRatio(), width: renderer.domElement.width, height: renderer.domElement.height });
-      if (reported.current) return;
-      reported.current = true;
+      if (context.isContextLost()) { onFailure(); return; }
+      const graphs: Object3D[] = [];
+      state.scene.traverse(object => { if (object.userData.studioScene) graphs.push(object); });
       const lights: Light[] = [];
       state.scene.traverse(object => { if (object instanceof Light) lights.push(object); });
+      const materials = new Set();
+      state.scene.traverse(object => { if (object instanceof Mesh) (Array.isArray(object.material) ? object.material : [object.material]).forEach(material => materials.add(material)); });
+      renderer.domElement.dataset.activeScene = graphs[0]?.userData.studioScene ?? "none";
+      renderer.domElement.dataset.renderMetrics = JSON.stringify({ calls: renderer.info.render.calls, triangles: renderer.info.render.triangles, geometries: renderer.info.memory.geometries, textures: renderer.info.memory.textures, materials: materials.size, programs: renderer.info.programs?.length ?? 0, dpr: renderer.getPixelRatio(), width: renderer.domElement.width, height: renderer.domElement.height, graphs: graphs.map(graph => graph.userData.studioScene), lightCount: lights.length, pointLightCount: lights.filter(light => light instanceof PointLight).length, shadows: renderer.shadowMap.enabled });
+      const graph = graphs[0];
+      if (graphs.length !== 1 || !graph || graph.userData.studioScene !== sceneRequest.id || graph.userData.sceneSequence !== sceneRequest.sequence || renderer.info.render.calls === 0) return;
+      const cameraReady = renderer.domElement.dataset.cameraPreset === (sceneRequest.id === "hub" ? request.preset : "development") && renderer.domElement.dataset.cameraMoving === "false";
+      const token = `${sceneRequest.id}:${sceneRequest.sequence}`;
+      if (cameraReady && stable.current !== token) {
+        stable.current = token;
+        onSceneState({ request: sceneRequest, phase: "ready", readyMs: Math.round(performance.now() - graph.userData.startedAt) });
+      }
+      if (!cameraReady) return;
+      if (reported.current) return;
+      reported.current = true;
       onReady({ lightCount: lights.length, pointLightCount: lights.filter(light => light instanceof PointLight).length, shadows: renderer.shadowMap.enabled, alpha: context.getContextAttributes()?.alpha ?? false, calls: renderer.info.render.calls, triangles: renderer.info.render.triangles, geometries: renderer.info.memory.geometries, textures: renderer.info.memory.textures, frames: frames.current, renderer: String(context.getParameter(context.RENDERER)) });
     });
   });
@@ -63,15 +78,14 @@ export default function HubCanvas(props: HubCanvasProps) {
     onCreated={({ gl }) => gl.setClearColor(0x000000, 0)}
     fallback={<p className="p-6 text-muted">WebGL is unavailable. Use the HTML portfolio navigation.</p>}
     role="img"
-    aria-label="Central Hub blockout. Select the Creator ID, Project Display or Workstation, or use the equivalent HTML controls below."
+    aria-label={`${sceneRegistry[props.sceneRequest.id].title}. Use the equivalent HTML controls below.`}
   >
 
     <PerspectiveCamera makeDefault position={camera.position} fov={camera.fov} near={camera.near} far={camera.far} />
     <hemisphereLight args={[lightingConfig.fill.sky, lightingConfig.fill.ground, lightingConfig.fill.intensity]} />
     <directionalLight {...lightingConfig.key} />
     <directionalLight {...lightingConfig.rim} />
-    <CentralHub selected={props.request.preset === "overview" ? null : props.request.preset} onSelect={props.onSelect} />
-    <CameraRig request={props.request} reducedMotion={props.reducedMotion} onSettled={props.onSettled} />
+    <SceneHost sceneRequest={props.sceneRequest} scenePhase={props.scenePhase} onSceneState={props.onSceneState} request={props.request} reducedMotion={props.reducedMotion} onSettled={props.onSettled} onSelect={props.onSelect} />
     <RendererLifecycle {...props} />
   </Canvas>;
 }

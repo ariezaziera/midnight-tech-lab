@@ -66,3 +66,10 @@
 - Low measurably reduces high-density buffer pixels; High remains bounded, with no new effect/asset/geometry/light cost.
 - Demand rest in all modes; repeated selections return resource counts to baseline; recovery and responsive remount retain chosen quality.
 - All prior checks retained; fresh matched production evidence, responsive 320/390/768/1024/1440 and honest browser/device limitations. Owner review required before M6.
+
+## M6-A1 acceptance results
+
+- One existing Canvas and one ready graph, with zero-graph loading/failure interval covered by HTML; Development imports only on explicit/validated entry. Late/stale imports and errors cannot replace a newer request or stable state.
+- Native Enter/Back/Reset/scoped Escape, focus restoration, ordinary links, separate validated scene-session and all accepted hub/restoration/recovery/mobile/no-JS rules work. Existing hub preset key, geometry/light/camera source and split-screen/440px shell are unchanged; console/globe inert.
+- F gates verified: exact hub overview counts; bay 9 calls/424 triangles/9 geometries/9 attached mesh materials/one texture with four lights/one point/no shadows; JS/readiness/entry/idle/twenty-cycle targets pass. No imported assets or new packages.
+- Final complete suite 65 passes, preserving55 guarantees plus10 checks. Report/evidence delivered for owner review; local results are not real-device/FPS/VRAM or accessibility certification. No M6-A2/B1 or deployment authorization follows.

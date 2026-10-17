@@ -1,3 +1,10 @@
+# M6-A1 one-scene host and technical review bay — 2026-10-17
+- Recorded D1–D4/F-only D6 authorization. Added two-scene typed host, lazy procedural Development placeholder and validated stable-scene restoration while preserving the hub, shell, camera rig and editorial data.
+- Successful switches retain one Canvas/renderer; load/error/cancel/readiness, scoped Escape/Back/Reset, keyboard focus and all HTML/failure/mobile safeguards remain available.
+- F measurements pass: hub median 663 ms against 1000 ms target, initial JS+5808 bytes, lazy bay 1280 bytes; bay 9 draws/424 triangles/9 geometries/9attached mesh materials/1 texture. Twenty cycles and 15 extended idle windows stable.
+- All 55 retained guarantees plus10 new checks:65 passed in4.1m; required commands and production audit pass. Temporal test synchronization strengthened without changing camera code. Added 63 screenshots, measurements/comparison/report; physical Intel HD 620 and absent-browser limitations documented.
+- Commit/push M6-A1 for owner review. No M6-A2/B1, content claims, other modules, publication or deployment.
+
 # M6 planning and architecture gate — 2026-10-17
 - Recorded M0–M5-C acceptance and qualitative Intel HD Graphics 620/High feedback; preserved existing quality default and split-screen shell.
 - Audited actual scene/editorial/test/reference inventory; verified all ten concept images without treating them as production assets.
