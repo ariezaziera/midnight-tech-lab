@@ -2,12 +2,12 @@
 
 A greenfield portfolio and solo freelance storefront with a cinematic 3D cosmic world plus accessible editorial content.
 
-**Status:** M3 functional prototype accepted; M4 accepted; M5-A accepted; M5-B lighting/atmosphere complete and awaiting owner review. The accepted M1 HTML foundation and M2 blockout remain usable. Final content/design remain unapproved. No actual Blender models or real portrait are included. Do not publish or begin M5-C/M6 without owner approval.
+**Status:** M3 functional prototype accepted; M4 accepted; M5-A accepted; M5-B accepted; M5-C graphics quality/visual QA complete and awaiting owner review. The accepted M1 HTML foundation and M2 blockout remain usable. Final content/design remain unapproved. No actual Blender models or real portrait are included. Do not publish or begin M6 without owner approval.
 
 ## Local development
 Use Node 22 (tested with 22.14.0) and npm (tested with 11.16.0). Run `npm ci`, then `npm run dev` and open `http://127.0.0.1:3000`. The server binds to loopback only.
 
-Validation: `npm run lint`, `npm run typecheck`, `npm run build`, then `npm test`. Browser tests start the production server themselves; port 3000 must be free. Install the matching browser with `npx playwright install chromium` if it is not already available. Current tests capture evidence under `docs/04-delivery/evidence/m5b/after/`; historical M1/M2 evidence is retained. Run installation before starting servers or tests to avoid Windows native-file locks.
+Validation: `npm run lint`, `npm run typecheck`, `npm run build`, then `npm test`. Browser tests start the production server themselves; port 3000 must be free. Install the matching browser with `npx playwright install chromium` if it is not already available. Current tests capture evidence under `docs/04-delivery/evidence/m5c/after/`; historical M1/M2 evidence is retained. Run installation before starting servers or tests to avoid Windows native-file locks.
 
 The sole project fixture is `/projects/placeholder`. It represents no actual project. Contact has no working destination or form. Styles and system fonts are provisional. See `docs/04-delivery/M1_IMPLEMENTATION_REPORT.md` for validation and limitations.
 
@@ -37,4 +37,11 @@ M4 editorial data lives in `src/content/editorial.ts`, with schema in `src/conte
 M5-A uses original lightweight procedural geometry, shared materials and static batching to refine the existing hub. No Blender, paid/downloaded asset, new texture, lighting effect or camera feature is required. The same four presets and three target mappings remain. Fresh baseline and after measurements are captured with `node scripts/capture-hub.mjs before` / `after` against a running local production build; these commands intentionally write only their matching evidence folders. Do not overwrite the committed baseline when reviewing later changes. Historical M5-A report/evidence: `docs/04-delivery/M5A_IMPLEMENTATION_REPORT.md` and `docs/04-delivery/evidence/m5a/comparison.html`; M5-A was subsequently accepted as the M5-B base.
 
 
-M5-B retains the geometry/cameras and uses four fixed lights plus shared material responses in `src/lib/scene/look-config.ts`. Static CSS gradients/stars sit behind a transparent desktop canvas, without post-processing or continuous animation. Latest report: `docs/04-delivery/M5B_IMPLEMENTATION_REPORT.md`; comparison: `docs/04-delivery/evidence/m5b/comparison.html`. Matched capture commands against the correct local production build: `node scripts/capture-hub.mjs before m5b` / `after m5b`. Preserve the committed baseline; do not regenerate it from a later scene. Repository commit/push is authorized after completed validation; deployment and M5-C/M6 are not.
+M5-B retains the geometry/cameras and uses four fixed lights plus shared material responses in `src/lib/scene/look-config.ts`. Static CSS gradients/stars sit behind a transparent desktop canvas, without post-processing or continuous animation. Historical M5-B report: `docs/04-delivery/M5B_IMPLEMENTATION_REPORT.md`; comparison: `docs/04-delivery/evidence/m5b/comparison.html`. Matched capture commands against the correct local production build: `node scripts/capture-hub.mjs before m5b` / `after m5b`. Preserve the committed baseline; do not regenerate it from a later scene. Repository commit/push is authorized after completed validation; deployment and M6 are not.
+
+## Graphics quality (M5-C)
+Desktop studio controls include native Low/Medium/High radios, with Low as the conservative default. They cap DPR at 1/1.5/2 without changing lighting, geometry or cameras. At device DPR 1 they intentionally match. Reduced motion remains independent; mobile uses HTML only. Retry and responsive remount retain selection within the studio; a fresh document starts Low.
+
+Current report: `docs/04-delivery/M5C_IMPLEMENTATION_REPORT.md`; all-mode/four-camera comparison: `docs/04-delivery/evidence/m5c/comparison.html`. All 55 tests pass, preserving the 51 earlier checks. Production audit has zero vulnerabilities; existing development advisories remain tracked. Firefox/WebKit were unavailable. No real-device FPS claim is made.
+
+Reproduce final captures against the matching production build with `node scripts/capture-hub.mjs after m5c`, then `node scripts/capture-quality.mjs` and `node scripts/review-quality.mjs`. Preserve committed before evidence: do not regenerate the M5-B baseline from M5-C. Owner review and explicit authorization are required before M6. Nothing is deployed.

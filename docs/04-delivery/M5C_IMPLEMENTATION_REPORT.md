@@ -19,7 +19,7 @@ The baseline did not expose excessive geometry or continuous rendering. Existing
 - `src/lib/scene/hub-config.ts`: removed superseded DPR setting, retaining spatial/material configuration.
 - `tests/quality.spec.ts`: four focused regressions. Five existing test files change evidence destinations only; their 51 checks remain intact.
 - `scripts/capture-hub.mjs`: M5-C baseline/final captures, fixed device scale factor and raster dimensions. `capture-quality.mjs` and `review-quality.mjs`: repeated modes, responsive evidence and comparison generation.
-- Architecture, performance, decisions, implementation plan, acceptance criteria, TASKS and CHANGELOG; this report and `evidence/m5c/`.
+- README, architecture, performance, decisions, implementation plan, acceptance criteria, TASKS and CHANGELOG; this report and `evidence/m5c/`.
 
 No package/lockfile, camera, geometry, lighting, editorial data or route change. Dependencies remain Next 16.4.2, React 19.3.1, Three 0.186.1, R3F 9.8.2 and Drei 10.7.9.
 
