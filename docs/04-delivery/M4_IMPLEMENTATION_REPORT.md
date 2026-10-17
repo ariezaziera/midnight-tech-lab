@@ -1,6 +1,6 @@
 # M4 — Editorial Portfolio & Content Integration
 
-Date: 2026-10-17 (Asia/Kuala_Lumpur). Base: accepted M3 commit `f932c61`. **M4 implementation and validation complete; submitted for owner review. M5/M6 remain unstarted.**
+Date: 2026-10-17 (Asia/Kuala_Lumpur). Base: accepted M3 commit `f932c61`. **Historical M4 implementation report. Owner accepted M4 and authorized M5-A procedural refinement on 2026-10-17. No content publication approval is implied.**
 
 ## Delivered work
 

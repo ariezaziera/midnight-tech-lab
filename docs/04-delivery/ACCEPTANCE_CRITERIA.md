@@ -42,3 +42,11 @@
 - Filters reflect actual published tags, expose current state and work without JavaScript; empty results have a clear recovery action.
 - About/Services lead to Contact; core journeys do not depend on the scene.
 - Retain noindex/nofollow, 404 restrictions, direct-link-only Contact and the complete M3 regression suite.
+
+## M5-A geometry and cost gate
+
+- Retain 8m top footprint and the accepted four preset coordinates/targets/FOV/clipping, three hit targets and HTML equivalents.
+- Layered rock mesh is deterministic, finite, outward facing and within the retained footprint; camera views keep targets visible and basic clearance checks pass.
+- Small integrated selected-frame accents replace debug volume lines without affecting hit tests.
+- Compare new same-condition before/after readiness, draws, triangles, geometries, textures, JS transfer and idle behavior; optimize or revert responsible changes if costs materially regress.
+- Added 35-draw/geometry and 3,000-triangle test caps are implementation regression guards, not owner-approved production hardware budgets or FPS claims.

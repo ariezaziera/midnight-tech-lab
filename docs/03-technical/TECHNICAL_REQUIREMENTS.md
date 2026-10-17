@@ -18,3 +18,7 @@
 - Validate external links and form input; keep secrets server-side.
 - Lint, typecheck, production build and tests required per milestone.
 - No backend/database unless a user-facing requirement justifies it.
+
+## M5-A workflow supersession
+
+For the authorized procedural refinement, use Three/R3F code geometry and lightweight shared materials. Blender/external modeling software and paid assets are explicitly outside this workflow. Preserve existing framework boundaries and camera controller. Later external assets/effects require separate owner authorization.

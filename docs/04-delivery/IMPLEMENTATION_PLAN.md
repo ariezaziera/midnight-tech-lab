@@ -41,3 +41,7 @@ Summary; changed files; assumptions; missing assets; tests run and exact results
 
 ### M4 authorized scope clarification
 Typed local editorial content and publication safeguards only. Preserve M1–M3, no new 3D behavior or backend. Zero approved projects means an honest portfolio empty state with the existing separate local template preview. Validate recruiter/client route journeys without JavaScript/WebGL and all previous regressions. Commit and submit report/evidence for owner review; do not begin M5/M6 or deploy.
+
+## M5-A — Procedural refinement (authorized slice of M5)
+
+Owner accepted M4 and authorized geometry, materials and composition only, prioritizing an older laptop. Capture fresh M4 baseline and refined views/measurements under the same production-browser conditions. Preserve all M1–M4 functionality, interaction metadata, camera architecture, mobile/failure paths and publication safeguards. No Blender, GLB download, expensive effects, new modules or deployment. Stop after M5-A report/commit; M5-B lighting/atmosphere/effects, M5-C and M6 remain unauthorized.

@@ -1,3 +1,11 @@
+# M5-A procedural refinement — 2026-10-17
+- Recorded M4 acceptance and M5-A-only code-first authorization; no Blender or downloaded assets required.
+- Refined deterministic layered rock, workstation/chair/lamp and neutral framed displays; replaced selection volumes with small integrated corners.
+- Shared/batched static geometry inside existing targets; preserved camera/controller, route actions, editorial safeguards, demand rendering and all fallback paths.
+- Matched samples: draws/geometries 49→30, triangles 866→1680, textures unchanged, JS +2592 bytes; idle frames unchanged. Triangle trade-off and physical-device limits documented.
+- npm ci, lint, typecheck, build, full tests (49 passed in 2.0m) and production audit (zero findings) passed. Captured 36 PNGs, five JSON files and HTML comparison; report submitted for review.
+- Stop after M5-A; no M5-B/M5-C/M6, new effects, content claims, push or deployment.
+
 # M4 editorial update — 2026-10-17
 - Recorded M3 functional acceptance and M4-only owner authorization.
 - Added typed local editorial content, publication validation, reusable library/case-study presentation, URL filters and structured About/Services/Contact.

@@ -58,3 +58,7 @@ Every record has `published`, `draft` or `placeholder` status. Published records
 Only published projects appear in the portfolio/filter categories/related work. The sole explicit exception is `/projects/placeholder`, shown separately as a local demonstration. Draft/other placeholder routes are excluded both by generated params and runtime selection. Candidate project names from documentation are not imported. Profile drafts show only missing-input messages, and unconfirmed services/contact methods are excluded. Prototype metadata remains noindex/nofollow for every status; no structured data is added.
 
 Projects filters use server-rendered query links (`?category=...`) and work without JavaScript. Unknown categories show an empty state with a clear-filter link; repeated category parameters use the unfiltered view. Consequently `/projects` renders at request time, while approved detail params remain statically generated. Existing small client navigation/studio boundaries are unchanged.
+
+## M5-A procedural resource boundary
+
+The existing lazy Canvas/client boundary, lifecycle, demand loop, camera rig and HTML portfolio are retained. Hub-local resource ownership and material batching live in `components/three/hub/primitives.tsx`; deterministic low-poly strata live in `platform.tsx`. Each furniture/display group merges geometry by surface locally, preserving separate hotspot metadata. Shared templates/materials and merged geometry have explicit unmount cleanup. No global mutable scene resource cache, new dependency or continuous frame callback is added.

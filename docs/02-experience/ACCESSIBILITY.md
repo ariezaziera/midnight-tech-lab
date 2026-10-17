@@ -20,3 +20,7 @@ Chromium keyboard/touch-emulation tests are implementation evidence, not a scree
 ## M4 editorial accessibility
 
 Editorial pages remain Server Components. Project category links use a named navigation landmark and aria-current, preserving native keyboard/history behavior without client scripting. Cards have descriptive text links; missing content is identified in text, not color alone. No hover-only content, custom keyboard widget or new animation is introduced. Existing focus, reduced-motion and wrapping navigation styles remain. Browser tests are observations, not WCAG conformance or assistive-technology certification.
+
+## M5-A selections
+
+Small amber corner marks on the physical display frames replace the large wireframe selection volume. They do not pulse or animate and are excluded from scene hit tests. The existing pressed buttons, written Selected state, focus behavior, live status and always-available route links remain the primary accessible feedback. No new keyboard behavior or mandatory camera movement is introduced.

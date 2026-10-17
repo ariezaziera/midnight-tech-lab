@@ -46,3 +46,17 @@ Platform radius 4m; upper slab centered at Y=0, depth 0.32m, walkable top Y=0.16
 ## M3 additions
 
 The M2 geometry is preserved. Workstation, Creator ID and Project Display groups carry explicit typed `hotspotId` metadata. A root selection handler resolves that metadata from the nearest hit without using mesh names; the platform, console and globe remain inert. A selected target receives a non-raycast amber bounds outline. CameraRig controls the four approved poses without free orbit or additional geometry. Loading/failed renderers retain HTML target explanations and links outside the canvas.
+
+## M5-A procedural hierarchy
+
+The camera rig and typed hotspot configuration remain unchanged. Procedural components replace the original block silhouettes with:
+
+- Platform: retained 12-sided, 4m-radius top and narrow perimeter structure; one deterministic vertex-colored rock mesh with seven shrinking strata and a closed tapered base. Six restrained perimeter accents share one batch.
+- Workstation target: chamfered warm desk, slim underframe/supports, dual blank monitors and stands, desk mat, abstract keyboard rows/mouse, shaped chair with arms/headrest/five spokes, constructed lamp retaining its original point-light output/position.
+- Creator target: pedestal, structural side rails, layered frame and abstract empty plate/marks. No portrait/biography is depicted.
+- Projects target: stepped plinth, inset spine and blank framed display. No project art or title is depicted.
+- Inert console/globe: minor edge/base construction; globe remains a simple wireframe icosahedron.
+
+`HubResources` shares small geometry templates and a material palette per mounted hub. `StaticParts` transforms and merges static primitives by surface **within** each logical group. This reduces draw calls without merging targets together. Merged mesh hits still resolve ancestor `hotspotId`, never mesh names. Static geometry and shared materials are disposed on unmount/recovery.
+
+The full amber wireframe volume is replaced by small amber frame-corner marks anchored to each selected display (both workstation monitors). These batches skip diagnostic rays and pointer raycasting, and do not obstruct target geometry. HTML selection/focus controls are unchanged. No continuous animation or new camera feature is introduced.

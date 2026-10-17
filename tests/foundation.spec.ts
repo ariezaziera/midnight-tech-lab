@@ -82,7 +82,7 @@ test("capture desktop and mobile route evidence", async ({ page }) => {
     for (const [path] of routes) {
       await page.goto(path);
       if (path === "/" && width >= 768) await expect(page.getByTestId("scene-viewport")).toHaveAttribute("data-scene-ready", "true", { timeout: 15000 });
-      await page.screenshot({ path: `docs/04-delivery/evidence/m4/${label}-${path === "/" ? "home" : path.slice(1).replaceAll("/", "-")}.png`, fullPage: path !== "/" || width < 768 });
+      await page.screenshot({ path: `docs/04-delivery/evidence/m5a/after/${label}-${path === "/" ? "home" : path.slice(1).replaceAll("/", "-")}.png`, fullPage: path !== "/" || width < 768 });
     }
   }
 });

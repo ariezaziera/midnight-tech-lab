@@ -27,3 +27,9 @@ No production assets are bundled. Every row is planned, not complete.
 ## M2 status clarification
 
 CH-001–CH-008 now have original procedural placeholder geometry in `src/components/three/hub/`; ENV-001 uses only a background color. This does **not** complete any production GLB/texture/image row above. CH-009/CH-010 detailed props/mascot remain unimplemented. The actual portrait, project imagery, approved screen crops and licensed production assets are still missing. All scene objects are labeled collectively as placeholders with an HTML zone legend; no board artwork or depicted identity was reused.
+
+## M5-A code-first assets
+
+The owner explicitly approved original procedural refinement rather than a Blender/GLB workflow. CH-001–CH-008 now have refined authored code geometry; this is a reviewable procedural art study, not final photorealistic or high-fidelity approval. Source is `src/components/three/hub/` and typed configuration in `src/lib/scene/hub-config.ts`. Geometry is authored locally; no third-party artwork/model, image texture or asset download is used. Existing concept boards guide broad composition only.
+
+Actual portrait/project media, final references, licensed image content and any future external production assets remain missing/unapproved. The original GLB target-format rows above are historical planning, not a requirement to obtain GLBs for M5-A. Detailed props, mascot, new modules and environment effects remain deferred.

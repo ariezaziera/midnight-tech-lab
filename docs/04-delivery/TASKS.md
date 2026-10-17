@@ -13,14 +13,14 @@
 
 ### M0 findings — prioritized follow-up
 
-Audit delivered; M3 accepted as a functional prototype and M4 authorized. **Do not begin M5 without explicit owner approval.** Findings are detailed in `M0_AUDIT_REPORT.md`; only decisions explicitly recorded in DECISIONS.md are approved.
+Audit delivered; M4 accepted and M5-A procedural refinement authorized. **Do not begin M5-B/M5-C/M6 without explicit owner approval.** Findings are detailed in `M0_AUDIT_REPORT.md`; only decisions explicitly recorded in DECISIONS.md are approved.
 
 - [x] Read all 34 baseline docs and inspect all ten concept boards.
 - [x] Validate all ten referenced image paths, PNG decoding and SHA-256 prefixes: 10/10 pass each check. No broken listed image paths.
 - [x] **AUD-01 / P0 / owner:** acknowledged gaps and approved M1-only scope, labeled placeholders and provisional tokens.
 - [ ] **AUD-02 / P0 / before final visual sign-off / owner:** supply approved per-screen desktop/mobile references and final palette/type/layout decisions.
 - [ ] **AUD-03 / P0 / before publication / owner:** supply authentic biography, portrait permission, CV, project content/media/rights/links, services and verified contact destination. Define draft exclusion across routes, metadata and hotspots.
-- [ ] **AUD-04 / P0 / before M5 / owner + implementer:** acquire approved production assets; extend manifest with licensing, provenance, runtime paths and asset budgets, including fallback/OG/favicon and editorial media.
+- [ ] **AUD-04 / P0 / before future external asset integration / owner + implementer:** acquire approved external production assets only in a separately authorized slice; M5-A uses original procedural geometry without Blender/downloads; extend manifest with licensing, provenance, runtime paths and asset budgets, including fallback/OG/favicon and editorial media.
 - [x] **AUD-05 / P1 / owner:** direct-link-only contact approved; incomplete informational shell until verified link exists, no form/success state.
 - [ ] **AUD-06 / P1 / release planning / owner:** confirm functional MVP boundary, defer intro/expansion, and require baseline hardening before any release.
 - [x] **AUD-07 / M3 matrix / owner + implementer:** approved creator → About, projects → Projects library, workstation → focus/overview; console/globe inactive. Service detail and Lab journeys remain deferred.
@@ -81,6 +81,19 @@ Audit delivered; M3 accepted as a functional prototype and M4 authorized. **Do n
 - [x] Capture 27 screenshots and three regression measurement JSON files; submit [M4 implementation report](M4_IMPLEMENTATION_REPORT.md).
 - [ ] Owner approve authentic project titles, roles, narratives, tools, media/rights, results and links before publication.
 - [ ] Owner supply approved biography, skills, experience, working approach, portrait/CV, actual offerings and verified contact destination/availability.
-- [ ] Owner review M4 implementation; M5/M6 remain unauthorized.
+- [x] Owner accepted M4 and authorized M5-A only (2026-10-17). M5-B/M5-C/M6 remain unauthorized.
 
 - [ ] Review the clean-install notice for the pinned `unrs-resolver@1.12.2` postinstall script before explicitly approving scripts; no blanket approval was applied in M4.
+
+
+## M5-A — Procedural geometry/material refinement
+- [x] Audit scene hierarchy, typed hotspot bounds, four camera presets, concept boards and M3/M4 evidence.
+- [x] Capture fresh before-edit production baseline: four camera views and three same-protocol measurement runs.
+- [x] Refine rock strata, workstation/chair/lamp and neutral framed display structures; retain 8m footprint and camera values.
+- [x] Batch static geometry by material inside target groups; share resources and release on unmount/recovery.
+- [x] Replace debug bounds volumes with integrated amber selection corners; preserve all HTML controls and route mappings.
+- [x] Focused checks: seven passed; no camera adjustment required.
+- [x] All required commands passed; final full suite 49 passed in 2.0m. Fresh three-run after comparison: draws/geometries 49→30, triangles 866→1680, textures unchanged, no idle loop; trade-off documented.
+- [x] Submit [M5-A implementation report](M5A_IMPLEMENTATION_REPORT.md), 36 screenshots, five JSON measurements and side-by-side comparison; commit for owner review.
+- [ ] Owner approve procedural visual direction before any M5-B lighting/atmosphere/effects work.
+- [ ] Physical older-laptop/GPU validation, final visual approval and authentic identity/project assets remain open.

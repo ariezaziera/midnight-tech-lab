@@ -80,3 +80,11 @@ M0 audit delivered. The owner gate was subsequently resolved by the conditional 
 - Content defaults to draft or labeled placeholder unless owner verification and explicit public-presentation approval are recorded. Candidate names in CONTENT_GUIDELINES are not publication approval.
 - Retain `/projects/placeholder` as a clearly labeled local template demonstration. Draft and other placeholder slugs are excluded from portfolio listings and detail routes. Prototype-wide noindex/nofollow remains; it is not access control.
 - No CMS, database, authentication, contact backend, deployment, production art, new 3D modules or camera features. Stop after M4 and request owner review before M5.
+
+## Owner gate — M5-A authorization (2026-10-17)
+
+- Owner accepted M4 and authorized only procedural geometry/material/composition refinement of the existing Central Hub. Prior GLB/Blender assumptions do not govern this code-first workflow; Blender, paid assets and external modeling software are not required.
+- Preserve approximately 8m island, existing four camera presets/bounds, three typed hotspot/route mappings, HTML equivalents, editorial publication safeguards, mobile 2D and all failure/retry behavior.
+- Refine rock strata/taper, workstation construction, Creator ID/project exhibition frames and minor inert console/globe geometry. Lightweight integrated selection marks may replace the debug bounds outline if tests and cost permit.
+- Simple shared materials, limited emissive geometry and static batching are permitted. No new lighting system, bloom, volumetrics, particles, expensive shaders/shadows, textures, dependencies, islands or modules.
+- Fresh before/after measurements and all four camera views are required. Do not silently accept material rendering/responsiveness regressions. Commit/report and stop for M5-A owner review. M5-B/M5-C/M6 and publication remain unauthorized.
