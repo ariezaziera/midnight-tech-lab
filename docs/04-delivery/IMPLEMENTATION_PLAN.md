@@ -49,3 +49,7 @@ Owner accepted M4 and authorized geometry, materials and composition only, prior
 ## M5-B — Lighting/materials/atmosphere (authorized)
 
 M5-A accepted as base. Refine the existing light/material response and a static lightweight cosmic background while retaining geometry, cameras, content and all fallbacks. Capture a fresh baseline before application changes. Do not introduce post-processing, animated particles, shadows, models or graphics settings. Commit and push the completed validated slice per standing owner instruction; stop for review before M5-C/M6. No deployment.
+
+## M5-C — Graphics quality and visual QA (authorized)
+
+M5-B accepted. Capture fresh unchanged production baseline first; implement conservative native desktop DPR quality controls, retain demand rendering and validate lifecycle, all presets, responsive/failure/no-JS paths. Low/Medium/High alter only density and do not imply new effects. Preserve all 51 existing checks, add focused quality tests and record measurements/evidence in M5C_IMPLEMENTATION_REPORT.md. Commit/push under standing instruction; stop for owner review before M6. No expansion or deployment.

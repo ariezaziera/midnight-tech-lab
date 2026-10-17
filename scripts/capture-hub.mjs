@@ -7,7 +7,7 @@ import { pathToFileURL } from "node:url";
 const phase = process.argv[2];
 if (!["before", "after"].includes(phase)) throw new Error("Use before or after");
 const milestone = process.argv[3] ?? "m5a";
-if (!["m5a", "m5b"].includes(milestone)) throw new Error("Use m5a or m5b");
+if (!["m5a", "m5b", "m5c"].includes(milestone)) throw new Error("Use m5a or m5b");
 const evidenceRoot = join("docs/04-delivery/evidence", milestone);
 const output = join(evidenceRoot, phase);
 mkdirSync(output, { recursive: true });
@@ -15,7 +15,7 @@ const browser = await chromium.launch();
 const observations = [];
 try {
   for (let run = 0; run < 3; run++) {
-    const context = await browser.newContext({ viewport: { width: 1440, height: 900 } });
+    const context = await browser.newContext({ viewport: { width: 1440, height: 900 }, deviceScaleFactor: milestone === "m5c" ? 2 : 1 });
     const page = await context.newPage();
     const errors = [];
     page.on("pageerror", error => errors.push(error.message));
@@ -38,12 +38,13 @@ try {
         await page.screenshot({ path: join(output, `preset-${preset}.png`) });
       }
     }
-    observations.push({ metrics, idle: { start, end, unchanged: start === end }, javascriptTransferBytes: resources.filter(r => r.path.endsWith(".js")).reduce((sum, r) => sum + r.transferBytes, 0), resources, camera, errors });
+    const raster = await page.locator("canvas").evaluate(c => ({ width: c.width, height: c.height, cssWidth: c.clientWidth, cssHeight: c.clientHeight, deviceDpr: devicePixelRatio, actualDpr: c.width / c.clientWidth }));
+    observations.push({ raster, metrics, idle: { start, end, unchanged: start === end }, javascriptTransferBytes: resources.filter(r => r.path.endsWith(".js")).reduce((sum, r) => sum + r.transferBytes, 0), resources, camera, errors });
     await context.close();
   }
-  writeFileSync(join(output, "measurements.json"), JSON.stringify({ phase, browser: browser.version(), viewport: "1440x900", environment: "Windows; local production build; Chromium headless; fresh browser context per run; no network throttling; two idle samples 750ms apart; same capture protocol, viewport and DPR; scene/rendering changes documented per phase", observations }, null, 2));
+  writeFileSync(join(output, "measurements.json"), JSON.stringify({ phase, browser: browser.version(), viewport: "1440x900", environment: "Windows; local production build; Chromium headless; fresh browser context per run; no network throttling; two idle samples 750ms apart; same capture protocol and viewport; device scale factor 2 for m5c (1 otherwise), actual raster DPR recorded separately; scene/rendering changes documented per phase", observations }, null, 2));
   console.log(JSON.stringify({ phase, observations: observations.map(({ metrics, idle, javascriptTransferBytes, errors }) => ({ metrics, idle, javascriptTransferBytes, errors })) }, null, 2));
-  if (phase === "after") {
+  if (phase === "after" && milestone !== "m5c") {
     const review = await browser.newPage({ viewport: { width: 1800, height: 1000 } });
     await review.goto(pathToFileURL(resolve(evidenceRoot, "comparison.html")).href);
     const loaded = await review.locator("img").evaluateAll(images => images.every(img => img.complete && img.naturalWidth > 0));

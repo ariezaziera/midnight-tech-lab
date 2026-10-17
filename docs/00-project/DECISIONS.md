@@ -97,3 +97,12 @@ M0 audit delivered. The owner gate was subsequently resolved by the conditional 
 - Capture fresh M5-A baseline and repeated comparable M5-B measurements/screenshots. Document trade-offs and simplify any material cost regression.
 - Standing owner instruction: after completed implementation and validation, commit and push directly. This authorizes repository delivery, not deployment or proceeding past milestone approval gates.
 - Stop after M5-B report/evidence for owner review. M5-C/M6 and public deployment remain unauthorized.
+
+## Owner gate — M5-C authorization (2026-10-17)
+
+- Owner accepted M5-B and authorized graphics quality, measured performance/lifecycle robustness and visual/responsive QA only. Their approximately ten-year-old laptop feedback is qualitative, not measured FPS or compatibility evidence.
+- Preserve geometry, lighting, four cameras, hotspot identities/routes, HTML navigation and mobile 2D; no new effects, models, modules, content or deployment.
+- Implement native Low/Medium/High density controls. Implementation choice: conservative Low default, DPR caps 1/1.5/2; fixed antialiasing and low-power renderer, no canvas recreation or automatic hardware inference. At device DPR 1 all modes are intentionally identical.
+- Quality stays local to the studio component, survives retry and responsive remount, and is independent of reduced motion. No new preference storage, cookies or analytics.
+- Capture unchanged M5-B baseline, repeated production measurements, all modes/presets and failures; preserve all 51 checks and add focused quality regressions.
+- Commit and push completed validated work under standing instruction. Stop for owner review; M6 and deployment remain unauthorized.

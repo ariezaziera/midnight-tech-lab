@@ -4,6 +4,7 @@ import { Component, useCallback, useEffect, useRef, useState, useSyncExternalSto
 import type { HubCanvasProps } from "@/components/three/world/hub-canvas";
 import type { SceneMetrics } from "@/lib/scene/hub-config";
 import { StudioControls } from "./studio-controls";
+import { defaultQuality, type GraphicsQuality } from "@/lib/scene/quality-config";
 import { isHotspotId, type CameraRequest, type HotspotId } from "@/lib/scene/interaction-config";
 import { readStablePreset, saveStablePreset, serverPreset, subscribeStablePreset } from "@/lib/scene/studio-session";
 
@@ -98,6 +99,7 @@ export function StudioPreview() {
   const restored = useSyncExternalStore(subscribeStablePreset, readStablePreset, serverPreset);
   const [requested, setRequested] = useState<CameraRequest | null>(null);
   const [attempt, setAttempt] = useState(0);
+  const [quality, setQuality] = useState<GraphicsQuality>(defaultQuality);
   const controls = useRef<Partial<Record<HotspotId, HTMLButtonElement | null>>>({});
   const region = useRef<HTMLElement>(null);
   const heading = useRef<HTMLHeadingElement>(null);
@@ -142,7 +144,7 @@ export function StudioPreview() {
 
   return <section ref={region} className="min-w-0 overflow-hidden border border-white/15 bg-surface" aria-labelledby="studio-preview-heading" data-studio-preset={preset}>
     <div className="border-b border-white/15 px-6 py-4"><h2 ref={heading} tabIndex={-1} id="studio-preview-heading" className="text-lg">Central Hub / Spatial prototype</h2><p className="mt-1 text-xs text-muted">M3 camera &amp; interactions · All objects are placeholders</p></div>
-    {desktop ? <DesktopPreview key={attempt} retry={retry} request={request} reducedMotion={reducedMotion} onSelect={select} onSettled={saveStablePreset} /> : <div data-testid="scene-2d"><StaticDescription message="This lightweight HTML view keeps the layout readable on smaller screens and when JavaScript is disabled. The 3D overview is available on wider screens." /></div>}
-    <StudioControls preset={preset} desktop={desktop} select={select} back={back} reset={reset} buttons={controls} />
+    {desktop ? <DesktopPreview key={attempt} retry={retry} quality={quality} request={request} reducedMotion={reducedMotion} onSelect={select} onSettled={saveStablePreset} /> : <div data-testid="scene-2d"><StaticDescription message="This lightweight HTML view keeps the layout readable on smaller screens and when JavaScript is disabled. The 3D overview is available on wider screens." /></div>}
+    <StudioControls quality={quality} setQuality={setQuality} preset={preset} desktop={desktop} select={select} back={back} reset={reset} buttons={controls} />
   </section>;
 }

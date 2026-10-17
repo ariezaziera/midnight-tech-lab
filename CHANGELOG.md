@@ -1,3 +1,10 @@
+# M5-C graphics quality and visual QA — 2026-10-17
+- Added native desktop Low/Medium/High DPR caps1/1.5/2; conservative Low default, no persistence or renderer/camera reset, reduced motion independent.
+- Preserved all scene geometry, lighting, routes and content; demand-frame diagnostics support lifecycle/resource verification without an idle loop.
+- Fresh production comparison: 30draws/1680triangles/30geometries/1texture retained; Low pixels55.6% below Medium at tested device DPR2, JS+493bytes, median readiness944→807ms (local samples, no general speed claim).
+- All51 prior checks retained plus4 quality tests:55 passed in2.6m; ci/lint/typecheck/build and production audit passed. Added54 screenshots, raw measurements and comparison/report; Firefox/WebKit unavailable.
+- Commit/push under standing instruction. Stop before M6; no deployment.
+
 # M5-B lighting, materials & atmosphere — 2026-10-17
 - Recorded M5-A acceptance and M5-B-only authorization; retained geometry, cameras, content and interaction behavior.
 - Added typed four-light setup/material responses, warm lamp/key and cool fill/rim, with static CSS cosmic gradients, twelve small stars and a transparent desktop canvas.

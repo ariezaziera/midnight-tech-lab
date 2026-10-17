@@ -2,15 +2,16 @@
 
 import { useEffect, useRef } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
-import { Light, PointLight } from "three";
+import { Light, Mesh, PointLight } from "three";
+import { qualityPolicy, type GraphicsQuality } from "@/lib/scene/quality-config";
 import { lightingConfig } from "@/lib/scene/look-config";
 import { PerspectiveCamera } from "@react-three/drei/core/PerspectiveCamera";
 import { CentralHub } from "../hub/central-hub";
-import { hubConfig, type SceneMetrics } from "@/lib/scene/hub-config";
+import { type SceneMetrics } from "@/lib/scene/hub-config";
 import { CameraRig, type CameraRigProps } from "../camera/camera-rig";
 import { cameraPresets, type HotspotId } from "@/lib/scene/interaction-config";
 
-export type HubCanvasProps = CameraRigProps & { onReady: (metrics: SceneMetrics) => void; onFailure: () => void; onSelect: (id: HotspotId) => void };
+export type HubCanvasProps = CameraRigProps & { quality: GraphicsQuality; onReady: (metrics: SceneMetrics) => void; onFailure: () => void; onSelect: (id: HotspotId) => void };
 
 function RendererLifecycle({ onReady, onFailure }: Pick<HubCanvasProps, "onReady" | "onFailure">) {
   const { gl } = useThree();
@@ -32,12 +33,17 @@ function RendererLifecycle({ onReady, onFailure }: Pick<HubCanvasProps, "onReady
     const renderer = state.gl;
     frames.current += 1;
     renderer.domElement.setAttribute("data-render-count", String(frames.current));
-    if (reported.current) return;
-    reported.current = true;
-    // Inspect the completed first draw, rather than marking ready at context creation.
+    if (scheduled.current !== null) return;
+    // Inspect completed demand draws. This callback never invalidates another frame.
     scheduled.current = requestAnimationFrame(() => {
+      scheduled.current = null;
       const context = renderer.getContext();
       if (context.isContextLost() || renderer.info.render.calls === 0) { onFailure(); return; }
+      const materials = new Set();
+      state.scene.traverse(object => { if (object instanceof Mesh) (Array.isArray(object.material) ? object.material : [object.material]).forEach(material => materials.add(material)); });
+      renderer.domElement.dataset.renderMetrics = JSON.stringify({ calls: renderer.info.render.calls, triangles: renderer.info.render.triangles, geometries: renderer.info.memory.geometries, textures: renderer.info.memory.textures, materials: materials.size, programs: renderer.info.programs?.length ?? 0, dpr: renderer.getPixelRatio(), width: renderer.domElement.width, height: renderer.domElement.height });
+      if (reported.current) return;
+      reported.current = true;
       const lights: Light[] = [];
       state.scene.traverse(object => { if (object instanceof Light) lights.push(object); });
       onReady({ lightCount: lights.length, pointLightCount: lights.filter(light => light instanceof PointLight).length, shadows: renderer.shadowMap.enabled, alpha: context.getContextAttributes()?.alpha ?? false, calls: renderer.info.render.calls, triangles: renderer.info.render.triangles, geometries: renderer.info.memory.geometries, textures: renderer.info.memory.textures, frames: frames.current, renderer: String(context.getParameter(context.RENDERER)) });
@@ -52,7 +58,7 @@ export default function HubCanvas(props: HubCanvasProps) {
     className="cosmic-canvas"
     frameloop="demand"
     resize={{ scroll: false }}
-    dpr={hubConfig.dpr}
+    dpr={qualityPolicy[props.quality].dpr}
     gl={{ antialias: true, alpha: true, powerPreference: "low-power" }}
     onCreated={({ gl }) => gl.setClearColor(0x000000, 0)}
     fallback={<p className="p-6 text-muted">WebGL is unavailable. Use the HTML portfolio navigation.</p>}

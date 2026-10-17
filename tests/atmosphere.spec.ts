@@ -1,6 +1,6 @@
 import { expect, test } from "@playwright/test";
 
-const evidence = "docs/04-delivery/evidence/m5b/after";
+const evidence = "docs/04-delivery/evidence/m5c/after";
 
 test("static atmosphere preserves input, fixed light budget and idle rendering cost", async ({ page }) => {
   const errors: string[] = [];

@@ -1,0 +1,154 @@
+{
+  "phases": {
+    "before": {
+      "readinessMs": {
+        "median": 944,
+        "min": 828,
+        "max": 1353
+      },
+      "javascriptBytes": {
+        "median": 393066,
+        "min": 393066,
+        "max": 393066
+      },
+      "raster": {
+        "width": 1041,
+        "height": 660,
+        "cssWidth": 695,
+        "cssHeight": 440,
+        "deviceDpr": 2,
+        "actualDpr": 1.497841726618705
+      },
+      "metrics": {
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false,
+        "alpha": true,
+        "calls": 30,
+        "triangles": 1680,
+        "geometries": 30,
+        "textures": 1,
+        "frames": 1,
+        "renderer": "WebKit WebGL",
+        "readyMs": 1353
+      },
+      "idleStable": true,
+      "errors": []
+    },
+    "after": {
+      "readinessMs": {
+        "median": 807,
+        "min": 776,
+        "max": 861
+      },
+      "javascriptBytes": {
+        "median": 393559,
+        "min": 393559,
+        "max": 393559
+      },
+      "raster": {
+        "width": 694,
+        "height": 440,
+        "cssWidth": 695,
+        "cssHeight": 440,
+        "deviceDpr": 2,
+        "actualDpr": 0.9985611510791367
+      },
+      "metrics": {
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false,
+        "alpha": true,
+        "calls": 30,
+        "triangles": 1680,
+        "geometries": 30,
+        "textures": 1,
+        "frames": 1,
+        "renderer": "WebKit WebGL",
+        "readyMs": 807
+      },
+      "idleStable": true,
+      "errors": []
+    }
+  },
+  "modes": {
+    "Low": {
+      "overview": {
+        "calls": 30,
+        "triangles": 1680,
+        "geometries": 30,
+        "textures": 1,
+        "materials": 15,
+        "programs": 2,
+        "dpr": 1,
+        "width": 694,
+        "height": 440
+      },
+      "pixels": 305360,
+      "idleStable": true,
+      "samples": 12,
+      "errors": []
+    },
+    "Medium": {
+      "overview": {
+        "calls": 30,
+        "triangles": 1680,
+        "geometries": 30,
+        "textures": 1,
+        "materials": 15,
+        "programs": 2,
+        "dpr": 1.5,
+        "width": 1041,
+        "height": 660
+      },
+      "pixels": 687060,
+      "idleStable": true,
+      "samples": 12,
+      "errors": []
+    },
+    "High": {
+      "overview": {
+        "calls": 30,
+        "triangles": 1680,
+        "geometries": 30,
+        "textures": 1,
+        "materials": 15,
+        "programs": 2,
+        "dpr": 2,
+        "width": 1389,
+        "height": 880
+      },
+      "pixels": 1222320,
+      "idleStable": true,
+      "samples": 12,
+      "errors": []
+    }
+  },
+  "responsive": [
+    {
+      "width": 320,
+      "overflow": false,
+      "canvas": 0
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "canvas": 0
+    },
+    {
+      "width": 768,
+      "overflow": false,
+      "canvas": 1
+    },
+    {
+      "width": 1024,
+      "overflow": false,
+      "canvas": 1
+    },
+    {
+      "width": 1440,
+      "overflow": false,
+      "canvas": 1
+    }
+  ]
+}

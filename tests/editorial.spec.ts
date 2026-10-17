@@ -91,7 +91,7 @@ test("keyboard filter, selected state and draft evidence", async ({ page }) => {
   for (const [label, width, height] of [["desktop", 1440, 900], ["mobile", 390, 844]] as const) {
     await page.setViewportSize({ width, height });
     await page.goto("/projects?category=missing");
-    await page.screenshot({ path: `docs/04-delivery/evidence/m5b/after/${label}-empty-filter.png`, fullPage: true });
+    await page.screenshot({ path: `docs/04-delivery/evidence/m5c/after/${label}-empty-filter.png`, fullPage: true });
     await page.goto("/about");
     await expect(page.getByText("Draft · awaiting owner input")).toHaveCount(6);
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);

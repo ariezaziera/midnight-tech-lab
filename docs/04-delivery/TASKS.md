@@ -106,4 +106,17 @@ Audit delivered; M5-A accepted and M5-B authorized. **Do not begin M5-C/M6 witho
 - [x] Preserve all 49 existing tests and add two live atmosphere/light-budget checks.
 - [x] All required checks passed; 51 tests in 2.2m, clean production audit. Submit [M5-B report](M5B_IMPLEMENTATION_REPORT.md), 37 PNGs, five JSON files and comparison.
 - [x] Commit and push completed M5-B under standing owner instruction; request owner review before M5-C/M6.
-- [ ] Physical older-laptop/GPU review, final visuals and M5-C authorization remain outstanding.
+- [x] Owner accepted M5-B and authorized M5-C; older-laptop experience acceptable qualitatively. Measured physical-GPU validation and final visual approval remain open.
+
+## M5-C — Graphics quality, performance & visual QA
+- [x] Owner accepted M5-B and authorized M5-C only; older-laptop feedback recorded as qualitative.
+- [x] Audit renderer/resource ownership/cameras/failures/tests; capture fresh unchanged M5-B production baseline before application edits.
+- [x] Add typed DPR-only Low/Medium/High caps1/1.5/2 with conservative Low default and native keyboard controls. Preserve renderer/camera identity, motion preference and all scene/content architecture.
+- [x] Add completed-demand-draw counters; verify resource stability, no idle loop, quality during travel, recovery and responsive remount.
+- [x] Preserve 51 prior tests and add four focused checks. Final npm test: 55 passed in2.6m; ci/lint/typecheck/build/production audit passed (zero production vulnerabilities).
+- [x] Three-run before/after: median readiness944→807ms, JS393066→393559bytes, unchanged30draws/1680triangles/30geometries/1texture. Low reduces high-density buffer pixels55.6%; no general speed/FPS claim.
+- [x] Capture12 mode/preset images, responsive/fallback/route evidence and comparison;36 mode/preset observations idle-stable, no errors.
+- [x] Submit [M5-C report](M5C_IMPLEMENTATION_REPORT.md); commit/push under standing owner instruction.
+- [ ] Owner review M5-C quality default, density trade-off and retained visual composition; M6 requires new explicit authorization.
+- [ ] Firefox/WebKit absent here; smoke tests and physical-device measurements remain open. Existing five dev-only advisories, unsupported ESLint9, pending resolver script approval and Three deprecations remain tracked.
+- [ ] Authentic content/assets, final camera/art direction and release/deployment approval remain unresolved.

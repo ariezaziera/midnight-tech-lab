@@ -1,0 +1,17 @@
+[
+  {
+    "browser": "chromium",
+    "installed": true,
+    "result": "Production baseline, full regression suite and evidence captures"
+  },
+  {
+    "browser": "firefox",
+    "installed": false,
+    "result": "Not run: binary absent; no download performed"
+  },
+  {
+    "browser": "webkit",
+    "installed": false,
+    "result": "Not run: binary absent; no download performed"
+  }
+]

@@ -58,3 +58,11 @@
 - Geometry counts, camera coordinates/hotspots and all M1–M5-A checks remain protected.
 - Fresh repeated before/after measurements include readiness, geometry/draw/texture counts, transfer, idle frames and page errors. CSS compositing cost is not represented by WebGL counters and needs real-device review.
 - Keep mobile HTML, reduced motion, all failure/retry states, noindex and direct-link-only Contact. No M5-C UI or unapproved content.
+
+## M5-C regression gates
+
+- Native keyboard-accessible Low/Medium/High, Low default; device DPR capped at 1/1.5/2 with no forced upscaling above device DPR 1.
+- No canvas recreation, camera reset or reduced-motion coupling on quality selection, including during travel.
+- Low measurably reduces high-density buffer pixels; High remains bounded, with no new effect/asset/geometry/light cost.
+- Demand rest in all modes; repeated selections return resource counts to baseline; recovery and responsive remount retain chosen quality.
+- All prior checks retained; fresh matched production evidence, responsive 320/390/768/1024/1440 and honest browser/device limitations. Owner review required before M6.
