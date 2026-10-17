@@ -1,3 +1,9 @@
+# M6 planning and architecture gate — 2026-10-17
+- Recorded M0–M5-C acceptance and qualitative Intel HD Graphics 620/High feedback; preserved existing quality default and split-screen shell.
+- Audited actual scene/editorial/test/reference inventory; verified all ten concept images without treating them as production assets.
+- Added four planning documents: ten-area journey, three spatial alternatives, Option C recommendation, staged cinematic/content strategy, proposed budgets, device/browser protocol, risks and independent batch/owner gates.
+- Updated current planning pointers and approval status only. No application, test, asset, dependency, layout/runtime change, fresh runtime test or deployment. Commit/push documentation; stop before M6-A1.
+
 # M5-C graphics quality and visual QA — 2026-10-17
 - Added native desktop Low/Medium/High DPR caps1/1.5/2; conservative Low default, no persistence or renderer/camera reset, reduced motion independent.
 - Preserved all scene geometry, lighting, routes and content; demand-frame diagnostics support lifecycle/resource verification without an idle loop.

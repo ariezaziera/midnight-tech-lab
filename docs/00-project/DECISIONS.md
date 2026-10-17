@@ -106,3 +106,11 @@ M0 audit delivered. The owner gate was subsequently resolved by the conditional 
 - Quality stays local to the studio component, survives retry and responsive remount, and is independent of reduced motion. No new preference storage, cookies or analytics.
 - Capture unchanged M5-B baseline, repeated production measurements, all modes/presets and failures; preserve all 51 checks and add focused quality regressions.
 - Commit and push completed validated work under standing instruction. Stop for owner review; M6 and deployment remain unauthorized.
+
+## Owner gate — M6 planning only (2026-10-17)
+
+- Owner accepts M0–M5 including M5-A/B/C and reports smooth Intel HD Graphics 620 operation, including High quality. This is qualitative owner-device feedback, not measured FPS/frame time/VRAM or broad compatibility evidence. Low remains the implemented default.
+- Authorizes repository audit and M6 experience/architecture, cinematic direction, performance/content and batch planning only. Preserve the accepted split-screen desktop shell; no implementation, layout/runtime, test, asset or dependency changes and no deployment.
+- Planning deliverables: M6_PLANNING_REPORT.md, M6_EXPERIENCE_ARCHITECTURE.md, M6_BATCH_PLAN.md and M6_OWNER_DECISIONS.md under docs/04-delivery/.
+- Option C (one active lazy scene), proposed navigation/restoration, numeric profiles and M6-A1 are recommendations awaiting approval, not accepted architecture or execution authorization. Other batches are independently gated.
+- Commit/push the documentation under standing instructions, then stop. Request explicit architecture and first-batch approval before M6-A1; no batch automatically authorizes another.

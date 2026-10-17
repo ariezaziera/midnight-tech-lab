@@ -31,7 +31,7 @@ M3 owner authorization narrows this slice to overview/creator/projects/workstati
 - Import approved, licensed GLB/texture/portrait assets; refine lighting/materials and scene composition.
 - Gate: side-by-side visual review and asset licensing audit.
 
-## M6 — Expansion and hardening
+## M6 — Historical concept scope (not execution authorization)
 - Remaining floating modules, intro, performance tuning, accessibility, responsive QA, SEO and deployment.
 - Gate: release checklist complete.
 
@@ -53,3 +53,9 @@ M5-A accepted as base. Refine the existing light/material response and a static 
 ## M5-C — Graphics quality and visual QA (authorized)
 
 M5-B accepted. Capture fresh unchanged production baseline first; implement conservative native desktop DPR quality controls, retain demand rendering and validate lifecycle, all presets, responsive/failure/no-JS paths. Low/Medium/High alter only density and do not imply new effects. Preserve all 51 existing checks, add focused quality tests and record measurements/evidence in M5C_IMPLEMENTATION_REPORT.md. Commit/push under standing instruction; stop for owner review before M6. No expansion or deployment.
+
+## M6 planning gate — current authority
+
+Owner accepted M0–M5-C and authorized planning only. Preserve the split-screen shell. The historical module/intro/deployment list above is not an approved batch or release permission. See [M6 planning report](M6_PLANNING_REPORT.md), [experience architecture](M6_EXPERIENCE_ARCHITECTURE.md), [batch plan](M6_BATCH_PLAN.md) and [owner decisions](M6_OWNER_DECISIONS.md).
+
+Recommended Option C and M6-A1 (single-scene lifecycle plus labeled Development review bay) remain proposed. Numerical F/Z/I/R profiles are targets needing approval. Each A/B/C sub-batch has its own scope, content dependencies, validation, evidence and stop gate; acceptance never authorizes the next. No M6 implementation or deployment has begun.

@@ -49,3 +49,9 @@ DPR-only policy: Low cap1 (default), Medium cap1.5 (old upper bound), High cap2.
 Three contexts × three modes × four presets = 36 stable samples, all idle for750ms with zero page errors. Overview geometry30, selected geometry31 (one selection batch), returning overview30; 15 live mesh materials and one texture remain stable. Four-cycle regression tests found no growing live resources. Physical GPU memory/browser heap reclamation and GPU execution cost remain unmeasured. High has no extra lights, geometry, effects, shaders or assets, but its pixels cost more and it is opt-in. No proven geometry bottleneck justified further batching or lifecycle rewrite.
 
 Evidence: delivery/evidence/m5c/performance-comparison.json and raw before/after/quality measurements. Responsive 320/390/768/1024/1440 passed without overflow; mobile keeps HTML only. Firefox/WebKit binaries absent, so no coverage claim. Owner older-laptop feedback is qualitative only. No FPS, GPU compatibility, power or WCAG conformance claim. M6 remains gated.
+
+## M6 planning reference — targets not yet approved
+
+Owner accepted M5-C and reports smooth High-quality operation on Intel HD Graphics 620. This is qualitative feedback, not an instrumented device benchmark. No fresh runtime measurements were made for planning; M5-C saved measurements remain the reference.
+
+Proposed per-batch F/Z/I/R caps, median/range protocol, resource-cycle and idle gates are in [M6 batch plan](../04-delivery/M6_BATCH_PLAN.md). They require explicit owner approval and do not supersede accepted limits automatically. The [planning report](../04-delivery/M6_PLANNING_REPORT.md) defines future Intel HD 620/browser tests and distinguishes measured pixel/resource counts from FPS/VRAM claims. Demand rendering, bounded DPR, explicit cleanup, lazy WebGL, HTML fallback and reduced motion remain unchanged.

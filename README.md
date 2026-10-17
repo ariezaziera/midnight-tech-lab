@@ -2,7 +2,7 @@
 
 A greenfield portfolio and solo freelance storefront with a cinematic 3D cosmic world plus accessible editorial content.
 
-**Status:** M3 functional prototype accepted; M4 accepted; M5-A accepted; M5-B accepted; M5-C graphics quality/visual QA complete and awaiting owner review. The accepted M1 HTML foundation and M2 blockout remain usable. Final content/design remain unapproved. No actual Blender models or real portrait are included. Do not publish or begin M6 without owner approval.
+**Status:** M3 functional prototype accepted; M4 accepted; M5-A accepted; M5-B accepted; M5-C accepted; M6 planning complete and awaiting architecture/first-batch approval. The accepted M1 HTML foundation and M2 blockout remain usable. Final content/design remain unapproved. No actual Blender models or real portrait are included. Do not publish or implement M6 without explicit owner approval.
 
 ## Local development
 Use Node 22 (tested with 22.14.0) and npm (tested with 11.16.0). Run `npm ci`, then `npm run dev` and open `http://127.0.0.1:3000`. The server binds to loopback only.
@@ -42,6 +42,11 @@ M5-B retains the geometry/cameras and uses four fixed lights plus shared materia
 ## Graphics quality (M5-C)
 Desktop studio controls include native Low/Medium/High radios, with Low as the conservative default. They cap DPR at 1/1.5/2 without changing lighting, geometry or cameras. At device DPR 1 they intentionally match. Reduced motion remains independent; mobile uses HTML only. Retry and responsive remount retain selection within the studio; a fresh document starts Low.
 
-Current report: `docs/04-delivery/M5C_IMPLEMENTATION_REPORT.md`; all-mode/four-camera comparison: `docs/04-delivery/evidence/m5c/comparison.html`. All 55 tests pass, preserving the 51 earlier checks. Production audit has zero vulnerabilities; existing development advisories remain tracked. Firefox/WebKit were unavailable. No real-device FPS claim is made.
+Accepted implementation report: `docs/04-delivery/M5C_IMPLEMENTATION_REPORT.md`; all-mode/four-camera comparison: `docs/04-delivery/evidence/m5c/comparison.html`. All 55 tests pass, preserving the 51 earlier checks. Production audit has zero vulnerabilities; existing development advisories remain tracked. Firefox/WebKit were unavailable. No real-device FPS claim is made.
 
 Reproduce final captures against the matching production build with `node scripts/capture-hub.mjs after m5c`, then `node scripts/capture-quality.mjs` and `node scripts/review-quality.mjs`. Preserve committed before evidence: do not regenerate the M5-B baseline from M5-C. Owner review and explicit authorization are required before M6. Nothing is deployed.
+
+## M6 planning only
+The owner accepts M0–M5-C and reports smooth Intel HD Graphics 620 operation including High (qualitative feedback, not an FPS benchmark). The split-screen desktop layout remains approved. No M6 application implementation or deployment is authorized.
+
+Review [M6 planning report](docs/04-delivery/M6_PLANNING_REPORT.md), [experience architecture](docs/04-delivery/M6_EXPERIENCE_ARCHITECTURE.md), [batch plan](docs/04-delivery/M6_BATCH_PLAN.md) and [owner decisions](docs/04-delivery/M6_OWNER_DECISIONS.md). Recommended Option C, numerical budgets and M6-A1 are pending decisions. Documentation commit/push does not authorize the first batch or later expansion.

@@ -13,7 +13,7 @@
 
 ### M0 findings — prioritized follow-up
 
-Audit delivered; M5-A accepted and M5-B authorized. **Do not begin M5-C/M6 without explicit owner approval.** Findings are detailed in `M0_AUDIT_REPORT.md`; only decisions explicitly recorded in DECISIONS.md are approved.
+Audit delivered; M0–M5-C accepted. **M6 planning only; no implementation or deployment authorized.** Findings are detailed in `M0_AUDIT_REPORT.md`; only decisions explicitly recorded in DECISIONS.md are approved.
 
 - [x] Read all 34 baseline docs and inspect all ten concept boards.
 - [x] Validate all ten referenced image paths, PNG decoding and SHA-256 prefixes: 10/10 pass each check. No broken listed image paths.
@@ -117,6 +117,17 @@ Audit delivered; M5-A accepted and M5-B authorized. **Do not begin M5-C/M6 witho
 - [x] Three-run before/after: median readiness944→807ms, JS393066→393559bytes, unchanged30draws/1680triangles/30geometries/1texture. Low reduces high-density buffer pixels55.6%; no general speed/FPS claim.
 - [x] Capture12 mode/preset images, responsive/fallback/route evidence and comparison;36 mode/preset observations idle-stable, no errors.
 - [x] Submit [M5-C report](M5C_IMPLEMENTATION_REPORT.md); commit/push under standing owner instruction.
-- [ ] Owner review M5-C quality default, density trade-off and retained visual composition; M6 requires new explicit authorization.
+- [x] Owner accepted M5-C and reports smooth Intel HD Graphics 620 behavior including High; M6 planning only authorized. No numerical device performance claim or default-quality change.
 - [ ] Firefox/WebKit absent here; smoke tests and physical-device measurements remain open. Existing five dev-only advisories, unsupported ESLint9, pending resolver script approval and Three deprecations remain tracked.
 - [ ] Authentic content/assets, final camera/art direction and release/deployment approval remain unresolved.
+
+## M6 — Planning and architecture gate only
+- [x] Audit current implementation/content/test coverage, M0–M5 reports, accepted decisions and actual asset/reference inventory.
+- [x] Verify all ten concept PNG paths/decode/hash prefixes; no production artwork approval inferred.
+- [x] Prepare [planning report](M6_PLANNING_REPORT.md), [ten-area experience architecture](M6_EXPERIENCE_ARCHITECTURE.md), [independently gated batch plan](M6_BATCH_PLAN.md) and [owner decisions/content intake](M6_OWNER_DECISIONS.md).
+- [x] Recommend Option C with proposed F/Z/I/R performance profiles and a minimal M6-A1 review bay; recommendations are not accepted requirements.
+- [x] Documentation-only path/consistency/Git scope review; no npm/runtime validation or new application screenshots claimed.
+- [ ] Owner approve architecture/state contract, review-only placeholder exception, numeric targets and explicitly authorize M6-A1 (D1–D4/D6).
+- [ ] Supply approved factual project/identity/services/contact/media packet; optional CV/socials/personal work must not be fabricated or block independent technical proof.
+- [ ] Authorize/measure Intel HD 620 and missing browser/assistive-device coverage in affected implementation batches.
+- [ ] M6-A1 implementation is NOT started. All later A/B/C batches and deployment remain unauthorized.
