@@ -3,6 +3,8 @@
 import { Component, useCallback, useEffect, useMemo, useRef, useState, useSyncExternalStore, type ComponentType, type ReactNode } from "react";
 import type { HubCanvasProps } from "@/components/three/world/hub-canvas";
 import type { SceneMetrics } from "@/lib/scene/hub-config";
+import type { DevelopmentExhibit } from "@/lib/scene/zone-content";
+import type { ExhibitRequest } from "@/lib/scene/development-config";
 import { StudioControls } from "./studio-controls";
 import { defaultQuality, type GraphicsQuality } from "@/lib/scene/quality-config";
 import { sceneRegistry, type SceneEvent, type SceneId, type SceneRequest } from "@/lib/scene/scene-registry";
@@ -98,12 +100,16 @@ function DesktopPreview({ retry, ...interaction }: { retry: () => void } & Omit<
   return <SceneBoundary fallback={error} fail={() => interaction.onSceneState({ request: interaction.sceneRequest, phase: "failed", message: "The graphics renderer could not initialize. Retry the 3D preview or use the HTML portfolio." })}>
     <div className="cosmic-stage relative h-[440px] w-full" data-testid="scene-viewport" data-scene-ready={metrics && interaction.scenePhase === "ready" ? "true" : "false"} data-scene-metrics={metrics ? JSON.stringify(metrics) : undefined}>
       {load.phase === "loaded" && <load.Canvas {...interaction} onReady={ready} onFailure={lost} />}
-      {(!metrics || interaction.scenePhase !== "ready") && <div className="absolute inset-0 z-10 flex flex-col items-center justify-center bg-space p-6 text-center" role="status"><p className="text-lg">{interaction.scenePhase === "failed" ? "The review scene could not become ready. Retry or return using the controls below." : interaction.sceneRequest.id === "hub" ? "Loading the Central Hub blockout…" : "Loading Development Lab — Technical Review Placeholder…"}</p><p className="mt-3 text-sm text-muted">The HTML portfolio is ready to use.</p></div>}
+      {(!metrics || interaction.scenePhase !== "ready") && <div className="absolute inset-0 z-10 flex flex-col items-center justify-center bg-space p-6 text-center" role="status"><p className="text-lg">{interaction.scenePhase === "failed" ? "The review scene could not become ready. Retry or return using the controls below." : interaction.sceneRequest.id === "hub" ? "Loading the Central Hub blockout…" : interaction.exhibitEligible ? "Loading Development Lab…" : "Loading Development Lab — Technical Review Placeholder…"}</p><p className="mt-3 text-sm text-muted">The HTML portfolio is ready to use.</p></div>}
     </div>
   </SceneBoundary>;
 }
 
-export function StudioPreview() {
+export function StudioPreview({ exhibit = null }: { exhibit?: DevelopmentExhibit | null }) {
+  const [exhibitRequest, setExhibitRequest] = useState<ExhibitRequest>({ selected: false, sequence: 0 });
+  const exhibitButton = useRef<HTMLButtonElement>(null);
+  const overviewExhibit = useCallback(() => { setExhibitRequest(value => ({ selected: false, sequence: value.sequence + 1 })); exhibitButton.current?.focus({ preventScroll: true }); }, []);
+  const focusExhibit = useCallback(() => { if (exhibit) { setExhibitRequest(value => ({ selected: true, sequence: value.sequence + 1 })); requestAnimationFrame(() => { const button = exhibitButton.current; if (button?.getClientRects().length) button.focus({ preventScroll: true }); }); } }, [exhibit]);
   const desktop = useSyncExternalStore(subscribe, getDesktop, getServerDesktop);
   const reducedMotion = useSyncExternalStore(subscribeMotion, getReducedMotion, getServerMotion);
   const restored = useSyncExternalStore(subscribeStablePreset, readStablePreset, serverPreset);
@@ -130,6 +136,7 @@ export function StudioPreview() {
     if (event.request.id === expected.id && event.request.sequence === expected.sequence) setSceneEvent(event);
   }, []);
   const chooseScene = useCallback((id: SceneId) => {
+    setExhibitRequest(value => ({ selected: false, sequence: value.sequence + 1 }));
     const next = { id, sequence: (pendingScene.current?.sequence ?? 0) + 1 };
     pendingScene.current = next;
     setSceneChoice(next); setSceneEvent(null); setSceneNotice("");
@@ -179,6 +186,7 @@ export function StudioPreview() {
     let active = true;
     queueMicrotask(() => {
       if (!active) return;
+      setExhibitRequest(value => ({ selected: false, sequence: value.sequence + 1 }));
       const stable = readStablePreset();
       setRequested(current => current && current.preset !== stable ? { preset: stable, sequence: current.sequence + 1 } : current);
       const stableScene = readStableScene();
@@ -193,19 +201,19 @@ export function StudioPreview() {
   useEffect(() => {
     const escape = (event: KeyboardEvent) => {
       if (event.key !== "Escape" || !region.current?.contains(document.activeElement)) return;
-      if (sceneRequest.id !== "hub") { event.preventDefault(); returnHub(); return; }
+      if (sceneRequest.id !== "hub") { event.preventDefault(); if (exhibit && exhibitRequest.selected && scenePhase === "ready") overviewExhibit(); else returnHub(); return; }
       if (preset === "overview") return;
       event.preventDefault();
       back();
     };
     window.addEventListener("keydown", escape);
     return () => window.removeEventListener("keydown", escape);
-  }, [back, preset, returnHub, sceneRequest.id]);
+  }, [back, preset, returnHub, sceneRequest.id, exhibit, exhibitRequest.selected, overviewExhibit, scenePhase]);
 
   return <section ref={region} className="min-w-0 overflow-hidden border border-white/15 bg-surface" aria-labelledby="studio-preview-heading" data-studio-preset={preset} data-studio-scene={desktop ? sceneRequest.id : "hub"}>
-    <div className="border-b border-white/15 px-6 py-4"><h2 ref={heading} tabIndex={-1} id="studio-preview-heading" className="text-lg">{sceneRegistry[desktop ? sceneRequest.id : "hub"].title}</h2><p className="mt-1 text-xs text-muted">{desktop && sceneRequest.id === "development" ? "M6-A1 technical review · No portfolio content" : "M3 camera & interactions · All objects are placeholders"}</p></div>
-    {desktop ? <DesktopPreview key={attempt} retry={retry} sceneRequest={sceneRequest} scenePhase={scenePhase} onSceneState={onSceneState} quality={quality} request={request} reducedMotion={reducedMotion} onSelect={select} onSettled={saveStablePreset} /> : <div data-testid="scene-2d"><StaticDescription message="This lightweight HTML view keeps the layout readable on smaller screens and when JavaScript is disabled. The 3D overview is available on wider screens." /></div>}
-    <StudioControls backToHub={returnHub} hubActive={!desktop || sceneRequest.id === "hub"} quality={quality} setQuality={setQuality} preset={preset} desktop={desktop} select={select} back={back} reset={reset} buttons={controls} />
-    <StudioDirectory desktop={desktop} scene={desktop ? sceneRequest.id : "hub"} phase={desktop ? scenePhase : "ready"} enter={enterBay} retry={() => { chooseScene(sceneRequest.id); retry(); }} button={entryButton} readyMs={sceneEvent?.readyMs} message={!desktop ? "The review bay is available on desktop; portfolio content remains available through HTML." : sceneNotice || sceneEvent?.message || (scenePhase === "ready" ? "Scene ready. All portfolio routes remain available." : "Loading the scene. You can cancel or browse projects.")} />
+    <div className="border-b border-white/15 px-6 py-4"><h2 ref={heading} tabIndex={-1} id="studio-preview-heading" className="text-lg">{desktop && sceneRequest.id === "development" && exhibit ? `Development Lab — ${exhibit.title}` : sceneRegistry[desktop ? sceneRequest.id : "hub"].title}</h2><p className="mt-1 text-xs text-muted">{desktop && sceneRequest.id === "development" ? exhibit ? "Text-first procedural exhibit · HTML case study is authoritative" : "M6-A1 technical review · No portfolio content" : "M3 camera & interactions · All objects are placeholders"}</p></div>
+    {desktop ? <DesktopPreview exhibitEligible={!!exhibit} exhibitRequest={exhibitRequest} onExhibit={focusExhibit} key={attempt} retry={retry} sceneRequest={sceneRequest} scenePhase={scenePhase} onSceneState={onSceneState} quality={quality} request={request} reducedMotion={reducedMotion} onSelect={select} onSettled={saveStablePreset} /> : <div data-testid="scene-2d"><StaticDescription message="This lightweight HTML view keeps the layout readable on smaller screens and when JavaScript is disabled. The 3D overview is available on wider screens." /></div>}
+    <StudioControls developmentTitle={exhibit?.title} developmentSelected={exhibitRequest.selected} backToHub={returnHub} hubActive={!desktop || sceneRequest.id === "hub"} quality={quality} setQuality={setQuality} preset={preset} desktop={desktop} select={select} back={back} reset={reset} buttons={controls} />
+    <StudioDirectory exhibit={exhibit} selected={exhibitRequest.selected} focusExhibit={focusExhibit} overviewExhibit={overviewExhibit} exhibitButton={exhibitButton} desktop={desktop} scene={desktop ? sceneRequest.id : "hub"} phase={desktop ? scenePhase : "ready"} enter={enterBay} retry={() => { chooseScene(sceneRequest.id); retry(); }} button={entryButton} readyMs={sceneEvent?.readyMs} message={!desktop ? "The review bay is available on desktop; portfolio content remains available through HTML." : sceneNotice || sceneEvent?.message || (scenePhase === "ready" ? "Scene ready. All portfolio routes remain available." : "Loading the scene. You can cancel or browse projects.")} />
   </section>;
 }

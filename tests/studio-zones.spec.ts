@@ -2,10 +2,10 @@ import { expect, test, type Page } from "@playwright/test";
 import { readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
-const evidence = "docs/04-delivery/evidence/m6a1/after";
+const evidence = "docs/04-delivery/evidence/m6a2/after";
 const sceneKey = "midnight-tech-lab:stable-scene:v1";
 test.use({ viewport: { width: 1440, height: 900 }, deviceScaleFactor: 2 });
-const entry = (page: Page) => page.getByRole("button", { name: "Enter Development Review Bay" });
+const entry = (page: Page) => page.getByRole("button", { name: "Enter Development Lab" });
 const directory = (page: Page) => page.getByTestId("studio-directory");
 const canvas = (page: Page) => page.locator("canvas");
 async function metrics(page: Page) { return JSON.parse((await canvas(page).getAttribute("data-render-metrics"))!); }
@@ -40,7 +40,7 @@ test("lazy bay uses one existing Canvas, keyboard focus and original hub restora
   const history = await page.evaluate(() => window.history.length);
   await entry(page).focus(); await page.keyboard.press("Enter"); await ready(page, "development");
   expect(requests).toBe(1);
-  await expect(page.getByRole("heading", { name: "Development Lab — Technical Review Placeholder", exact: true })).toBeFocused();
+  await expect(page.getByRole("heading", { name: "Development Lab — Savvyra", exact: true })).toBeFocused();
   await expect(canvas(page)).toHaveAttribute("data-original-canvas", "true");
   expect(await page.evaluate(() => window.history.length)).toBe(history);
   await expect(page).toHaveURL("/");
@@ -134,7 +134,7 @@ test("scene allocation exception is isolated and retry recovers", async ({ page 
 test("validated bay restores after reload; leaving a pending load keeps the previous stable hub", async ({ page, browser }) => {
   await page.goto("/"); await ready(page); await entry(page).click(); await ready(page, "development");
   await page.reload(); await ready(page, "development");
-  await expect(page.locator("#studio-preview-heading")).toHaveText("Development Lab — Technical Review Placeholder");
+  await expect(page.locator("#studio-preview-heading")).toHaveText("Development Lab — Savvyra");
   const context = await browser.newContext({ viewport: { width: 1440, height: 900 }, reducedMotion: "reduce" });
   const pendingPage = await context.newPage();
   let release = () => {}; const pending = new Promise<void>(resolve => { release = resolve; });
@@ -200,29 +200,40 @@ test("restored bay never loads on mobile/no-JS or blocks unsupported WebGL links
     await expect(page).toHaveURL(/\/projects$/); await context.close();
   }
   const page = await browser.newPage({ viewport: { width: 1440, height: 900 } });
-  await page.addInitScript(() => { HTMLCanvasElement.prototype.getContext = () => null; });
-  await page.goto("http://127.0.0.1:3000/"); await expect(page.getByTestId("scene-fallback")).toBeVisible();
+  await page.addInitScript(() => { HTMLCanvasElement.prototype.getContext = () => { document.documentElement.dataset.unsupportedProbe = "true"; return null; }; });
+  await page.goto("http://127.0.0.1:3000/");
+  // Assert recovery from an actual failed capability probe, after client hydration.
+  await page.waitForFunction(() => document.documentElement.dataset.unsupportedProbe === "true", undefined, { timeout: 15000 });
+  await expect(page.getByTestId("scene-fallback")).toBeVisible();
   await entry(page).click();
   await page.getByTestId("studio-directory").getByRole("link", { name: "Browse Projects", exact: true }).click();
   await expect(page).toHaveURL(/\/projects$/); await page.close();
 });
 
 test("twenty round trips retain bounded resources and idle rendering in every bay quality", async ({ page }) => {
-  test.setTimeout(120000);
+  test.setTimeout(180000);
   await page.goto("/"); await ready(page);
   const errors: string[] = []; page.on("pageerror", error => errors.push(error.message));
   const samples = [];
+  let expectedFocus: { calls: number; geometries: number; materials: number; textures: number } | null = null;
   await canvas(page).evaluate(c => c.setAttribute("data-original-canvas", "true"));
   for (let cycle = 0; cycle < 20; cycle++) {
     await entry(page).click(); await ready(page, "development"); await page.waitForTimeout(500);
     const bay = await metrics(page);
+    await page.getByRole("button", { name: "Focus Savvyra", exact: true }).click();
+    await expect(canvas(page)).toHaveAttribute("data-camera-preset", "development-exhibit");
+    await expect(canvas(page)).toHaveAttribute("data-camera-moving", "false");
+    const focus = await metrics(page);
+    expect(focus.calls).toBeLessThanOrEqual(45); expect(focus.triangles).toBeLessThanOrEqual(7000);
+    if (expectedFocus) expect(focus).toMatchObject(expectedFocus);
+    else expectedFocus = { calls: focus.calls, geometries: focus.geometries, materials: focus.materials, textures: focus.textures };
     expect(bay.calls).toBeLessThanOrEqual(35); expect(bay.triangles).toBeLessThanOrEqual(3000);
     expect(bay.geometries).toBeLessThanOrEqual(35); expect(bay.materials).toBeLessThanOrEqual(16);
     expect(bay.textures).toBeLessThanOrEqual(1); expect(bay.lightCount).toBeLessThanOrEqual(4); expect(bay.pointLightCount).toBeLessThanOrEqual(1); expect(bay.shadows).toBe(false);
     await page.getByRole("button", { name: "Back to Central Hub" }).click(); await ready(page); await page.waitForTimeout(500);
     const hub = await metrics(page);
     expect(hub.calls).toBe(30); expect(hub.triangles).toBe(1680); expect(hub.geometries).toBe(30); expect(hub.materials).toBe(15); expect(hub.textures).toBe(1);
-    samples.push({ cycle, bay, hub }); await expect(canvas(page)).toHaveAttribute("data-original-canvas", "true");
+    samples.push({ cycle, bay, hub, focus }); await expect(canvas(page)).toHaveAttribute("data-original-canvas", "true");
   }
   await entry(page).click(); await ready(page, "development");
   for (const label of ["Low", "Medium", "High"]) {

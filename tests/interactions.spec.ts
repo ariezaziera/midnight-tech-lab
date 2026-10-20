@@ -3,7 +3,7 @@ import { mkdirSync, writeFileSync } from "node:fs";
 import { cameraBounds, cameraPresets, hotspotIds, hotspots, transitionPose, type CameraPresetId } from "../src/lib/scene/interaction-config";
 
 test.use({ viewport: { width: 1440, height: 900 } });
-const evidence = "docs/04-delivery/evidence/m6a1/after";
+const evidence = "docs/04-delivery/evidence/m6a2/after";
 type MotionSample = { position: number[]; target: number[] };
 type Diagnostics = {
   position: number[]; target: number[]; fov: number; near: number; far: number; clearance: number;

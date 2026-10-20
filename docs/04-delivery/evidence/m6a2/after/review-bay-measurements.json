@@ -1,0 +1,2271 @@
+{
+  "browser": "156.0.8078.4",
+  "environment": "Windows; local production build; Chromium headless; no throttling; fresh context per first entry; 1440x900 deviceScaleFactor2; reduced-motion snap for preset inspection; five first/warm entries per quality; idle 500ms settle +2s +10s; input-to-ready includes DOM event through completed draw/ready UI commit; separate normal-motion keyboard/pointer journey captures",
+  "entries": [
+    {
+      "mode": "Low",
+      "run": 0,
+      "first": {
+        "activationToDrawMs": 257,
+        "hostReadyMs": 238
+      },
+      "warm": {
+        "activationToDrawMs": 235,
+        "hostReadyMs": 162
+      },
+      "bay": {
+        "render": {
+          "calls": 10,
+          "triangles": 436,
+          "geometries": 10,
+          "textures": 1,
+          "materials": 9,
+          "programs": 1,
+          "dpr": 1,
+          "width": 694,
+          "height": 440,
+          "graphs": [
+            "development"
+          ],
+          "lightCount": 4,
+          "pointLightCount": 1,
+          "shadows": false
+        },
+        "camera": {
+          "position": [
+            5.6,
+            4.6,
+            6.8
+          ],
+          "target": [
+            0,
+            1,
+            0
+          ],
+          "fov": 38,
+          "near": 0.1,
+          "far": 40,
+          "clearance": 6.427285572334453,
+          "bounds": {
+            "min": [
+              2.7,
+              2.6,
+              4.2
+            ],
+            "max": [
+              5.6,
+              4.6,
+              6.8
+            ]
+          },
+          "targetInView": [
+            2.3074364550473634e-16,
+            -6.776417670673255e-17,
+            0.983943290641143
+          ],
+          "exhibitPick": {
+            "x": 0.5094687863581461,
+            "y": 0.3552922536439831,
+            "depth": 0.9833697178456663
+          },
+          "corners": [
+            [
+              -0.11046556702166123,
+              0.19689396090171113,
+              0.9849280004164174
+            ],
+            [
+              -0.11481650839231748,
+              0.4845554737745705,
+              0.9841369248006313
+            ],
+            [
+              0.1628980415496284,
+              0.07938494314637366,
+              0.9825439675432193
+            ],
+            [
+              0.17010946493352733,
+              0.39750139435960696,
+              0.9815492942817045
+            ]
+          ]
+        },
+        "frames": "7"
+      },
+      "sameCanvas": true,
+      "additional": [
+        {
+          "path": "/_next/static/chunks/2pb5sw77diq1q.js",
+          "bytes": 1921,
+          "durationMs": 9
+        }
+      ],
+      "additionalJsBytes": 1921,
+      "errors": []
+    },
+    {
+      "mode": "Low",
+      "run": 1,
+      "first": {
+        "activationToDrawMs": 365,
+        "hostReadyMs": 355
+      },
+      "warm": {
+        "activationToDrawMs": 226,
+        "hostReadyMs": 218
+      },
+      "bay": {
+        "render": {
+          "calls": 10,
+          "triangles": 436,
+          "geometries": 10,
+          "textures": 1,
+          "materials": 9,
+          "programs": 1,
+          "dpr": 1,
+          "width": 694,
+          "height": 440,
+          "graphs": [
+            "development"
+          ],
+          "lightCount": 4,
+          "pointLightCount": 1,
+          "shadows": false
+        },
+        "camera": {
+          "position": [
+            5.6,
+            4.6,
+            6.8
+          ],
+          "target": [
+            0,
+            1,
+            0
+          ],
+          "fov": 38,
+          "near": 0.1,
+          "far": 40,
+          "clearance": 6.427285572334453,
+          "bounds": {
+            "min": [
+              2.7,
+              2.6,
+              4.2
+            ],
+            "max": [
+              5.6,
+              4.6,
+              6.8
+            ]
+          },
+          "targetInView": [
+            2.3074364550473634e-16,
+            -6.776417670673255e-17,
+            0.983943290641143
+          ],
+          "exhibitPick": {
+            "x": 0.5094687863581461,
+            "y": 0.3552922536439831,
+            "depth": 0.9833697178456663
+          },
+          "corners": [
+            [
+              -0.11046556702166123,
+              0.19689396090171113,
+              0.9849280004164174
+            ],
+            [
+              -0.11481650839231748,
+              0.4845554737745705,
+              0.9841369248006313
+            ],
+            [
+              0.1628980415496284,
+              0.07938494314637366,
+              0.9825439675432193
+            ],
+            [
+              0.17010946493352733,
+              0.39750139435960696,
+              0.9815492942817045
+            ]
+          ]
+        },
+        "frames": "8"
+      },
+      "sameCanvas": true,
+      "additional": [
+        {
+          "path": "/_next/static/chunks/2pb5sw77diq1q.js",
+          "bytes": 1921,
+          "durationMs": 101
+        }
+      ],
+      "additionalJsBytes": 1921,
+      "errors": []
+    },
+    {
+      "mode": "Low",
+      "run": 2,
+      "first": {
+        "activationToDrawMs": 183,
+        "hostReadyMs": 172
+      },
+      "warm": {
+        "activationToDrawMs": 172,
+        "hostReadyMs": 164
+      },
+      "bay": {
+        "render": {
+          "calls": 10,
+          "triangles": 436,
+          "geometries": 10,
+          "textures": 1,
+          "materials": 9,
+          "programs": 1,
+          "dpr": 1,
+          "width": 694,
+          "height": 440,
+          "graphs": [
+            "development"
+          ],
+          "lightCount": 4,
+          "pointLightCount": 1,
+          "shadows": false
+        },
+        "camera": {
+          "position": [
+            5.6,
+            4.6,
+            6.8
+          ],
+          "target": [
+            0,
+            1,
+            0
+          ],
+          "fov": 38,
+          "near": 0.1,
+          "far": 40,
+          "clearance": 6.427285572334453,
+          "bounds": {
+            "min": [
+              2.7,
+              2.6,
+              4.2
+            ],
+            "max": [
+              5.6,
+              4.6,
+              6.8
+            ]
+          },
+          "targetInView": [
+            2.3074364550473634e-16,
+            -6.776417670673255e-17,
+            0.983943290641143
+          ],
+          "exhibitPick": {
+            "x": 0.5094687863581461,
+            "y": 0.3552922536439831,
+            "depth": 0.9833697178456663
+          },
+          "corners": [
+            [
+              -0.11046556702166123,
+              0.19689396090171113,
+              0.9849280004164174
+            ],
+            [
+              -0.11481650839231748,
+              0.4845554737745705,
+              0.9841369248006313
+            ],
+            [
+              0.1628980415496284,
+              0.07938494314637366,
+              0.9825439675432193
+            ],
+            [
+              0.17010946493352733,
+              0.39750139435960696,
+              0.9815492942817045
+            ]
+          ]
+        },
+        "frames": "7"
+      },
+      "sameCanvas": true,
+      "additional": [
+        {
+          "path": "/_next/static/chunks/2pb5sw77diq1q.js",
+          "bytes": 1921,
+          "durationMs": 5
+        }
+      ],
+      "additionalJsBytes": 1921,
+      "errors": []
+    },
+    {
+      "mode": "Low",
+      "run": 3,
+      "first": {
+        "activationToDrawMs": 423,
+        "hostReadyMs": 407
+      },
+      "warm": {
+        "activationToDrawMs": 183,
+        "hostReadyMs": 170
+      },
+      "bay": {
+        "render": {
+          "calls": 10,
+          "triangles": 436,
+          "geometries": 10,
+          "textures": 1,
+          "materials": 9,
+          "programs": 1,
+          "dpr": 1,
+          "width": 694,
+          "height": 440,
+          "graphs": [
+            "development"
+          ],
+          "lightCount": 4,
+          "pointLightCount": 1,
+          "shadows": false
+        },
+        "camera": {
+          "position": [
+            5.6,
+            4.6,
+            6.8
+          ],
+          "target": [
+            0,
+            1,
+            0
+          ],
+          "fov": 38,
+          "near": 0.1,
+          "far": 40,
+          "clearance": 6.427285572334453,
+          "bounds": {
+            "min": [
+              2.7,
+              2.6,
+              4.2
+            ],
+            "max": [
+              5.6,
+              4.6,
+              6.8
+            ]
+          },
+          "targetInView": [
+            2.3074364550473634e-16,
+            -6.776417670673255e-17,
+            0.983943290641143
+          ],
+          "exhibitPick": {
+            "x": 0.5094687863581461,
+            "y": 0.3552922536439831,
+            "depth": 0.9833697178456663
+          },
+          "corners": [
+            [
+              -0.11046556702166123,
+              0.19689396090171113,
+              0.9849280004164174
+            ],
+            [
+              -0.11481650839231748,
+              0.4845554737745705,
+              0.9841369248006313
+            ],
+            [
+              0.1628980415496284,
+              0.07938494314637366,
+              0.9825439675432193
+            ],
+            [
+              0.17010946493352733,
+              0.39750139435960696,
+              0.9815492942817045
+            ]
+          ]
+        },
+        "frames": "8"
+      },
+      "sameCanvas": true,
+      "additional": [
+        {
+          "path": "/_next/static/chunks/2pb5sw77diq1q.js",
+          "bytes": 1921,
+          "durationMs": 28
+        }
+      ],
+      "additionalJsBytes": 1921,
+      "errors": []
+    },
+    {
+      "mode": "Low",
+      "run": 4,
+      "first": {
+        "activationToDrawMs": 332,
+        "hostReadyMs": 317
+      },
+      "warm": {
+        "activationToDrawMs": 178,
+        "hostReadyMs": 168
+      },
+      "bay": {
+        "render": {
+          "calls": 10,
+          "triangles": 436,
+          "geometries": 10,
+          "textures": 1,
+          "materials": 9,
+          "programs": 1,
+          "dpr": 1,
+          "width": 694,
+          "height": 440,
+          "graphs": [
+            "development"
+          ],
+          "lightCount": 4,
+          "pointLightCount": 1,
+          "shadows": false
+        },
+        "camera": {
+          "position": [
+            5.6,
+            4.6,
+            6.8
+          ],
+          "target": [
+            0,
+            1,
+            0
+          ],
+          "fov": 38,
+          "near": 0.1,
+          "far": 40,
+          "clearance": 6.427285572334453,
+          "bounds": {
+            "min": [
+              2.7,
+              2.6,
+              4.2
+            ],
+            "max": [
+              5.6,
+              4.6,
+              6.8
+            ]
+          },
+          "targetInView": [
+            2.3074364550473634e-16,
+            -6.776417670673255e-17,
+            0.983943290641143
+          ],
+          "exhibitPick": {
+            "x": 0.5094687863581461,
+            "y": 0.3552922536439831,
+            "depth": 0.9833697178456663
+          },
+          "corners": [
+            [
+              -0.11046556702166123,
+              0.19689396090171113,
+              0.9849280004164174
+            ],
+            [
+              -0.11481650839231748,
+              0.4845554737745705,
+              0.9841369248006313
+            ],
+            [
+              0.1628980415496284,
+              0.07938494314637366,
+              0.9825439675432193
+            ],
+            [
+              0.17010946493352733,
+              0.39750139435960696,
+              0.9815492942817045
+            ]
+          ]
+        },
+        "frames": "8"
+      },
+      "sameCanvas": true,
+      "additional": [
+        {
+          "path": "/_next/static/chunks/2pb5sw77diq1q.js",
+          "bytes": 1921,
+          "durationMs": 14
+        }
+      ],
+      "additionalJsBytes": 1921,
+      "errors": []
+    },
+    {
+      "mode": "Medium",
+      "run": 0,
+      "first": {
+        "activationToDrawMs": 323,
+        "hostReadyMs": 312
+      },
+      "warm": {
+        "activationToDrawMs": 286,
+        "hostReadyMs": 228
+      },
+      "bay": {
+        "render": {
+          "calls": 10,
+          "triangles": 436,
+          "geometries": 10,
+          "textures": 1,
+          "materials": 9,
+          "programs": 1,
+          "dpr": 1.5,
+          "width": 1041,
+          "height": 660,
+          "graphs": [
+            "development"
+          ],
+          "lightCount": 4,
+          "pointLightCount": 1,
+          "shadows": false
+        },
+        "camera": {
+          "position": [
+            5.6,
+            4.6,
+            6.8
+          ],
+          "target": [
+            0,
+            1,
+            0
+          ],
+          "fov": 38,
+          "near": 0.1,
+          "far": 40,
+          "clearance": 6.427285572334453,
+          "bounds": {
+            "min": [
+              2.7,
+              2.6,
+              4.2
+            ],
+            "max": [
+              5.6,
+              4.6,
+              6.8
+            ]
+          },
+          "targetInView": [
+            2.3074364550473634e-16,
+            -6.776417670673255e-17,
+            0.983943290641143
+          ],
+          "exhibitPick": {
+            "x": 0.5094687863581461,
+            "y": 0.3552922536439831,
+            "depth": 0.9833697178456663
+          },
+          "corners": [
+            [
+              -0.11046556702166123,
+              0.19689396090171113,
+              0.9849280004164174
+            ],
+            [
+              -0.11481650839231748,
+              0.4845554737745705,
+              0.9841369248006313
+            ],
+            [
+              0.1628980415496284,
+              0.07938494314637366,
+              0.9825439675432193
+            ],
+            [
+              0.17010946493352733,
+              0.39750139435960696,
+              0.9815492942817045
+            ]
+          ]
+        },
+        "frames": "10"
+      },
+      "sameCanvas": true,
+      "additional": [
+        {
+          "path": "/_next/static/chunks/2pb5sw77diq1q.js",
+          "bytes": 1921,
+          "durationMs": 11
+        }
+      ],
+      "additionalJsBytes": 1921,
+      "errors": []
+    },
+    {
+      "mode": "Medium",
+      "run": 1,
+      "first": {
+        "activationToDrawMs": 314,
+        "hostReadyMs": 286
+      },
+      "warm": {
+        "activationToDrawMs": 238,
+        "hostReadyMs": 196
+      },
+      "bay": {
+        "render": {
+          "calls": 10,
+          "triangles": 436,
+          "geometries": 10,
+          "textures": 1,
+          "materials": 9,
+          "programs": 1,
+          "dpr": 1.5,
+          "width": 1041,
+          "height": 660,
+          "graphs": [
+            "development"
+          ],
+          "lightCount": 4,
+          "pointLightCount": 1,
+          "shadows": false
+        },
+        "camera": {
+          "position": [
+            5.6,
+            4.6,
+            6.8
+          ],
+          "target": [
+            0,
+            1,
+            0
+          ],
+          "fov": 38,
+          "near": 0.1,
+          "far": 40,
+          "clearance": 6.427285572334453,
+          "bounds": {
+            "min": [
+              2.7,
+              2.6,
+              4.2
+            ],
+            "max": [
+              5.6,
+              4.6,
+              6.8
+            ]
+          },
+          "targetInView": [
+            2.3074364550473634e-16,
+            -6.776417670673255e-17,
+            0.983943290641143
+          ],
+          "exhibitPick": {
+            "x": 0.5094687863581461,
+            "y": 0.3552922536439831,
+            "depth": 0.9833697178456663
+          },
+          "corners": [
+            [
+              -0.11046556702166123,
+              0.19689396090171113,
+              0.9849280004164174
+            ],
+            [
+              -0.11481650839231748,
+              0.4845554737745705,
+              0.9841369248006313
+            ],
+            [
+              0.1628980415496284,
+              0.07938494314637366,
+              0.9825439675432193
+            ],
+            [
+              0.17010946493352733,
+              0.39750139435960696,
+              0.9815492942817045
+            ]
+          ]
+        },
+        "frames": "8"
+      },
+      "sameCanvas": true,
+      "additional": [
+        {
+          "path": "/_next/static/chunks/2pb5sw77diq1q.js",
+          "bytes": 1921,
+          "durationMs": 22
+        }
+      ],
+      "additionalJsBytes": 1921,
+      "errors": []
+    },
+    {
+      "mode": "Medium",
+      "run": 2,
+      "first": {
+        "activationToDrawMs": 314,
+        "hostReadyMs": 302
+      },
+      "warm": {
+        "activationToDrawMs": 213,
+        "hostReadyMs": 207
+      },
+      "bay": {
+        "render": {
+          "calls": 10,
+          "triangles": 436,
+          "geometries": 10,
+          "textures": 1,
+          "materials": 9,
+          "programs": 1,
+          "dpr": 1.5,
+          "width": 1041,
+          "height": 660,
+          "graphs": [
+            "development"
+          ],
+          "lightCount": 4,
+          "pointLightCount": 1,
+          "shadows": false
+        },
+        "camera": {
+          "position": [
+            5.6,
+            4.6,
+            6.8
+          ],
+          "target": [
+            0,
+            1,
+            0
+          ],
+          "fov": 38,
+          "near": 0.1,
+          "far": 40,
+          "clearance": 6.427285572334453,
+          "bounds": {
+            "min": [
+              2.7,
+              2.6,
+              4.2
+            ],
+            "max": [
+              5.6,
+              4.6,
+              6.8
+            ]
+          },
+          "targetInView": [
+            2.3074364550473634e-16,
+            -6.776417670673255e-17,
+            0.983943290641143
+          ],
+          "exhibitPick": {
+            "x": 0.5094687863581461,
+            "y": 0.3552922536439831,
+            "depth": 0.9833697178456663
+          },
+          "corners": [
+            [
+              -0.11046556702166123,
+              0.19689396090171113,
+              0.9849280004164174
+            ],
+            [
+              -0.11481650839231748,
+              0.4845554737745705,
+              0.9841369248006313
+            ],
+            [
+              0.1628980415496284,
+              0.07938494314637366,
+              0.9825439675432193
+            ],
+            [
+              0.17010946493352733,
+              0.39750139435960696,
+              0.9815492942817045
+            ]
+          ]
+        },
+        "frames": "9"
+      },
+      "sameCanvas": true,
+      "additional": [
+        {
+          "path": "/_next/static/chunks/2pb5sw77diq1q.js",
+          "bytes": 1921,
+          "durationMs": 12
+        }
+      ],
+      "additionalJsBytes": 1921,
+      "errors": []
+    },
+    {
+      "mode": "Medium",
+      "run": 3,
+      "first": {
+        "activationToDrawMs": 271,
+        "hostReadyMs": 257
+      },
+      "warm": {
+        "activationToDrawMs": 224,
+        "hostReadyMs": 216
+      },
+      "bay": {
+        "render": {
+          "calls": 10,
+          "triangles": 436,
+          "geometries": 10,
+          "textures": 1,
+          "materials": 9,
+          "programs": 1,
+          "dpr": 1.5,
+          "width": 1041,
+          "height": 660,
+          "graphs": [
+            "development"
+          ],
+          "lightCount": 4,
+          "pointLightCount": 1,
+          "shadows": false
+        },
+        "camera": {
+          "position": [
+            5.6,
+            4.6,
+            6.8
+          ],
+          "target": [
+            0,
+            1,
+            0
+          ],
+          "fov": 38,
+          "near": 0.1,
+          "far": 40,
+          "clearance": 6.427285572334453,
+          "bounds": {
+            "min": [
+              2.7,
+              2.6,
+              4.2
+            ],
+            "max": [
+              5.6,
+              4.6,
+              6.8
+            ]
+          },
+          "targetInView": [
+            2.3074364550473634e-16,
+            -6.776417670673255e-17,
+            0.983943290641143
+          ],
+          "exhibitPick": {
+            "x": 0.5094687863581461,
+            "y": 0.3552922536439831,
+            "depth": 0.9833697178456663
+          },
+          "corners": [
+            [
+              -0.11046556702166123,
+              0.19689396090171113,
+              0.9849280004164174
+            ],
+            [
+              -0.11481650839231748,
+              0.4845554737745705,
+              0.9841369248006313
+            ],
+            [
+              0.1628980415496284,
+              0.07938494314637366,
+              0.9825439675432193
+            ],
+            [
+              0.17010946493352733,
+              0.39750139435960696,
+              0.9815492942817045
+            ]
+          ]
+        },
+        "frames": "8"
+      },
+      "sameCanvas": true,
+      "additional": [
+        {
+          "path": "/_next/static/chunks/2pb5sw77diq1q.js",
+          "bytes": 1921,
+          "durationMs": 23
+        }
+      ],
+      "additionalJsBytes": 1921,
+      "errors": []
+    },
+    {
+      "mode": "Medium",
+      "run": 4,
+      "first": {
+        "activationToDrawMs": 250,
+        "hostReadyMs": 237
+      },
+      "warm": {
+        "activationToDrawMs": 232,
+        "hostReadyMs": 191
+      },
+      "bay": {
+        "render": {
+          "calls": 10,
+          "triangles": 436,
+          "geometries": 10,
+          "textures": 1,
+          "materials": 9,
+          "programs": 1,
+          "dpr": 1.5,
+          "width": 1041,
+          "height": 660,
+          "graphs": [
+            "development"
+          ],
+          "lightCount": 4,
+          "pointLightCount": 1,
+          "shadows": false
+        },
+        "camera": {
+          "position": [
+            5.6,
+            4.6,
+            6.8
+          ],
+          "target": [
+            0,
+            1,
+            0
+          ],
+          "fov": 38,
+          "near": 0.1,
+          "far": 40,
+          "clearance": 6.427285572334453,
+          "bounds": {
+            "min": [
+              2.7,
+              2.6,
+              4.2
+            ],
+            "max": [
+              5.6,
+              4.6,
+              6.8
+            ]
+          },
+          "targetInView": [
+            2.3074364550473634e-16,
+            -6.776417670673255e-17,
+            0.983943290641143
+          ],
+          "exhibitPick": {
+            "x": 0.5094687863581461,
+            "y": 0.3552922536439831,
+            "depth": 0.9833697178456663
+          },
+          "corners": [
+            [
+              -0.11046556702166123,
+              0.19689396090171113,
+              0.9849280004164174
+            ],
+            [
+              -0.11481650839231748,
+              0.4845554737745705,
+              0.9841369248006313
+            ],
+            [
+              0.1628980415496284,
+              0.07938494314637366,
+              0.9825439675432193
+            ],
+            [
+              0.17010946493352733,
+              0.39750139435960696,
+              0.9815492942817045
+            ]
+          ]
+        },
+        "frames": "9"
+      },
+      "sameCanvas": true,
+      "additional": [
+        {
+          "path": "/_next/static/chunks/2pb5sw77diq1q.js",
+          "bytes": 1921,
+          "durationMs": 14
+        }
+      ],
+      "additionalJsBytes": 1921,
+      "errors": []
+    },
+    {
+      "mode": "High",
+      "run": 0,
+      "first": {
+        "activationToDrawMs": 314,
+        "hostReadyMs": 280
+      },
+      "warm": {
+        "activationToDrawMs": 307,
+        "hostReadyMs": 238
+      },
+      "bay": {
+        "render": {
+          "calls": 10,
+          "triangles": 436,
+          "geometries": 10,
+          "textures": 1,
+          "materials": 9,
+          "programs": 1,
+          "dpr": 2,
+          "width": 1389,
+          "height": 880,
+          "graphs": [
+            "development"
+          ],
+          "lightCount": 4,
+          "pointLightCount": 1,
+          "shadows": false
+        },
+        "camera": {
+          "position": [
+            5.6,
+            4.6,
+            6.8
+          ],
+          "target": [
+            0,
+            1,
+            0
+          ],
+          "fov": 38,
+          "near": 0.1,
+          "far": 40,
+          "clearance": 6.427285572334453,
+          "bounds": {
+            "min": [
+              2.7,
+              2.6,
+              4.2
+            ],
+            "max": [
+              5.6,
+              4.6,
+              6.8
+            ]
+          },
+          "targetInView": [
+            2.3074364550473634e-16,
+            -6.776417670673255e-17,
+            0.983943290641143
+          ],
+          "exhibitPick": {
+            "x": 0.5094687863581461,
+            "y": 0.3552922536439831,
+            "depth": 0.9833697178456663
+          },
+          "corners": [
+            [
+              -0.11046556702166123,
+              0.19689396090171113,
+              0.9849280004164174
+            ],
+            [
+              -0.11481650839231748,
+              0.4845554737745705,
+              0.9841369248006313
+            ],
+            [
+              0.1628980415496284,
+              0.07938494314637366,
+              0.9825439675432193
+            ],
+            [
+              0.17010946493352733,
+              0.39750139435960696,
+              0.9815492942817045
+            ]
+          ]
+        },
+        "frames": "8"
+      },
+      "sameCanvas": true,
+      "additional": [
+        {
+          "path": "/_next/static/chunks/2pb5sw77diq1q.js",
+          "bytes": 1921,
+          "durationMs": 10
+        }
+      ],
+      "additionalJsBytes": 1921,
+      "errors": []
+    },
+    {
+      "mode": "High",
+      "run": 1,
+      "first": {
+        "activationToDrawMs": 269,
+        "hostReadyMs": 256
+      },
+      "warm": {
+        "activationToDrawMs": 213,
+        "hostReadyMs": 205
+      },
+      "bay": {
+        "render": {
+          "calls": 10,
+          "triangles": 436,
+          "geometries": 10,
+          "textures": 1,
+          "materials": 9,
+          "programs": 1,
+          "dpr": 2,
+          "width": 1389,
+          "height": 880,
+          "graphs": [
+            "development"
+          ],
+          "lightCount": 4,
+          "pointLightCount": 1,
+          "shadows": false
+        },
+        "camera": {
+          "position": [
+            5.6,
+            4.6,
+            6.8
+          ],
+          "target": [
+            0,
+            1,
+            0
+          ],
+          "fov": 38,
+          "near": 0.1,
+          "far": 40,
+          "clearance": 6.427285572334453,
+          "bounds": {
+            "min": [
+              2.7,
+              2.6,
+              4.2
+            ],
+            "max": [
+              5.6,
+              4.6,
+              6.8
+            ]
+          },
+          "targetInView": [
+            2.3074364550473634e-16,
+            -6.776417670673255e-17,
+            0.983943290641143
+          ],
+          "exhibitPick": {
+            "x": 0.5094687863581461,
+            "y": 0.3552922536439831,
+            "depth": 0.9833697178456663
+          },
+          "corners": [
+            [
+              -0.11046556702166123,
+              0.19689396090171113,
+              0.9849280004164174
+            ],
+            [
+              -0.11481650839231748,
+              0.4845554737745705,
+              0.9841369248006313
+            ],
+            [
+              0.1628980415496284,
+              0.07938494314637366,
+              0.9825439675432193
+            ],
+            [
+              0.17010946493352733,
+              0.39750139435960696,
+              0.9815492942817045
+            ]
+          ]
+        },
+        "frames": "8"
+      },
+      "sameCanvas": true,
+      "additional": [
+        {
+          "path": "/_next/static/chunks/2pb5sw77diq1q.js",
+          "bytes": 1921,
+          "durationMs": 18
+        }
+      ],
+      "additionalJsBytes": 1921,
+      "errors": []
+    },
+    {
+      "mode": "High",
+      "run": 2,
+      "first": {
+        "activationToDrawMs": 297,
+        "hostReadyMs": 266
+      },
+      "warm": {
+        "activationToDrawMs": 323,
+        "hostReadyMs": 252
+      },
+      "bay": {
+        "render": {
+          "calls": 10,
+          "triangles": 436,
+          "geometries": 10,
+          "textures": 1,
+          "materials": 9,
+          "programs": 1,
+          "dpr": 2,
+          "width": 1389,
+          "height": 880,
+          "graphs": [
+            "development"
+          ],
+          "lightCount": 4,
+          "pointLightCount": 1,
+          "shadows": false
+        },
+        "camera": {
+          "position": [
+            5.6,
+            4.6,
+            6.8
+          ],
+          "target": [
+            0,
+            1,
+            0
+          ],
+          "fov": 38,
+          "near": 0.1,
+          "far": 40,
+          "clearance": 6.427285572334453,
+          "bounds": {
+            "min": [
+              2.7,
+              2.6,
+              4.2
+            ],
+            "max": [
+              5.6,
+              4.6,
+              6.8
+            ]
+          },
+          "targetInView": [
+            2.3074364550473634e-16,
+            -6.776417670673255e-17,
+            0.983943290641143
+          ],
+          "exhibitPick": {
+            "x": 0.5094687863581461,
+            "y": 0.3552922536439831,
+            "depth": 0.9833697178456663
+          },
+          "corners": [
+            [
+              -0.11046556702166123,
+              0.19689396090171113,
+              0.9849280004164174
+            ],
+            [
+              -0.11481650839231748,
+              0.4845554737745705,
+              0.9841369248006313
+            ],
+            [
+              0.1628980415496284,
+              0.07938494314637366,
+              0.9825439675432193
+            ],
+            [
+              0.17010946493352733,
+              0.39750139435960696,
+              0.9815492942817045
+            ]
+          ]
+        },
+        "frames": "9"
+      },
+      "sameCanvas": true,
+      "additional": [
+        {
+          "path": "/_next/static/chunks/2pb5sw77diq1q.js",
+          "bytes": 1921,
+          "durationMs": 11
+        }
+      ],
+      "additionalJsBytes": 1921,
+      "errors": []
+    },
+    {
+      "mode": "High",
+      "run": 3,
+      "first": {
+        "activationToDrawMs": 354,
+        "hostReadyMs": 344
+      },
+      "warm": {
+        "activationToDrawMs": 210,
+        "hostReadyMs": 202
+      },
+      "bay": {
+        "render": {
+          "calls": 10,
+          "triangles": 436,
+          "geometries": 10,
+          "textures": 1,
+          "materials": 9,
+          "programs": 1,
+          "dpr": 2,
+          "width": 1389,
+          "height": 880,
+          "graphs": [
+            "development"
+          ],
+          "lightCount": 4,
+          "pointLightCount": 1,
+          "shadows": false
+        },
+        "camera": {
+          "position": [
+            5.6,
+            4.6,
+            6.8
+          ],
+          "target": [
+            0,
+            1,
+            0
+          ],
+          "fov": 38,
+          "near": 0.1,
+          "far": 40,
+          "clearance": 6.427285572334453,
+          "bounds": {
+            "min": [
+              2.7,
+              2.6,
+              4.2
+            ],
+            "max": [
+              5.6,
+              4.6,
+              6.8
+            ]
+          },
+          "targetInView": [
+            2.3074364550473634e-16,
+            -6.776417670673255e-17,
+            0.983943290641143
+          ],
+          "exhibitPick": {
+            "x": 0.5094687863581461,
+            "y": 0.3552922536439831,
+            "depth": 0.9833697178456663
+          },
+          "corners": [
+            [
+              -0.11046556702166123,
+              0.19689396090171113,
+              0.9849280004164174
+            ],
+            [
+              -0.11481650839231748,
+              0.4845554737745705,
+              0.9841369248006313
+            ],
+            [
+              0.1628980415496284,
+              0.07938494314637366,
+              0.9825439675432193
+            ],
+            [
+              0.17010946493352733,
+              0.39750139435960696,
+              0.9815492942817045
+            ]
+          ]
+        },
+        "frames": "9"
+      },
+      "sameCanvas": true,
+      "additional": [
+        {
+          "path": "/_next/static/chunks/2pb5sw77diq1q.js",
+          "bytes": 1921,
+          "durationMs": 4
+        }
+      ],
+      "additionalJsBytes": 1921,
+      "errors": []
+    },
+    {
+      "mode": "High",
+      "run": 4,
+      "first": {
+        "activationToDrawMs": 279,
+        "hostReadyMs": 264
+      },
+      "warm": {
+        "activationToDrawMs": 282,
+        "hostReadyMs": 245
+      },
+      "bay": {
+        "render": {
+          "calls": 10,
+          "triangles": 436,
+          "geometries": 10,
+          "textures": 1,
+          "materials": 9,
+          "programs": 1,
+          "dpr": 2,
+          "width": 1389,
+          "height": 880,
+          "graphs": [
+            "development"
+          ],
+          "lightCount": 4,
+          "pointLightCount": 1,
+          "shadows": false
+        },
+        "camera": {
+          "position": [
+            5.6,
+            4.6,
+            6.8
+          ],
+          "target": [
+            0,
+            1,
+            0
+          ],
+          "fov": 38,
+          "near": 0.1,
+          "far": 40,
+          "clearance": 6.427285572334453,
+          "bounds": {
+            "min": [
+              2.7,
+              2.6,
+              4.2
+            ],
+            "max": [
+              5.6,
+              4.6,
+              6.8
+            ]
+          },
+          "targetInView": [
+            2.3074364550473634e-16,
+            -6.776417670673255e-17,
+            0.983943290641143
+          ],
+          "exhibitPick": {
+            "x": 0.5094687863581461,
+            "y": 0.3552922536439831,
+            "depth": 0.9833697178456663
+          },
+          "corners": [
+            [
+              -0.11046556702166123,
+              0.19689396090171113,
+              0.9849280004164174
+            ],
+            [
+              -0.11481650839231748,
+              0.4845554737745705,
+              0.9841369248006313
+            ],
+            [
+              0.1628980415496284,
+              0.07938494314637366,
+              0.9825439675432193
+            ],
+            [
+              0.17010946493352733,
+              0.39750139435960696,
+              0.9815492942817045
+            ]
+          ]
+        },
+        "frames": "8"
+      },
+      "sameCanvas": true,
+      "additional": [
+        {
+          "path": "/_next/static/chunks/2pb5sw77diq1q.js",
+          "bytes": 1921,
+          "durationMs": 24
+        }
+      ],
+      "additionalJsBytes": 1921,
+      "errors": []
+    }
+  ],
+  "idle": [
+    {
+      "mode": "Low",
+      "preset": "development",
+      "render": {
+        "calls": 10,
+        "triangles": 436,
+        "geometries": 10,
+        "textures": 1,
+        "materials": 9,
+        "programs": 1,
+        "dpr": 1,
+        "width": 694,
+        "height": 440,
+        "graphs": [
+          "development"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      },
+      "camera": {
+        "position": [
+          5.6,
+          4.6,
+          6.8
+        ],
+        "target": [
+          0,
+          1,
+          0
+        ],
+        "fov": 38,
+        "near": 0.1,
+        "far": 40,
+        "clearance": 6.427285572334453,
+        "bounds": {
+          "min": [
+            2.7,
+            2.6,
+            4.2
+          ],
+          "max": [
+            5.6,
+            4.6,
+            6.8
+          ]
+        },
+        "targetInView": [
+          2.3074364550473634e-16,
+          -6.776417670673255e-17,
+          0.983943290641143
+        ],
+        "exhibitPick": {
+          "x": 0.5094687863581461,
+          "y": 0.3552922536439831,
+          "depth": 0.9833697178456663
+        },
+        "corners": [
+          [
+            -0.11046556702166123,
+            0.19689396090171113,
+            0.9849280004164174
+          ],
+          [
+            -0.11481650839231748,
+            0.4845554737745705,
+            0.9841369248006313
+          ],
+          [
+            0.1628980415496284,
+            0.07938494314637366,
+            0.9825439675432193
+          ],
+          [
+            0.17010946493352733,
+            0.39750139435960696,
+            0.9815492942817045
+          ]
+        ]
+      },
+      "frames": "7",
+      "after2s": "7",
+      "afterFurther10s": "7",
+      "unchanged": true
+    },
+    {
+      "mode": "Low",
+      "preset": "development-exhibit",
+      "render": {
+        "calls": 11,
+        "triangles": 532,
+        "geometries": 11,
+        "textures": 1,
+        "materials": 9,
+        "programs": 1,
+        "dpr": 1,
+        "width": 694,
+        "height": 440,
+        "graphs": [
+          "development"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      },
+      "camera": {
+        "position": [
+          2.7,
+          2.6,
+          4.2
+        ],
+        "target": [
+          0,
+          1.95,
+          -0.17
+        ],
+        "fov": 38,
+        "near": 0.1,
+        "far": 40,
+        "clearance": 2.5337718523435373,
+        "bounds": {
+          "min": [
+            2.7,
+            2.6,
+            4.2
+          ],
+          "max": [
+            5.6,
+            4.6,
+            6.8
+          ]
+        },
+        "targetInView": [
+          9.862475874189228e-17,
+          -3.736337344462376e-16,
+          0.9662891258237389
+        ],
+        "exhibitPick": {
+          "x": 0.49812619916239415,
+          "y": 0.5006009796910247,
+          "depth": 0.9661624726674968
+        },
+        "corners": [
+          [
+            -0.25083698872849436,
+            -0.22384624778060355,
+            0.9697935040346838
+          ],
+          [
+            -0.2564929377579986,
+            0.2886213307808545,
+            0.9689993746510897
+          ],
+          [
+            0.2922222485607432,
+            -0.3405908363989895,
+            0.9628404036306103
+          ],
+          [
+            0.3001474983443825,
+            0.272628127367406,
+            0.9616966692039606
+          ]
+        ]
+      },
+      "frames": "8",
+      "after2s": "8",
+      "afterFurther10s": "8",
+      "unchanged": true
+    },
+    {
+      "mode": "Medium",
+      "preset": "development",
+      "render": {
+        "calls": 10,
+        "triangles": 436,
+        "geometries": 10,
+        "textures": 1,
+        "materials": 9,
+        "programs": 1,
+        "dpr": 1.5,
+        "width": 1041,
+        "height": 660,
+        "graphs": [
+          "development"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      },
+      "camera": {
+        "position": [
+          5.6,
+          4.6,
+          6.8
+        ],
+        "target": [
+          0,
+          1,
+          0
+        ],
+        "fov": 38,
+        "near": 0.1,
+        "far": 40,
+        "clearance": 6.427285572334453,
+        "bounds": {
+          "min": [
+            2.7,
+            2.6,
+            4.2
+          ],
+          "max": [
+            5.6,
+            4.6,
+            6.8
+          ]
+        },
+        "targetInView": [
+          2.3074364550473634e-16,
+          -6.776417670673255e-17,
+          0.983943290641143
+        ],
+        "exhibitPick": {
+          "x": 0.5094687863581461,
+          "y": 0.3552922536439831,
+          "depth": 0.9833697178456663
+        },
+        "corners": [
+          [
+            -0.11046556702166123,
+            0.19689396090171113,
+            0.9849280004164174
+          ],
+          [
+            -0.11481650839231748,
+            0.4845554737745705,
+            0.9841369248006313
+          ],
+          [
+            0.1628980415496284,
+            0.07938494314637366,
+            0.9825439675432193
+          ],
+          [
+            0.17010946493352733,
+            0.39750139435960696,
+            0.9815492942817045
+          ]
+        ]
+      },
+      "frames": "10",
+      "after2s": "10",
+      "afterFurther10s": "10",
+      "unchanged": true
+    },
+    {
+      "mode": "Medium",
+      "preset": "development-exhibit",
+      "render": {
+        "calls": 11,
+        "triangles": 532,
+        "geometries": 11,
+        "textures": 1,
+        "materials": 9,
+        "programs": 1,
+        "dpr": 1.5,
+        "width": 1041,
+        "height": 660,
+        "graphs": [
+          "development"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      },
+      "camera": {
+        "position": [
+          2.7,
+          2.6,
+          4.2
+        ],
+        "target": [
+          0,
+          1.95,
+          -0.17
+        ],
+        "fov": 38,
+        "near": 0.1,
+        "far": 40,
+        "clearance": 2.5337718523435373,
+        "bounds": {
+          "min": [
+            2.7,
+            2.6,
+            4.2
+          ],
+          "max": [
+            5.6,
+            4.6,
+            6.8
+          ]
+        },
+        "targetInView": [
+          9.862475874189228e-17,
+          -3.736337344462376e-16,
+          0.9662891258237389
+        ],
+        "exhibitPick": {
+          "x": 0.49812619916239415,
+          "y": 0.5006009796910247,
+          "depth": 0.9661624726674968
+        },
+        "corners": [
+          [
+            -0.25083698872849436,
+            -0.22384624778060355,
+            0.9697935040346838
+          ],
+          [
+            -0.2564929377579986,
+            0.2886213307808545,
+            0.9689993746510897
+          ],
+          [
+            0.2922222485607432,
+            -0.3405908363989895,
+            0.9628404036306103
+          ],
+          [
+            0.3001474983443825,
+            0.272628127367406,
+            0.9616966692039606
+          ]
+        ]
+      },
+      "frames": "11",
+      "after2s": "11",
+      "afterFurther10s": "11",
+      "unchanged": true
+    },
+    {
+      "mode": "High",
+      "preset": "development",
+      "render": {
+        "calls": 10,
+        "triangles": 436,
+        "geometries": 10,
+        "textures": 1,
+        "materials": 9,
+        "programs": 1,
+        "dpr": 2,
+        "width": 1389,
+        "height": 880,
+        "graphs": [
+          "development"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      },
+      "camera": {
+        "position": [
+          5.6,
+          4.6,
+          6.8
+        ],
+        "target": [
+          0,
+          1,
+          0
+        ],
+        "fov": 38,
+        "near": 0.1,
+        "far": 40,
+        "clearance": 6.427285572334453,
+        "bounds": {
+          "min": [
+            2.7,
+            2.6,
+            4.2
+          ],
+          "max": [
+            5.6,
+            4.6,
+            6.8
+          ]
+        },
+        "targetInView": [
+          2.3074364550473634e-16,
+          -6.776417670673255e-17,
+          0.983943290641143
+        ],
+        "exhibitPick": {
+          "x": 0.5094687863581461,
+          "y": 0.3552922536439831,
+          "depth": 0.9833697178456663
+        },
+        "corners": [
+          [
+            -0.11046556702166123,
+            0.19689396090171113,
+            0.9849280004164174
+          ],
+          [
+            -0.11481650839231748,
+            0.4845554737745705,
+            0.9841369248006313
+          ],
+          [
+            0.1628980415496284,
+            0.07938494314637366,
+            0.9825439675432193
+          ],
+          [
+            0.17010946493352733,
+            0.39750139435960696,
+            0.9815492942817045
+          ]
+        ]
+      },
+      "frames": "8",
+      "after2s": "8",
+      "afterFurther10s": "8",
+      "unchanged": true
+    },
+    {
+      "mode": "High",
+      "preset": "development-exhibit",
+      "render": {
+        "calls": 11,
+        "triangles": 532,
+        "geometries": 11,
+        "textures": 1,
+        "materials": 9,
+        "programs": 1,
+        "dpr": 2,
+        "width": 1389,
+        "height": 880,
+        "graphs": [
+          "development"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      },
+      "camera": {
+        "position": [
+          2.7,
+          2.6,
+          4.2
+        ],
+        "target": [
+          0,
+          1.95,
+          -0.17
+        ],
+        "fov": 38,
+        "near": 0.1,
+        "far": 40,
+        "clearance": 2.5337718523435373,
+        "bounds": {
+          "min": [
+            2.7,
+            2.6,
+            4.2
+          ],
+          "max": [
+            5.6,
+            4.6,
+            6.8
+          ]
+        },
+        "targetInView": [
+          9.862475874189228e-17,
+          -3.736337344462376e-16,
+          0.9662891258237389
+        ],
+        "exhibitPick": {
+          "x": 0.49812619916239415,
+          "y": 0.5006009796910247,
+          "depth": 0.9661624726674968
+        },
+        "corners": [
+          [
+            -0.25083698872849436,
+            -0.22384624778060355,
+            0.9697935040346838
+          ],
+          [
+            -0.2564929377579986,
+            0.2886213307808545,
+            0.9689993746510897
+          ],
+          [
+            0.2922222485607432,
+            -0.3405908363989895,
+            0.9628404036306103
+          ],
+          [
+            0.3001474983443825,
+            0.272628127367406,
+            0.9616966692039606
+          ]
+        ]
+      },
+      "frames": "9",
+      "after2s": "9",
+      "afterFurther10s": "9",
+      "unchanged": true
+    }
+  ],
+  "responsive": [
+    {
+      "width": 320,
+      "overflow": false,
+      "canvas": 0
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "canvas": 0
+    },
+    {
+      "width": 768,
+      "overflow": false,
+      "canvas": 1
+    },
+    {
+      "width": 1024,
+      "overflow": false,
+      "canvas": 1
+    },
+    {
+      "width": 1440,
+      "overflow": false,
+      "canvas": 1
+    }
+  ],
+  "journeys": [
+    {
+      "method": "keyboard",
+      "focused": true,
+      "unchangedHistory": true,
+      "metrics": {
+        "render": {
+          "calls": 11,
+          "triangles": 532,
+          "geometries": 11,
+          "textures": 1,
+          "materials": 9,
+          "programs": 1,
+          "dpr": 1,
+          "width": 694,
+          "height": 440,
+          "graphs": [
+            "development"
+          ],
+          "lightCount": 4,
+          "pointLightCount": 1,
+          "shadows": false
+        },
+        "camera": {
+          "position": [
+            2.7,
+            2.6,
+            4.2
+          ],
+          "target": [
+            0,
+            1.95,
+            -0.17
+          ],
+          "fov": 38,
+          "near": 0.1,
+          "far": 40,
+          "clearance": 2.5337718523435373,
+          "bounds": {
+            "min": [
+              2.7,
+              2.6,
+              4.2
+            ],
+            "max": [
+              5.6,
+              4.6,
+              6.8
+            ]
+          },
+          "targetInView": [
+            9.862475874189228e-17,
+            -3.736337344462376e-16,
+            0.9662891258237389
+          ],
+          "exhibitPick": {
+            "x": 0.49812619916239415,
+            "y": 0.5006009796910247,
+            "depth": 0.9661624726674968
+          },
+          "corners": [
+            [
+              -0.25083698872849436,
+              -0.22384624778060355,
+              0.9697935040346838
+            ],
+            [
+              -0.2564929377579986,
+              0.2886213307808545,
+              0.9689993746510897
+            ],
+            [
+              0.2922222485607432,
+              -0.3405908363989895,
+              0.9628404036306103
+            ],
+            [
+              0.3001474983443825,
+              0.272628127367406,
+              0.9616966692039606
+            ]
+          ]
+        },
+        "frames": "25"
+      }
+    },
+    {
+      "method": "route",
+      "detail": "/projects/savvyra",
+      "returnedScene": "development",
+      "pose": "development"
+    },
+    {
+      "method": "pointer",
+      "focused": true,
+      "metrics": {
+        "render": {
+          "calls": 11,
+          "triangles": 532,
+          "geometries": 11,
+          "textures": 1,
+          "materials": 9,
+          "programs": 1,
+          "dpr": 1,
+          "width": 694,
+          "height": 440,
+          "graphs": [
+            "development"
+          ],
+          "lightCount": 4,
+          "pointLightCount": 1,
+          "shadows": false
+        },
+        "camera": {
+          "position": [
+            2.7,
+            2.6,
+            4.2
+          ],
+          "target": [
+            0,
+            1.95,
+            -0.17
+          ],
+          "fov": 38,
+          "near": 0.1,
+          "far": 40,
+          "clearance": 2.5337718523435373,
+          "bounds": {
+            "min": [
+              2.7,
+              2.6,
+              4.2
+            ],
+            "max": [
+              5.6,
+              4.6,
+              6.8
+            ]
+          },
+          "targetInView": [
+            9.862475874189228e-17,
+            -3.736337344462376e-16,
+            0.9662891258237389
+          ],
+          "exhibitPick": {
+            "x": 0.49812619916239415,
+            "y": 0.5006009796910247,
+            "depth": 0.9661624726674968
+          },
+          "corners": [
+            [
+              -0.25083698872849436,
+              -0.22384624778060355,
+              0.9697935040346838
+            ],
+            [
+              -0.2564929377579986,
+              0.2886213307808545,
+              0.9689993746510897
+            ],
+            [
+              0.2922222485607432,
+              -0.3405908363989895,
+              0.9628404036306103
+            ],
+            [
+              0.3001474983443825,
+              0.272628127367406,
+              0.9616966692039606
+            ]
+          ]
+        },
+        "frames": "22"
+      }
+    },
+    {
+      "method": "no-js-mobile",
+      "detail": "/projects/savvyra",
+      "canvas": 0
+    }
+  ],
+  "browsers": [
+    {
+      "name": "chromium",
+      "installed": true
+    },
+    {
+      "name": "firefox",
+      "installed": false
+    },
+    {
+      "name": "webkit",
+      "installed": false
+    }
+  ]
+}

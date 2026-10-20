@@ -1,0 +1,1085 @@
+{
+  "samples": [
+    {
+      "cycle": 0,
+      "bay": {
+        "calls": 10,
+        "triangles": 436,
+        "geometries": 10,
+        "textures": 1,
+        "materials": 9,
+        "programs": 1,
+        "dpr": 1,
+        "width": 694,
+        "height": 440,
+        "graphs": [
+          "development"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      },
+      "hub": {
+        "calls": 30,
+        "triangles": 1680,
+        "geometries": 30,
+        "textures": 1,
+        "materials": 15,
+        "programs": 2,
+        "dpr": 1,
+        "width": 694,
+        "height": 440,
+        "graphs": [
+          "hub"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      },
+      "focus": {
+        "calls": 11,
+        "triangles": 532,
+        "geometries": 11,
+        "textures": 1,
+        "materials": 9,
+        "programs": 1,
+        "dpr": 1,
+        "width": 694,
+        "height": 440,
+        "graphs": [
+          "development"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      }
+    },
+    {
+      "cycle": 1,
+      "bay": {
+        "calls": 10,
+        "triangles": 436,
+        "geometries": 10,
+        "textures": 1,
+        "materials": 9,
+        "programs": 1,
+        "dpr": 1,
+        "width": 694,
+        "height": 440,
+        "graphs": [
+          "development"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      },
+      "hub": {
+        "calls": 30,
+        "triangles": 1680,
+        "geometries": 30,
+        "textures": 1,
+        "materials": 15,
+        "programs": 2,
+        "dpr": 1,
+        "width": 694,
+        "height": 440,
+        "graphs": [
+          "hub"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      },
+      "focus": {
+        "calls": 11,
+        "triangles": 532,
+        "geometries": 11,
+        "textures": 1,
+        "materials": 9,
+        "programs": 1,
+        "dpr": 1,
+        "width": 694,
+        "height": 440,
+        "graphs": [
+          "development"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      }
+    },
+    {
+      "cycle": 2,
+      "bay": {
+        "calls": 10,
+        "triangles": 436,
+        "geometries": 10,
+        "textures": 1,
+        "materials": 9,
+        "programs": 1,
+        "dpr": 1,
+        "width": 694,
+        "height": 440,
+        "graphs": [
+          "development"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      },
+      "hub": {
+        "calls": 30,
+        "triangles": 1680,
+        "geometries": 30,
+        "textures": 1,
+        "materials": 15,
+        "programs": 2,
+        "dpr": 1,
+        "width": 694,
+        "height": 440,
+        "graphs": [
+          "hub"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      },
+      "focus": {
+        "calls": 11,
+        "triangles": 532,
+        "geometries": 11,
+        "textures": 1,
+        "materials": 9,
+        "programs": 1,
+        "dpr": 1,
+        "width": 694,
+        "height": 440,
+        "graphs": [
+          "development"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      }
+    },
+    {
+      "cycle": 3,
+      "bay": {
+        "calls": 10,
+        "triangles": 436,
+        "geometries": 10,
+        "textures": 1,
+        "materials": 9,
+        "programs": 1,
+        "dpr": 1,
+        "width": 694,
+        "height": 440,
+        "graphs": [
+          "development"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      },
+      "hub": {
+        "calls": 30,
+        "triangles": 1680,
+        "geometries": 30,
+        "textures": 1,
+        "materials": 15,
+        "programs": 2,
+        "dpr": 1,
+        "width": 694,
+        "height": 440,
+        "graphs": [
+          "hub"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      },
+      "focus": {
+        "calls": 11,
+        "triangles": 532,
+        "geometries": 11,
+        "textures": 1,
+        "materials": 9,
+        "programs": 1,
+        "dpr": 1,
+        "width": 694,
+        "height": 440,
+        "graphs": [
+          "development"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      }
+    },
+    {
+      "cycle": 4,
+      "bay": {
+        "calls": 10,
+        "triangles": 436,
+        "geometries": 10,
+        "textures": 1,
+        "materials": 9,
+        "programs": 1,
+        "dpr": 1,
+        "width": 694,
+        "height": 440,
+        "graphs": [
+          "development"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      },
+      "hub": {
+        "calls": 30,
+        "triangles": 1680,
+        "geometries": 30,
+        "textures": 1,
+        "materials": 15,
+        "programs": 2,
+        "dpr": 1,
+        "width": 694,
+        "height": 440,
+        "graphs": [
+          "hub"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      },
+      "focus": {
+        "calls": 11,
+        "triangles": 532,
+        "geometries": 11,
+        "textures": 1,
+        "materials": 9,
+        "programs": 1,
+        "dpr": 1,
+        "width": 694,
+        "height": 440,
+        "graphs": [
+          "development"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      }
+    },
+    {
+      "cycle": 5,
+      "bay": {
+        "calls": 10,
+        "triangles": 436,
+        "geometries": 10,
+        "textures": 1,
+        "materials": 9,
+        "programs": 1,
+        "dpr": 1,
+        "width": 694,
+        "height": 440,
+        "graphs": [
+          "development"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      },
+      "hub": {
+        "calls": 30,
+        "triangles": 1680,
+        "geometries": 30,
+        "textures": 1,
+        "materials": 15,
+        "programs": 2,
+        "dpr": 1,
+        "width": 694,
+        "height": 440,
+        "graphs": [
+          "hub"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      },
+      "focus": {
+        "calls": 11,
+        "triangles": 532,
+        "geometries": 11,
+        "textures": 1,
+        "materials": 9,
+        "programs": 1,
+        "dpr": 1,
+        "width": 694,
+        "height": 440,
+        "graphs": [
+          "development"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      }
+    },
+    {
+      "cycle": 6,
+      "bay": {
+        "calls": 10,
+        "triangles": 436,
+        "geometries": 10,
+        "textures": 1,
+        "materials": 9,
+        "programs": 1,
+        "dpr": 1,
+        "width": 694,
+        "height": 440,
+        "graphs": [
+          "development"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      },
+      "hub": {
+        "calls": 30,
+        "triangles": 1680,
+        "geometries": 30,
+        "textures": 1,
+        "materials": 15,
+        "programs": 2,
+        "dpr": 1,
+        "width": 694,
+        "height": 440,
+        "graphs": [
+          "hub"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      },
+      "focus": {
+        "calls": 11,
+        "triangles": 532,
+        "geometries": 11,
+        "textures": 1,
+        "materials": 9,
+        "programs": 1,
+        "dpr": 1,
+        "width": 694,
+        "height": 440,
+        "graphs": [
+          "development"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      }
+    },
+    {
+      "cycle": 7,
+      "bay": {
+        "calls": 10,
+        "triangles": 436,
+        "geometries": 10,
+        "textures": 1,
+        "materials": 9,
+        "programs": 1,
+        "dpr": 1,
+        "width": 694,
+        "height": 440,
+        "graphs": [
+          "development"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      },
+      "hub": {
+        "calls": 30,
+        "triangles": 1680,
+        "geometries": 30,
+        "textures": 1,
+        "materials": 15,
+        "programs": 2,
+        "dpr": 1,
+        "width": 694,
+        "height": 440,
+        "graphs": [
+          "hub"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      },
+      "focus": {
+        "calls": 11,
+        "triangles": 532,
+        "geometries": 11,
+        "textures": 1,
+        "materials": 9,
+        "programs": 1,
+        "dpr": 1,
+        "width": 694,
+        "height": 440,
+        "graphs": [
+          "development"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      }
+    },
+    {
+      "cycle": 8,
+      "bay": {
+        "calls": 10,
+        "triangles": 436,
+        "geometries": 10,
+        "textures": 1,
+        "materials": 9,
+        "programs": 1,
+        "dpr": 1,
+        "width": 694,
+        "height": 440,
+        "graphs": [
+          "development"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      },
+      "hub": {
+        "calls": 30,
+        "triangles": 1680,
+        "geometries": 30,
+        "textures": 1,
+        "materials": 15,
+        "programs": 2,
+        "dpr": 1,
+        "width": 694,
+        "height": 440,
+        "graphs": [
+          "hub"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      },
+      "focus": {
+        "calls": 11,
+        "triangles": 532,
+        "geometries": 11,
+        "textures": 1,
+        "materials": 9,
+        "programs": 1,
+        "dpr": 1,
+        "width": 694,
+        "height": 440,
+        "graphs": [
+          "development"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      }
+    },
+    {
+      "cycle": 9,
+      "bay": {
+        "calls": 10,
+        "triangles": 436,
+        "geometries": 10,
+        "textures": 1,
+        "materials": 9,
+        "programs": 1,
+        "dpr": 1,
+        "width": 694,
+        "height": 440,
+        "graphs": [
+          "development"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      },
+      "hub": {
+        "calls": 30,
+        "triangles": 1680,
+        "geometries": 30,
+        "textures": 1,
+        "materials": 15,
+        "programs": 2,
+        "dpr": 1,
+        "width": 694,
+        "height": 440,
+        "graphs": [
+          "hub"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      },
+      "focus": {
+        "calls": 11,
+        "triangles": 532,
+        "geometries": 11,
+        "textures": 1,
+        "materials": 9,
+        "programs": 1,
+        "dpr": 1,
+        "width": 694,
+        "height": 440,
+        "graphs": [
+          "development"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      }
+    },
+    {
+      "cycle": 10,
+      "bay": {
+        "calls": 10,
+        "triangles": 436,
+        "geometries": 10,
+        "textures": 1,
+        "materials": 9,
+        "programs": 1,
+        "dpr": 1,
+        "width": 694,
+        "height": 440,
+        "graphs": [
+          "development"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      },
+      "hub": {
+        "calls": 30,
+        "triangles": 1680,
+        "geometries": 30,
+        "textures": 1,
+        "materials": 15,
+        "programs": 2,
+        "dpr": 1,
+        "width": 694,
+        "height": 440,
+        "graphs": [
+          "hub"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      },
+      "focus": {
+        "calls": 11,
+        "triangles": 532,
+        "geometries": 11,
+        "textures": 1,
+        "materials": 9,
+        "programs": 1,
+        "dpr": 1,
+        "width": 694,
+        "height": 440,
+        "graphs": [
+          "development"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      }
+    },
+    {
+      "cycle": 11,
+      "bay": {
+        "calls": 10,
+        "triangles": 436,
+        "geometries": 10,
+        "textures": 1,
+        "materials": 9,
+        "programs": 1,
+        "dpr": 1,
+        "width": 694,
+        "height": 440,
+        "graphs": [
+          "development"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      },
+      "hub": {
+        "calls": 30,
+        "triangles": 1680,
+        "geometries": 30,
+        "textures": 1,
+        "materials": 15,
+        "programs": 2,
+        "dpr": 1,
+        "width": 694,
+        "height": 440,
+        "graphs": [
+          "hub"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      },
+      "focus": {
+        "calls": 11,
+        "triangles": 532,
+        "geometries": 11,
+        "textures": 1,
+        "materials": 9,
+        "programs": 1,
+        "dpr": 1,
+        "width": 694,
+        "height": 440,
+        "graphs": [
+          "development"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      }
+    },
+    {
+      "cycle": 12,
+      "bay": {
+        "calls": 10,
+        "triangles": 436,
+        "geometries": 10,
+        "textures": 1,
+        "materials": 9,
+        "programs": 1,
+        "dpr": 1,
+        "width": 694,
+        "height": 440,
+        "graphs": [
+          "development"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      },
+      "hub": {
+        "calls": 30,
+        "triangles": 1680,
+        "geometries": 30,
+        "textures": 1,
+        "materials": 15,
+        "programs": 2,
+        "dpr": 1,
+        "width": 694,
+        "height": 440,
+        "graphs": [
+          "hub"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      },
+      "focus": {
+        "calls": 11,
+        "triangles": 532,
+        "geometries": 11,
+        "textures": 1,
+        "materials": 9,
+        "programs": 1,
+        "dpr": 1,
+        "width": 694,
+        "height": 440,
+        "graphs": [
+          "development"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      }
+    },
+    {
+      "cycle": 13,
+      "bay": {
+        "calls": 10,
+        "triangles": 436,
+        "geometries": 10,
+        "textures": 1,
+        "materials": 9,
+        "programs": 1,
+        "dpr": 1,
+        "width": 694,
+        "height": 440,
+        "graphs": [
+          "development"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      },
+      "hub": {
+        "calls": 30,
+        "triangles": 1680,
+        "geometries": 30,
+        "textures": 1,
+        "materials": 15,
+        "programs": 2,
+        "dpr": 1,
+        "width": 694,
+        "height": 440,
+        "graphs": [
+          "hub"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      },
+      "focus": {
+        "calls": 11,
+        "triangles": 532,
+        "geometries": 11,
+        "textures": 1,
+        "materials": 9,
+        "programs": 1,
+        "dpr": 1,
+        "width": 694,
+        "height": 440,
+        "graphs": [
+          "development"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      }
+    },
+    {
+      "cycle": 14,
+      "bay": {
+        "calls": 10,
+        "triangles": 436,
+        "geometries": 10,
+        "textures": 1,
+        "materials": 9,
+        "programs": 1,
+        "dpr": 1,
+        "width": 694,
+        "height": 440,
+        "graphs": [
+          "development"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      },
+      "hub": {
+        "calls": 30,
+        "triangles": 1680,
+        "geometries": 30,
+        "textures": 1,
+        "materials": 15,
+        "programs": 2,
+        "dpr": 1,
+        "width": 694,
+        "height": 440,
+        "graphs": [
+          "hub"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      },
+      "focus": {
+        "calls": 11,
+        "triangles": 532,
+        "geometries": 11,
+        "textures": 1,
+        "materials": 9,
+        "programs": 1,
+        "dpr": 1,
+        "width": 694,
+        "height": 440,
+        "graphs": [
+          "development"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      }
+    },
+    {
+      "cycle": 15,
+      "bay": {
+        "calls": 10,
+        "triangles": 436,
+        "geometries": 10,
+        "textures": 1,
+        "materials": 9,
+        "programs": 1,
+        "dpr": 1,
+        "width": 694,
+        "height": 440,
+        "graphs": [
+          "development"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      },
+      "hub": {
+        "calls": 30,
+        "triangles": 1680,
+        "geometries": 30,
+        "textures": 1,
+        "materials": 15,
+        "programs": 2,
+        "dpr": 1,
+        "width": 694,
+        "height": 440,
+        "graphs": [
+          "hub"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      },
+      "focus": {
+        "calls": 11,
+        "triangles": 532,
+        "geometries": 11,
+        "textures": 1,
+        "materials": 9,
+        "programs": 1,
+        "dpr": 1,
+        "width": 694,
+        "height": 440,
+        "graphs": [
+          "development"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      }
+    },
+    {
+      "cycle": 16,
+      "bay": {
+        "calls": 10,
+        "triangles": 436,
+        "geometries": 10,
+        "textures": 1,
+        "materials": 9,
+        "programs": 1,
+        "dpr": 1,
+        "width": 694,
+        "height": 440,
+        "graphs": [
+          "development"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      },
+      "hub": {
+        "calls": 30,
+        "triangles": 1680,
+        "geometries": 30,
+        "textures": 1,
+        "materials": 15,
+        "programs": 2,
+        "dpr": 1,
+        "width": 694,
+        "height": 440,
+        "graphs": [
+          "hub"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      },
+      "focus": {
+        "calls": 11,
+        "triangles": 532,
+        "geometries": 11,
+        "textures": 1,
+        "materials": 9,
+        "programs": 1,
+        "dpr": 1,
+        "width": 694,
+        "height": 440,
+        "graphs": [
+          "development"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      }
+    },
+    {
+      "cycle": 17,
+      "bay": {
+        "calls": 10,
+        "triangles": 436,
+        "geometries": 10,
+        "textures": 1,
+        "materials": 9,
+        "programs": 1,
+        "dpr": 1,
+        "width": 694,
+        "height": 440,
+        "graphs": [
+          "development"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      },
+      "hub": {
+        "calls": 30,
+        "triangles": 1680,
+        "geometries": 30,
+        "textures": 1,
+        "materials": 15,
+        "programs": 2,
+        "dpr": 1,
+        "width": 694,
+        "height": 440,
+        "graphs": [
+          "hub"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      },
+      "focus": {
+        "calls": 11,
+        "triangles": 532,
+        "geometries": 11,
+        "textures": 1,
+        "materials": 9,
+        "programs": 1,
+        "dpr": 1,
+        "width": 694,
+        "height": 440,
+        "graphs": [
+          "development"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      }
+    },
+    {
+      "cycle": 18,
+      "bay": {
+        "calls": 10,
+        "triangles": 436,
+        "geometries": 10,
+        "textures": 1,
+        "materials": 9,
+        "programs": 1,
+        "dpr": 1,
+        "width": 694,
+        "height": 440,
+        "graphs": [
+          "development"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      },
+      "hub": {
+        "calls": 30,
+        "triangles": 1680,
+        "geometries": 30,
+        "textures": 1,
+        "materials": 15,
+        "programs": 2,
+        "dpr": 1,
+        "width": 694,
+        "height": 440,
+        "graphs": [
+          "hub"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      },
+      "focus": {
+        "calls": 11,
+        "triangles": 532,
+        "geometries": 11,
+        "textures": 1,
+        "materials": 9,
+        "programs": 1,
+        "dpr": 1,
+        "width": 694,
+        "height": 440,
+        "graphs": [
+          "development"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      }
+    },
+    {
+      "cycle": 19,
+      "bay": {
+        "calls": 10,
+        "triangles": 436,
+        "geometries": 10,
+        "textures": 1,
+        "materials": 9,
+        "programs": 1,
+        "dpr": 1,
+        "width": 694,
+        "height": 440,
+        "graphs": [
+          "development"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      },
+      "hub": {
+        "calls": 30,
+        "triangles": 1680,
+        "geometries": 30,
+        "textures": 1,
+        "materials": 15,
+        "programs": 2,
+        "dpr": 1,
+        "width": 694,
+        "height": 440,
+        "graphs": [
+          "hub"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      },
+      "focus": {
+        "calls": 11,
+        "triangles": 532,
+        "geometries": 11,
+        "textures": 1,
+        "materials": 9,
+        "programs": 1,
+        "dpr": 1,
+        "width": 694,
+        "height": 440,
+        "graphs": [
+          "development"
+        ],
+        "lightCount": 4,
+        "pointLightCount": 1,
+        "shadows": false
+      }
+    }
+  ],
+  "errors": []
+}

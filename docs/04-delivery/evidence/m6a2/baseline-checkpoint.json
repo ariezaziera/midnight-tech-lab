@@ -1,0 +1,63 @@
+{
+  "baseCommit": "6e010a942923ab55a4111e361cabdcc8e6646041",
+  "recoveredOn": "2026-10-20",
+  "note": "Complete original baseline preserved; no matching interrupted capture process found on resume.",
+  "files": [
+    {
+      "path": "docs/04-delivery/evidence/m6a2/before/measurements.json",
+      "sha256": "7b4e1e938752973b34dd97c1be926a98df6f4208cd563018d2b271c1d40d045d"
+    },
+    {
+      "path": "docs/04-delivery/evidence/m6a2/before/preset-creator.png",
+      "sha256": "d39d95fda39804198a32cf5cbdeba424df86d70d0f6289b3e25dcbe34cc4749d"
+    },
+    {
+      "path": "docs/04-delivery/evidence/m6a2/before/preset-overview.png",
+      "sha256": "110b012f2c75d7a5b6247456bdef69d49b9ef105066af4aeb6b4a741fdd89e0f"
+    },
+    {
+      "path": "docs/04-delivery/evidence/m6a2/before/preset-projects.png",
+      "sha256": "2a93c3426f3d9ab6ff59c811ae1dd7f3ac4ec898d8bccdc235eda93ee05df209"
+    },
+    {
+      "path": "docs/04-delivery/evidence/m6a2/before/preset-workstation.png",
+      "sha256": "51a64798ebe723f2393037521e3565c6ea3f5fc85d2182ea6d72b70a20c81ba2"
+    },
+    {
+      "path": "docs/04-delivery/evidence/m6a2/before/quality/high-development.png",
+      "sha256": "76aeac8f48a50f4477399269cd2c54e0d12a8a4c7d156c585c4bdf5cc21438e4"
+    },
+    {
+      "path": "docs/04-delivery/evidence/m6a2/before/quality/low-development.png",
+      "sha256": "8aa716707e3f942af5d088748fcbd20672c7ac58f76f4a2dd90a41712dfe53e1"
+    },
+    {
+      "path": "docs/04-delivery/evidence/m6a2/before/quality/medium-development.png",
+      "sha256": "b4550cbc29dbfce03dc897b7f20ed77bd0f8b90fa7fa30da22a8b4a1be997396"
+    },
+    {
+      "path": "docs/04-delivery/evidence/m6a2/before/quality/responsive-1024.png",
+      "sha256": "5bc33166808abd51279f0688a2286b5b2a7e015f51838de7ae2b177ddacc304c"
+    },
+    {
+      "path": "docs/04-delivery/evidence/m6a2/before/quality/responsive-1440.png",
+      "sha256": "9115fe4045571a29ae3ff2351b829562946af61a9725ae6e842bef8715572189"
+    },
+    {
+      "path": "docs/04-delivery/evidence/m6a2/before/quality/responsive-320.png",
+      "sha256": "eafc913729c3f4d2993654a11247e4e189e02c0f026e3a46c2b9ea527a62078e"
+    },
+    {
+      "path": "docs/04-delivery/evidence/m6a2/before/quality/responsive-390.png",
+      "sha256": "a39784571fbaceba3b2328ebb449a7ab9803522e2ceffc75ec3cb60809316824"
+    },
+    {
+      "path": "docs/04-delivery/evidence/m6a2/before/quality/responsive-768.png",
+      "sha256": "5f6c8018b0362a710449d4841e0aaea0dc53a77246d6424cf81e0741429ce4f7"
+    },
+    {
+      "path": "docs/04-delivery/evidence/m6a2/before/review-bay-measurements.json",
+      "sha256": "83a6b7b86ef05d45e27bada0e6d267d650841d9f9b7b6378f3a9b9d70b7e2ed6"
+    }
+  ]
+}

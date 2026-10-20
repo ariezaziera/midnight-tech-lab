@@ -42,3 +42,7 @@ All four preset positions, targets, FOV/clipping, transition waypoint/duration a
 ## M6-A1 review camera
 
 Hub presets/controller/waypoint/bounds are unchanged. Development uses a separate fixed overview only: position [5.6,4.6,6.8], target [0,1,0], FOV 38°, near/far0.1/40. Position bounds [5,4,6]–[6,5,7] describe its fixed configuration envelope, not an exploration feature. It is placed directly before the demanded draw; no entry flight, camera animation, orbit or exhibit preset. Scene switching/reduced motion do not require travel. Actual framing/clearance evidence is recorded separately in the M6-A1 report.
+
+## M6-A2 Development exhibit camera
+
+The accepted overview remains [5.6,4.6,6.8]→[0,1,0]. One local focus pose is configured at [2.7,2.6,4.2]→[0,1.95,-0.17], FOV38°, near/far0.1/40, in `development-config.ts`. A 600ms smoothstep interpolation stays in the convex position envelope [2.7,2.6,4.2]–[5.6,4.6,6.8], outside the bench. Each new request replaces the old plan from its current pose. Initial/recovery/reduced-motion placement snaps; changing motion preference replans immediately. Only movement invalidates demand frames; no idle loop. Camera diagnostics record bounds, target projection, marker pick, focus-frame corners and conservative AABB clearance for browser verification. Hub configuration/controller is unchanged; local framing still needs owner visual review.

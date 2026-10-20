@@ -1,0 +1,56 @@
+{
+  "baseCommit": "6e010a942923ab55a4111e361cabdcc8e6646041",
+  "date": "2026-10-20",
+  "node": "22.14.0",
+  "npm": "11.16.0",
+  "commands": {
+    "npm ci": "exit0;427 installed/428 audited;5 high dev-only advisories;8m",
+    "npm run lint": "exit0",
+    "npm run typecheck": "exit0",
+    "npm run build": "exit0;9 generated pages",
+    "npm test": "npm.cmd test -- --workers=1;exit0;78 passed;7.4m",
+    "npm audit --omit=dev": "network-enabled retry exit0;0 vulnerabilities"
+  },
+  "baselineFilesUnchanged": 14,
+  "measurementGates": {
+    "startupSamples": true,
+    "unvisitedScene": true,
+    "sameBrowser": true,
+    "hubReadiness": true,
+    "initialHomeJs": true,
+    "lazyJs": true,
+    "entries": true,
+    "idle": true,
+    "singleCanvas": true,
+    "resources": true,
+    "twentyCycles": true,
+    "responsive": true,
+    "journeys": true,
+    "errors": true
+  },
+  "limitations": [
+    "baseline October17;final October20;uncontrolled power/background/cache",
+    "Chromium only;Firefox/WebKit binaries absent",
+    "no physical GPU/FPS/VRAM or assistive-technology certification",
+    "intermediate failures retained in report/iterations;final serial test changes no assertion"
+  ],
+  "scope": "M6-A2 only;no deployment/media/external Savvyra links/new dependency/Hub geometry or camera modification",
+  "localMarkdownLinksResolved": 58,
+  "protectedPathsUnchanged": [
+    "src/content",
+    "src/lib/content.ts",
+    "src/components/three/hub",
+    "src/components/three/camera",
+    "src/lib/scene/hub-config.ts",
+    "src/lib/scene/interaction-config.ts",
+    "src/lib/scene/look-config.ts",
+    "src/lib/scene/quality-config.ts",
+    "src/lib/scene/scene-session.ts",
+    "src/lib/scene/studio-session.ts",
+    "src/app/globals.css",
+    "src/app/layout.tsx",
+    "package.json",
+    "package-lock.json",
+    "public"
+  ]
+}

@@ -73,3 +73,7 @@
 - Native Enter/Back/Reset/scoped Escape, focus restoration, ordinary links, separate validated scene-session and all accepted hub/restoration/recovery/mobile/no-JS rules work. Existing hub preset key, geometry/light/camera source and split-screen/440px shell are unchanged; console/globe inert.
 - F gates verified: exact hub overview counts; bay 9 calls/424 triangles/9 geometries/9 attached mesh materials/one texture with four lights/one point/no shadows; JS/readiness/entry/idle/twenty-cycle targets pass. No imported assets or new packages.
 - Final complete suite 65 passes, preserving55 guarantees plus10 checks. Report/evidence delivered for owner review; local results are not real-device/FPS/VRAM or accessibility certification. No M6-A2/B1 or deployment authorization follows.
+
+## M6-A2 scoped acceptance contract
+
+Only approved/routable Development content can supply the text-first Savvyra marker and HTML explanation; invalid/draft/absent records retain the technical fallback. Exactly one Canvas/graph, original Hub/cameras/targets, console/globe inert, 440px split shell, DPR/motion/failure/session/no-JS/mobile and noindex safeguards remain. One local focus pose supports pointer/native keyboard, pressed/selected indicators, overview/Hub Back, Reset and scoped Escape, with no scene-history entries. Z and original F Home-JS cap apply only to this slice; no authored project media or other module. Preserve all prior regression guarantees and verify real eligibility/focus/route/recovery/idle/resource behavior before owner acceptance.

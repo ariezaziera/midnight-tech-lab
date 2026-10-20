@@ -68,3 +68,7 @@ M5-A procedural geometry, dimensions, frame-corner selection and hotspot ancestr
 ## M6-A1 graph lifecycle
 
 The only Canvas contains common PerspectiveCamera, hemisphere/key/rim lights, SceneHost and RendererLifecycle. SceneHost owns exactly one ready graph: the accepted CentralHub plus its existing CameraRig, or DevelopmentTechnicalReviewBay plus its fixed camera placement and one local point light. Loading/failure temporarily has no graph and a readable HTML cover; no two graphs coexist. The bay reuses per-mount shared primitive/material templates and merged batches; unmount disposes them. The console/globe and three hub targets remain unchanged. No other room, exhibit camera or spatial travel system is present.
+
+## M6-A2 Development exhibit
+
+The existing DevelopmentTechnicalReviewBay graph name is retained for compatibility, not used to infer interaction. Eligible approved content adds one cyan procedural display marker carrying typed `exhibitId: savvyra`; selection adds one merged amber-corner batch. The local camera owns overview/focus poses and replaces its demand plan on each request. Marker/selection share the bay's per-mount resource palette and cleanup. No second Canvas/graph, new light, texture or other room; Hub target metadata and graph are unchanged. Public labels and case-study href derive from the server-approved editorial projection, outside geometry.

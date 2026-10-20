@@ -41,3 +41,7 @@ The background is original CSS gradient/color composition with twelve static one
 ## M6-A1 Development technical review bay
 
 One original procedural bench/display arrangement is now loaded on demand in the existing scene panel, with a small platform, warm desk, blank monitor/peripheral blocks and lamp. There are no language logos, code screenshots, employer/project claims or imported assets. Label: Development Lab — Technical Review Placeholder. Source: src/components/three/zones/development-scene.tsx. It does not complete an authentic portfolio-media/portrait/production GLB row or authorize another module.
+
+## M6-A2 text-first marker provenance
+
+The Development monitor receives one original code-authored cyan marker and the existing procedural amber selection-corner construction. Neither is a Savvyra screenshot, logo, UI reconstruction or imported artwork. No new media file, model, font, texture or license acquisition. Approved Savvyra narrative is reused as HTML from the existing record; all portfolio media/link arrays remain empty. Local PNGs under docs/04-delivery/evidence/m6a2 are Midnight Tech Lab QA captures only, not runtime assets or imported Savvyra application images.

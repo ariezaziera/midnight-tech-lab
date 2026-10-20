@@ -127,3 +127,7 @@ M0 audit delivered. The owner gate was subsequently resolved by the conditional 
 ## Owner gate — M6-B3 execution authorization
 
 - Owner separately and explicitly authorized Savvyra HTML library integration using the complete Savvyra Content Packet v1.0. Exact text is approved for this repository and HTML presentation only; this does not authorize deployment, screenshots/media, external Savvyra links, 3D changes or another milestone. Preserve existing publication validation/noindex and the separate template. Stop after validation, scoped commit/push and remote-SHA verification. See `docs/04-delivery/SAVVYRA_CONTENT_PACKET_V1.md` for the approved text, without historical gate metadata.
+
+## Owner gate — M6-A2 execution and resumed checkpoint
+
+Owner accepted M6-A1/M6-B3 and explicitly authorized M6-A2 Specification v1.0 implementation, validation, scoped commit and push to origin/main. Text-first Savvyra exhibit only, deriving approved narrative from editorial records; no project imagery/logos/artwork, external links or other rooms. Console/globe remain inert; D5 deferred. Z profile and common gates apply to this slice; original F initial-Home cap remains. Preserve one Canvas/graph, Hub poses, shell/440px, quality, reduced motion, HTML/mobile/no-JS and recovery. No deployment or automatic next milestone. Resumed on 2026-10-20 from preserved complete baseline at 6e010a9; the date gap is a measurement limitation, not grounds to overwrite prior evidence.

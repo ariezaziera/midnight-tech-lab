@@ -159,3 +159,12 @@ Audit delivered; M0–M5-C accepted. **M6-A1 delivered for review only; no later
 - [x] Extend focused editorial coverage and retain empty/draft exclusion guarantees with isolated fixtures.
 - [x] ci/lint/typecheck/build passed; 69 tests passed in 4.4m; production audit found zero vulnerabilities. Exact packet text, protected files and documentation paths reviewed. See [M6-B3 report](M6B3_IMPLEMENTATION_REPORT.md).
 - [ ] Owner review after scoped commit/push and remote-SHA verification; no M6-A2, M6-B4 or deployment.
+
+## M6-A2 — Authentic Savvyra Development exhibit
+
+- [x] Explicit execution/commit/push approval; A1/B3 accepted. Resume from 6e010a9, verify local/remote and account for expected script/generated-file changes.
+- [x] Preserve complete baseline: five startup samples and fifteen first/warm Development pairs, three extended idle windows, screenshots and responsive checks. No interrupted process presumed alive; no duplicate capture.
+- [x] Implement server-selected approved public text, procedural marker, one local focus camera, native/HTML actions and honest ineligible fallback. Preserve Hub/console/globe, one Canvas, accepted shell and publication safeguards.
+- [x] Required ci/lint/typecheck/build/audit pass; final full suite78 passes in7.4m serially. All14 measured gates pass, five startup/15 entry pairs/six extended idle windows/20 focus-inclusive cycles; preserve intermediate failures and date-gap/device/browser limitations. See [M6-A2 report](M6A2_IMPLEMENTATION_REPORT.md).
+- [x] Prepare scoped report/evidence delivery; commit/push SHA and remote verification are recorded in the final handoff. Stop for owner review. No M6-A3, M6-B4 or deployment.
+- [ ] Owner accepts M6-A2 framing/interaction/HTML explanation; real-device and absent-browser/AT coverage remain open, not prerequisites silently treated as completed.

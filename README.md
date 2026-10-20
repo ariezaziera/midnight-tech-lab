@@ -2,14 +2,14 @@
 
 A greenfield portfolio and solo freelance storefront with a cinematic 3D cosmic world plus accessible editorial content.
 
-**Status:** M3 functional prototype accepted; M4 accepted; M5-A accepted; M5-B accepted; M5-C accepted; M6-A1 one-scene host/review bay complete and awaiting owner review. The accepted M1 HTML foundation and M2 blockout remain usable. Savvyra v1.0 text is approved for the HTML library under separately authorized M6-B3; other content and final design remain gated. No actual Blender models or real portrait are included. Do not publish or implement M6 without explicit owner approval.
+**Status:** M3 functional prototype accepted; M4 accepted; M5-A accepted; M5-B accepted; M5-C accepted; M6-A1 one-scene host/review bay and M6-B3 HTML integration accepted; M6-A2 text-first Savvyra exhibit is the current authorized slice. The accepted M1 HTML foundation and M2 blockout remain usable. Savvyra v1.0 text is approved for the HTML library under separately authorized M6-B3; other content and final design remain gated. No actual Blender models or real portrait are included. Do not publish or implement M6 without explicit owner approval.
 
 ## Local development
 Use Node 22 (tested with 22.14.0) and npm (tested with 11.16.0). Run `npm ci`, then `npm run dev` and open `http://127.0.0.1:3000`. The server binds to loopback only.
 
-Validation: `npm run lint`, `npm run typecheck`, `npm run build`, then `npm test`. Browser tests start the production server themselves; port 3000 must be free. Install the matching browser with `npx playwright install chromium` if it is not already available. Current tests capture evidence under `docs/04-delivery/evidence/m6a1/after/`; historical M1/M2 evidence is retained. Run installation before starting servers or tests to avoid Windows native-file locks.
+Validation: `npm run lint`, `npm run typecheck`, `npm run build`, then `npm test`. Browser tests start the production server themselves; port 3000 must be free. Install the matching browser with `npx playwright install chromium` if it is not already available. Current tests capture evidence under `docs/04-delivery/evidence/m6a2/after/`; historical M1/M2 evidence is retained. Run installation before starting servers or tests to avoid Windows native-file locks.
 
-The sole project fixture is `/projects/placeholder`. It represents no actual project. Contact has no working destination or form. Styles and system fonts are provisional. See `docs/04-delivery/M1_IMPLEMENTATION_REPORT.md` for validation and limitations.
+The separate template fixture is `/projects/placeholder`. It represents no actual project. Contact has no working destination or form. Styles and system fonts are provisional. See `docs/04-delivery/M1_IMPLEMENTATION_REPORT.md` for validation and limitations.
 
 M2 introduced the procedural 3D view on screens at least 768 CSS px wide, with descriptive HTML on smaller screens and without JavaScript. Its static-scene implementation and validation remain documented in `docs/04-delivery/M2_IMPLEMENTATION_REPORT.md`. M3 extends that base as described below.
 
@@ -47,15 +47,19 @@ Accepted implementation report: `docs/04-delivery/M5C_IMPLEMENTATION_REPORT.md`;
 Reproduce final captures against the matching production build with `node scripts/capture-hub.mjs after m5c`, then `node scripts/capture-quality.mjs` and `node scripts/review-quality.mjs`. Preserve committed before evidence: do not regenerate the M5-B baseline from M5-C. Owner review and explicit authorization are required before M6. Nothing is deployed.
 
 ## M6 planning and execution gates
-The owner accepts M0–M5-C and reports smooth Intel HD Graphics 620 operation including High (qualitative feedback, not an FPS benchmark). The split-screen desktop layout remains approved. M6-A1 is delivered for review. M6-B3 was separately authorized for Savvyra HTML text integration only; no scene exhibit, subsequent batch or deployment is authorized.
+The owner accepts M0–M5-C and reports smooth Intel HD Graphics 620 operation including High (qualitative feedback, not an FPS benchmark). The split-screen desktop layout remains approved. M6-A1/M6-B3 are accepted. M6-A2 was separately authorized for one text-first Savvyra Development exhibit with local camera/HTML equivalents; console/globe and other rooms remain gated. No deployment is authorized.
 
 Review [M6 planning report](docs/04-delivery/M6_PLANNING_REPORT.md), [experience architecture](docs/04-delivery/M6_EXPERIENCE_ARCHITECTURE.md), [batch plan](docs/04-delivery/M6_BATCH_PLAN.md) and [owner decisions](docs/04-delivery/M6_OWNER_DECISIONS.md). D1–D4 and the F-only portion of D6 were subsequently approved for M6-A1 under explicit execution conditions. All other decisions/batches remain pending; acceptance does not authorize later expansion.
 
-## M6-A1 local review
+## M6-A1 local review (historical)
 Desktop: use Enter Development Review Bay below the existing scene controls. The native control loads one explicitly labeled blank procedural review scene; Back to Central Hub beside Reset or scoped Escape restores the stable hub view. Reset selects hub overview. Browse Projects and all normal HTML routes remain available. No authentic portfolio/skill claims or active console/globe were added. Mobile/no-JS retains HTML only.
 
-Current report: [M6-A1 implementation](docs/04-delivery/M6A1_IMPLEMENTATION_REPORT.md); visual comparison: [review sheet](docs/04-delivery/evidence/m6a1/comparison.html). All 65 checks pass (55 retained plus 10 new). F measurements pass: hub readiness median 663 ms against 1000 ms target; initial JS +5808 bytes; lazy bay 1280 bytes; twenty resource cycles and fifteen extended idle windows stable. Intel HD Graphics 620 feedback is qualitative; headless measurements do not replace real-device review. Stop before M6-A2/B1 or deployment.
+Historical report: [M6-A1 implementation](docs/04-delivery/M6A1_IMPLEMENTATION_REPORT.md); visual comparison: [review sheet](docs/04-delivery/evidence/m6a1/comparison.html). All 65 checks pass (55 retained plus 10 new). F measurements pass: hub readiness median 663 ms against 1000 ms target; initial JS +5808 bytes; lazy bay 1280 bytes; twenty resource cycles and fifteen extended idle windows stable. Intel HD Graphics 620 feedback is qualitative; headless measurements do not replace real-device review. Stop before M6-A2/B1 or deployment.
 
 ## M6-B3 — Savvyra HTML library
 
 Browse `/projects`, select Development, then Read Savvyra, or open `/projects/savvyra` directly. The full approved textual case study is server-rendered and reachable without JavaScript/WebGL. Media, external project links and related projects remain empty; Contact remains incomplete. See the [M6-B3 report](docs/04-delivery/M6B3_IMPLEMENTATION_REPORT.md) and [approved packet](docs/04-delivery/SAVVYRA_CONTENT_PACKET_V1.md). No 3D, global styling, indexing policy or deployment change. Stop for owner review before further work.
+
+## M6-A2 — Text-first Development exhibit
+
+On desktop, Enter Development Lab, then select the cyan procedural marker or use Focus Savvyra. Back to Development overview and scoped Escape return from focus; another Escape returns to the Hub. Back to Central Hub and Reset retain their existing meanings. About Savvyra is a native disclosure for the approved explanation; it opens explicitly and works without JavaScript. Read Savvyra case study remains an always-visible ordinary link, also available without WebGL/JavaScript and on mobile. No project image, logo, external link or new room is added. See the [M6-A2 report](docs/04-delivery/M6A2_IMPLEMENTATION_REPORT.md) and [comparison sheet](docs/04-delivery/evidence/m6a2/comparison.html) for validation, recovered baseline and owner review gate.

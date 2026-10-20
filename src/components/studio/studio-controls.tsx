@@ -3,7 +3,8 @@ import type { RefObject } from "react";
 import { qualityIds, qualityPolicy, type GraphicsQuality } from "@/lib/scene/quality-config";
 import { hotspots, hotspotIds, type CameraPresetId, type HotspotId } from "@/lib/scene/interaction-config";
 
-export function StudioControls({ preset, desktop, select, back, reset, buttons, quality, setQuality, hubActive, backToHub }: {
+export function StudioControls({ preset, desktop, select, back, reset, buttons, quality, setQuality, hubActive, backToHub, developmentTitle, developmentSelected }: {
+  developmentTitle?: string; developmentSelected: boolean;
   backToHub: () => void;
   hubActive: boolean;
   quality: GraphicsQuality; setQuality: (quality: GraphicsQuality) => void;
@@ -31,9 +32,9 @@ export function StudioControls({ preset, desktop, select, back, reset, buttons, 
       </div>
     </>}
     <section className={desktop ? "mt-5" : ""} aria-labelledby="studio-selection-title">
-      <h3 id="studio-selection-title" className="text-lg">{selected?.title ?? (hubActive ? "Studio overview" : "Technical review controls")}</h3>
-      <p className="mt-2 text-sm leading-relaxed text-muted">{!hubActive ? "Inspect the static review bench. Escape or Back to Central Hub returns to the studio; Reset view returns to the hub overview." : selected?.description ?? (desktop ? "Select an object or use the focus controls. Escape returns to the overview. All objects remain blockout placeholders." : "Explore the portfolio through these HTML links. The workstation overview is described above.")}</p>
-      <p className="sr-only" role="status">{selected ? `${selected.title} selected.` : hubActive ? "Studio overview selected." : "Development technical review selected."}</p>
+      <h3 id="studio-selection-title" className="text-lg">{selected?.title ?? (hubActive ? "Studio overview" : developmentTitle ? `${developmentTitle} exhibit controls` : "Technical review controls")}</h3>
+      <p className="mt-2 text-sm leading-relaxed text-muted">{!hubActive ? developmentTitle ? "Use the exhibit controls and read its HTML explanation below. Escape returns from exhibit focus to Development overview, then to the Central Hub. Reset view returns to hub overview." : "Inspect the static review bench. Escape or Back to Central Hub returns to the studio; Reset view returns to the hub overview." : selected?.description ?? (desktop ? "Select an object or use the focus controls. Escape returns to the overview. All objects remain blockout placeholders." : "Explore the portfolio through these HTML links. The workstation overview is described above.")}</p>
+      <p className="sr-only" role="status">{selected ? `${selected.title} selected.` : hubActive ? "Studio overview selected." : developmentTitle ? `${developmentTitle} ${developmentSelected ? "selected" : "overview"}.` : "Development technical review selected."}</p>
       <div className="mt-4 flex flex-wrap gap-3">
         <Link href="/about" className={preset === "creator" ? "action" : "action action-secondary"}>About Arieza <span aria-hidden="true">↗</span></Link>
         <Link href="/projects" className={preset === "projects" ? "action" : "action action-secondary"}>Browse projects <span aria-hidden="true">↗</span></Link>

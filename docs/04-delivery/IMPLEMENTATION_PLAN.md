@@ -63,3 +63,7 @@ Recommended Option C and M6-A1 (single-scene lifecycle plus labeled Development 
 ## M6-A1 delivery gate
 
 Owner explicitly approved D1–D4/F-only D6 and M6-A1 under execution conditions. One-scene host plus Development technical review bay is delivered for owner review; see [implementation report](M6A1_IMPLEMENTATION_REPORT.md). Preserve the shell, hub, cameras, editorial safeguards and all prior guarantees. No other A/B/C batch, console/globe activation, authentic-content integration or deployment is authorized by this delivery. The earlier planning-only section is historical and superseded only for this specific slice.
+
+## M6-A2 scoped execution gate
+
+Owner accepted A1/B3 and explicitly authorized Specification v1.0 implementation/validation/commit/push. Add one text-first approved Savvyra exhibit and one bounded local focus camera in the existing Development scene, with HTML equivalents and preserved lifecycle. Z counts/JS/common gates apply; no console/globe activation, imagery, other room, new dependency or deployment. Preserve complete recovered baseline and disclose its interruption gap. Stop for owner review after delivery.

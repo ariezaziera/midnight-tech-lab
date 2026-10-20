@@ -1,5 +1,7 @@
 "use client";
 
+import type { DevelopmentInteraction } from "@/lib/scene/development-config";
+
 import { useEffect, useRef } from "react";
 import { Canvas, useFrame, useThree } from "@react-three/fiber";
 import { Light, Mesh, PointLight, type Object3D } from "three";
@@ -12,9 +14,9 @@ import { type SceneMetrics } from "@/lib/scene/hub-config";
 import { type CameraRigProps } from "../camera/camera-rig";
 import { cameraPresets, type HotspotId } from "@/lib/scene/interaction-config";
 
-export type HubCanvasProps = CameraRigProps & { sceneRequest: SceneRequest; scenePhase: ScenePhase; onSceneState: (event: SceneEvent) => void; quality: GraphicsQuality; onReady: (metrics: SceneMetrics) => void; onFailure: () => void; onSelect: (id: HotspotId) => void };
+export type HubCanvasProps = CameraRigProps & DevelopmentInteraction & { sceneRequest: SceneRequest; scenePhase: ScenePhase; onSceneState: (event: SceneEvent) => void; quality: GraphicsQuality; onReady: (metrics: SceneMetrics) => void; onFailure: () => void; onSelect: (id: HotspotId) => void };
 
-function RendererLifecycle({ onReady, onFailure, sceneRequest, request, onSceneState }: Pick<HubCanvasProps, "onReady" | "onFailure" | "sceneRequest" | "request" | "onSceneState">) {
+function RendererLifecycle({ onReady, onFailure, sceneRequest, request, onSceneState, exhibitRequest, exhibitEligible }: Pick<HubCanvasProps, "onReady" | "onFailure" | "sceneRequest" | "request" | "onSceneState" | "exhibitRequest" | "exhibitEligible">) {
   const { gl } = useThree();
   const frames = useRef(0);
   const reported = useRef(false);
@@ -52,7 +54,7 @@ function RendererLifecycle({ onReady, onFailure, sceneRequest, request, onSceneS
       renderer.domElement.dataset.renderMetrics = JSON.stringify({ calls: renderer.info.render.calls, triangles: renderer.info.render.triangles, geometries: renderer.info.memory.geometries, textures: renderer.info.memory.textures, materials: materials.size, programs: renderer.info.programs?.length ?? 0, dpr: renderer.getPixelRatio(), width: renderer.domElement.width, height: renderer.domElement.height, graphs: graphs.map(graph => graph.userData.studioScene), lightCount: lights.length, pointLightCount: lights.filter(light => light instanceof PointLight).length, shadows: renderer.shadowMap.enabled });
       const graph = graphs[0];
       if (graphs.length !== 1 || !graph || graph.userData.studioScene !== sceneRequest.id || graph.userData.sceneSequence !== sceneRequest.sequence || renderer.info.render.calls === 0) return;
-      const cameraReady = renderer.domElement.dataset.cameraPreset === (sceneRequest.id === "hub" ? request.preset : "development") && renderer.domElement.dataset.cameraMoving === "false";
+      const cameraReady = renderer.domElement.dataset.cameraPreset === (sceneRequest.id === "hub" ? request.preset : exhibitEligible && exhibitRequest.selected ? "development-exhibit" : "development") && renderer.domElement.dataset.cameraMoving === "false";
       const token = `${sceneRequest.id}:${sceneRequest.sequence}`;
       if (cameraReady && stable.current !== token) {
         stable.current = token;
@@ -78,14 +80,14 @@ export default function HubCanvas(props: HubCanvasProps) {
     onCreated={({ gl }) => gl.setClearColor(0x000000, 0)}
     fallback={<p className="p-6 text-muted">WebGL is unavailable. Use the HTML portfolio navigation.</p>}
     role="img"
-    aria-label={`${sceneRegistry[props.sceneRequest.id].title}. Use the equivalent HTML controls below.`}
+    aria-label={`${props.sceneRequest.id === "development" && props.exhibitEligible ? "Development Lab" : sceneRegistry[props.sceneRequest.id].title}. Use the equivalent HTML controls below.`}
   >
 
     <PerspectiveCamera makeDefault position={camera.position} fov={camera.fov} near={camera.near} far={camera.far} />
     <hemisphereLight args={[lightingConfig.fill.sky, lightingConfig.fill.ground, lightingConfig.fill.intensity]} />
     <directionalLight {...lightingConfig.key} />
     <directionalLight {...lightingConfig.rim} />
-    <SceneHost sceneRequest={props.sceneRequest} scenePhase={props.scenePhase} onSceneState={props.onSceneState} request={props.request} reducedMotion={props.reducedMotion} onSettled={props.onSettled} onSelect={props.onSelect} />
+    <SceneHost exhibitEligible={props.exhibitEligible} exhibitRequest={props.exhibitRequest} onExhibit={props.onExhibit} sceneRequest={props.sceneRequest} scenePhase={props.scenePhase} onSceneState={props.onSceneState} request={props.request} reducedMotion={props.reducedMotion} onSettled={props.onSettled} onSelect={props.onSelect} />
     <RendererLifecycle {...props} />
   </Canvas>;
 }

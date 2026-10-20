@@ -1,11 +1,12 @@
+import type { DevelopmentInteraction } from "@/lib/scene/development-config";
 import { Component, useEffect, useRef, useState, type ComponentType, type ReactNode } from "react";
 import { CentralHub } from "../hub/central-hub";
 import { CameraRig, type CameraRigProps } from "../camera/camera-rig";
 import type { HotspotId } from "@/lib/scene/interaction-config";
 import type { SceneEvent, ScenePhase, SceneRequest } from "@/lib/scene/scene-registry";
 
-type Props = CameraRigProps & { sceneRequest: SceneRequest; scenePhase: ScenePhase; onSceneState: (event: SceneEvent) => void; onSelect: (id: HotspotId) => void };
-type Loaded = { request: SceneRequest; startedAt: number; View?: ComponentType; fail: () => void };
+type Props = CameraRigProps & DevelopmentInteraction & { sceneRequest: SceneRequest; scenePhase: ScenePhase; onSceneState: (event: SceneEvent) => void; onSelect: (id: HotspotId) => void };
+type Loaded = { request: SceneRequest; startedAt: number; View?: ComponentType<DevelopmentInteraction & { reducedMotion: boolean }>; fail: () => void };
 class GraphBoundary extends Component<{ children: ReactNode; fail: () => void }, { failed: boolean }> {
   state = { failed: false };
   static getDerivedStateFromError() { return { failed: true }; }
@@ -14,7 +15,7 @@ class GraphBoundary extends Component<{ children: ReactNode; fail: () => void },
 }
 
 /** Two graphs only. Loading disposes the previous graph; successful switches keep Canvas. */
-export function SceneHost({ sceneRequest, scenePhase, onSceneState, ...hub }: Props) {
+export function SceneHost({ sceneRequest, scenePhase, onSceneState, exhibitEligible, exhibitRequest, onExhibit, ...hub }: Props) {
   const [loaded, setLoaded] = useState<Loaded | null>(null);
   const timer = useRef<ReturnType<typeof setTimeout> | null>(null);
   useEffect(() => {
@@ -49,7 +50,7 @@ export function SceneHost({ sceneRequest, scenePhase, onSceneState, ...hub }: Pr
   if (!loaded || loaded.request.id !== sceneRequest.id || loaded.request.sequence !== sceneRequest.sequence) return null;
   return <group name="ActiveStudioGraph" userData={{ studioScene: loaded.request.id, sceneSequence: loaded.request.sequence, startedAt: loaded.startedAt }}>
     <GraphBoundary key={`${sceneRequest.id}:${sceneRequest.sequence}`} fail={loaded.fail}>
-      {loaded.View ? <loaded.View /> : <><CentralHub selected={hub.request.preset === "overview" ? null : hub.request.preset} onSelect={hub.onSelect} /><CameraRig request={hub.request} reducedMotion={hub.reducedMotion} onSettled={hub.onSettled} /></>}
+      {loaded.View ? <loaded.View exhibitEligible={exhibitEligible} exhibitRequest={exhibitRequest} onExhibit={onExhibit} reducedMotion={hub.reducedMotion} /> : <><CentralHub selected={hub.request.preset === "overview" ? null : hub.request.preset} onSelect={hub.onSelect} /><CameraRig request={hub.request} reducedMotion={hub.reducedMotion} onSettled={hub.onSettled} /></>}
     </GraphBoundary>
   </group>;
 }

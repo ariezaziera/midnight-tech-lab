@@ -1,3 +1,9 @@
+# M6-A2 text-first Savvyra Development exhibit — 2026-10-20
+
+- Resume and preserve the completed five-run baseline and partial tooling; select only approved Savvyra public text on the server. Add an original procedural marker, one bounded local focus camera and native/HTML explanation with ordinary case-study navigation. No project imagery or external links.
+- Preserve one lazy Canvas/active graph, exact Hub geometry/cameras/lighting, split-screen shell and 440px panel, DPR policy, recovery, mobile/no-JS and publication safeguards. Console/globe remain inert.
+- All78 checks pass serially in7.4m; ci/lint/typecheck/build/audit pass (zero production vulnerabilities). All14 measured gates pass: startup942ms≤1152ms, JS+793 bytes under F cap, lazy1921 bytes, six idle windows and20 resource cycles stable. Full outcomes are recorded in [M6-A2 report](docs/04-delivery/M6A2_IMPLEMENTATION_REPORT.md). Preserve intermediate captures and document test corrections. Commit/push only; no other batch or deployment.
+
 # M6-B3 Savvyra HTML library integration
 
 - Add one owner-approved text-only Savvyra case study and Development category using the existing schema/publication guards; preserve the separate template, noindex and all studio behavior. No media, external Savvyra links, dependencies, 3D changes or deployment.

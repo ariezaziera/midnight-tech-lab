@@ -1,6 +1,6 @@
 # M6 owner decisions and content intake
 
-**Current gate:** owner approves D1, D2, D3, D4 and the F-profile portion of D6 for M6-A1 only, subject to the recorded execution authorization. All other decisions and batches remain pending. The recommendations below remain planning context except where explicitly approved.
+**Current gate:** owner accepted M6-A1/M6-B3 and separately authorized M6-A2 Specification v1.0, including scoped implementation, validation, commit and push. Text-first Savvyra only; Z counts/transfer/common gates apply to this slice, original F Home cap retained. D5 console activation is deferred; I/R, other rooms/media allowances and deployment remain unapproved. Historical recommendations below are superseded only by these explicit scope decisions. The recommendations below remain planning context except where explicitly approved.
 
 ## Already approved constraints — do not ask again
 
@@ -9,7 +9,7 @@
 - Accepted split-screen desktop shell. This request explicitly preserves it; no fullscreen redesign is proposed.
 - Accepted M3 hub overview/creator/projects/workstation behavior, M5-A procedural geometry, M5-B static atmosphere/materials and M5-C density policy; no forced camera/content prerequisite.
 - Current mobile HTML, reduced motion, failure recovery, direct-link-only incomplete Contact until verified, no fabricated identity/projects/services, no deployment.
-- Commit/push the authorized slice under the standing instruction, then stop. M6-A1 only is authorized; do not implement M6-A2/B1 or deploy.
+- Commit/push the authorized slice under the standing instruction, then stop. The current authorization covers M6-A2 only; do not implement another batch or deploy.
 - Owner reports smooth operation on **Intel HD Graphics 620**, including High. This identifies a real target and qualitative acceptance; it is not an instrumented frame-time/FPS/GPU-memory result. It does not change Low default or approve higher density/effects automatically.
 
 ## Decisions requested now
